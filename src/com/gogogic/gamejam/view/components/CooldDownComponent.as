@@ -1,7 +1,9 @@
 package com.gogogic.gamejam.view.components
 {
 	import com.gogogic.gamejam.Settings;
+	import com.gogogic.ui.drawPieMask;
 	import com.greensock.TweenLite;
+	import com.greensock.easing.Linear;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -22,7 +24,7 @@ package com.gogogic.gamejam.view.components
 		
 		public function start():void {
 			timeLeft = Settings.COOLDOWN_TIME;
-			TweenLite.to(this, Settings.COOLDOWN_TIME / 1000, { timeLeft: 0, onComplete: onCooldownFinished, onUpdate: onTimeProgress });
+			TweenLite.to(this, Settings.COOLDOWN_TIME / 1000, { timeLeft: 0, onComplete: onCooldownFinished, onUpdate: onTimeProgress, ease: Linear.easeNone });
 			onTimeProgress();
 		}
 		
@@ -42,8 +44,13 @@ package com.gogogic.gamejam.view.components
 		}
 		
 		private function onTimeProgress():void {
-			var scale:Number = Settings.COOLDOWN_TIME / timeLeft;
+			var scale:Number = timeLeft / Settings.COOLDOWN_TIME ;
 			// TODO: Draw the progress
+			
+			graphics.clear();
+			graphics.beginFill(0);
+			drawPieMask(graphics, scale, 50, 0, 0, -Math.PI/2, 20);
+			graphics.endFill();
 		}
 	}
 }

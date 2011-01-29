@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.view
 {
+	import com.gogogic.gamejam.Application;
 	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.vo.PlayerVO;
 	import com.gogogic.gamejam.view.components.FriendCardComponent;
@@ -28,8 +29,15 @@ package com.gogogic.gamejam.view
 			_playerVO = playerVO;
 			
 			addChild(_gameBoardComponent = new GameBoardComponent());
+			_gameBoardComponent.y = 50;
+			
 			addChild(_gameDeckComponent = new GameDeckComponent(_friendDeck));
+			_gameDeckComponent.x = 50;
+			_gameDeckComponent.y = 700;
+			
 			addChild(_scoreComponent = new ScoreComponent(_playerVO));
+			_scoreComponent.x = Application.APPLICATION_WIDTH / 2;
+			_scoreComponent.y = 20;
 		}
 	}
 }
