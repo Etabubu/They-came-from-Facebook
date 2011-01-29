@@ -6,5 +6,6 @@ package com.gogogic.gamejam.model.vo
 		public var id:int;
 		public var name:String;
 		public var portraitUrl:String;
+		public var bonuses:Vector.<BonusVO>;
 	}
 }

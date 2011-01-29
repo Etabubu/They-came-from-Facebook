@@ -25,6 +25,7 @@ package com.gogogic.gamejam.view
 			if (friendsProxy.friends) {
 				friendsLoaded();
 			} else {
+				friendsProxy.loadFriends();
 				// TODO: Disable start game button
 				// TODO: Show a message in main menu view that it is loading the friends
 			}

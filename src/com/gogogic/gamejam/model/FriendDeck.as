@@ -13,6 +13,7 @@ package com.gogogic.gamejam.model
 				throw new Error("Error, no friends provided");
 			
 			_friends = friends;
+			_discarded = new Vector.<FriendVO>();
 		}
 		
 		public function drawNext():FriendVO {

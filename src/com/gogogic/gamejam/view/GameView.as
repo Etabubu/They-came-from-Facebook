@@ -20,10 +20,6 @@ package com.gogogic.gamejam.view
 			_friendDeck = friendDeck;
 			
 			addChild(_gameDeckComponent = new GameDeckComponent(_friendDeck));
-			
-			var cardTest:FriendCardComponent = new FriendCardComponent(_friendDeck.drawNext());
-			addChild(cardTest);
-			trace("Yahoo");
 		}
 	}
 }
