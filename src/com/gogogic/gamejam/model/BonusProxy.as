@@ -110,19 +110,19 @@ package com.gogogic.gamejam.model
 			if(friend.relation == "son" || friend.relation == "daughter") friend.bonuses.push(bonuses["filicide"]);
 			
 			// marital problems! - relation is married to player - _male and _female
-			if(friend.relation == "married" && friend.gender == "male") friend.bonuses.push(bonuses["marital_problems_male"]);
-			if(friend.relation == "married" && friend.gender == "female") friend.bonuses.push(bonuses["marital_problems_female"]);
+			if(friend.relation == "married" && friend.gender == MALE) friend.bonuses.push(bonuses["marital_problems_male"]);
+			if(friend.relation == "married" && friend.gender == FEMALE) friend.bonuses.push(bonuses["marital_problems_female"]);
 			
 			// The honeymoon suite! - relation is engaged
 			if(friend.relation == "engaged") friend.bonuses.push(bonuses["honeymoon_suite"]);
 			
 			// On the rocks - relation is a spouse (not married or engaged) - _male and _female
-			if(friend.relation == "in a relationship" && friend.gender == "male") friend.bonuses.push(bonuses["on_the_rocks_male"]);
-			if(friend.relation == "in a relationship" && friend.gender == "female") friend.bonuses.push(bonuses["on_the_rocks_female"]);
+			if(friend.relation == "in a relationship" && friend.gender == MALE) friend.bonuses.push(bonuses["on_the_rocks_male"]);
+			if(friend.relation == "in a relationship" && friend.gender == FEMALE) friend.bonuses.push(bonuses["on_the_rocks_female"]);
 			
 			// prom king/queen - has more than 500 friends - _male and _female
-			if(friend.friendCount > 500 && friend.gender == "male") friend.bonuses.push(bonuses["prom_male"]);
-			if(friend.friendCount > 500 && friend.gender == "female") friend.bonuses.push(bonuses["prom_female"]);
+			if(friend.friendCount > 500 && friend.gender == MALE) friend.bonuses.push(bonuses["prom_male"]);
+			if(friend.friendCount > 500 && friend.gender == FEMALE) friend.bonuses.push(bonuses["prom_female"]);
 			
 			// double-cross - has more than 25 mutual friends
 			if(friend.mutualFriendCount > 25) friend.bonuses.push(bonuses["doublecross"]);

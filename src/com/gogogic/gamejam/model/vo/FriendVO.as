@@ -3,10 +3,11 @@ package com.gogogic.gamejam.model.vo
 	
 	public class FriendVO extends BaseVO
 	{
-		public var id:int;
+		public var id:Number;
 		public var name:String;
 		public var portraitUrl:String;
 		public var bonuses:Vector.<BonusVO>;
+		public var unitType:UnitTypeBaseVO;
 		
 		// facebook info
 		public var relationship:String; //son/daughter/brother/sister/father/mother/engaged/married/complicated etc
