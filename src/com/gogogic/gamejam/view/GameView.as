@@ -45,5 +45,9 @@ package com.gogogic.gamejam.view
 			_scoreComponent.x = Application.APPLICATION_WIDTH / 2;
 			_scoreComponent.y = 20;
 		}
+		
+		public function get gameBoardComponent():GameBoardComponent {
+			return _gameBoardComponent;
+		}
 	}
 }

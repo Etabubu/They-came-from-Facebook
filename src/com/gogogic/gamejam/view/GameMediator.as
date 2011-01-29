@@ -2,7 +2,7 @@ package com.gogogic.gamejam.view
 {
 	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.FriendsProxy;
-	import com.gogogic.gamejam.model.OppositionProxy;
+	import com.gogogic.gamejam.model.OppositionUnitProxy;
 	import com.gogogic.gamejam.model.PlayerProxy;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
@@ -16,7 +16,7 @@ package com.gogogic.gamejam.view
 		
 		private var _friendsProxy:FriendsProxy;
 		private var _playerProxy:PlayerProxy;
-		private var _oppositionProxy:OppositionProxy;
+		private var _oppositionProxy:OppositionUnitProxy;
 		
 		public function GameMediator(gameView:GameView)
 		{
@@ -30,7 +30,7 @@ package com.gogogic.gamejam.view
 		override public function onRegister():void {
 			_friendsProxy = facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy;
 			_playerProxy = facade.retrieveProxy(PlayerProxy.NAME) as PlayerProxy;
-			_oppositionProxy = facade.retrieveProxy(OppositionProxy.NAME) as OppositionProxy;
+			_oppositionProxy = facade.retrieveProxy(OppositionUnitProxy.NAME) as OppositionUnitProxy;
 			
 			if (_friendsProxy.friends) {
 				friendsLoaded();
@@ -53,8 +53,10 @@ package com.gogogic.gamejam.view
 		
 		private function friendsLoaded():void {
 			// Set up the opposition friendDeck by supplying the "enemy friends" to the opposition proxy
-			_oppositionProxy.friends = _friendsProxy.enemies;
+			_oppositionProxy.oppositionFriends = _friendsProxy.enemies;
 			gameView.init(_playerProxy.playerVO, new FriendDeck(_friendsProxy.friends), _oppositionProxy.oppositionDeck);
+			// Register the mediator for the game board
+			facade.registerMediator(new GameBoardMediator(gameView.gameBoardComponent));
 		}
 	}
 }

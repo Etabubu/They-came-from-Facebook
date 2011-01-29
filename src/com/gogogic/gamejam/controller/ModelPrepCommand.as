@@ -1,7 +1,8 @@
 package com.gogogic.gamejam.controller
 {
+	import com.gogogic.gamejam.UserUnitProxy;
 	import com.gogogic.gamejam.model.FriendsProxy;
-	import com.gogogic.gamejam.model.OppositionProxy;
+	import com.gogogic.gamejam.model.OppositionUnitProxy;
 	import com.gogogic.gamejam.model.PlayerProxy;
 	
 	import org.puremvc.as3.multicore.interfaces.ICommand;
@@ -13,7 +14,8 @@ package com.gogogic.gamejam.controller
 		override public function execute(notification:INotification):void {
 			facade.registerProxy(new PlayerProxy());
 			facade.registerProxy(new FriendsProxy());
-			facade.registerProxy(new OppositionProxy());
+			facade.registerProxy(new UserUnitProxy());
+			facade.registerProxy(new OppositionUnitProxy());
 		}
 	}
 }

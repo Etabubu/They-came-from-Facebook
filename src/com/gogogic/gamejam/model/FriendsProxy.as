@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.model
 {
+	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
 	import org.puremvc.as3.multicore.interfaces.IProxy;
@@ -59,7 +60,9 @@ package com.gogogic.gamejam.model
 			while (allFriends.length > 0)
 				shuffledFriends.push(allFriends.splice(Math.round(Math.random() * (allFriends.length - 1)), 1)[0]);
 			
-			var enemyCount:int = Math.floor(shuffledFriends.length / 2);
+			var enemyCount:int = allFriends.length > Settings.MAX_FRIENDS_ON_TEAM * 2 ?
+				allFriends.length - Settings.MAX_FRIENDS_ON_TEAM :
+				Math.floor(shuffledFriends.length / 2);
 			// Hand out friends to user and enemy
 			for (var i:int = 0; i < shuffledFriends.length; i++) {
 				if (i < enemyCount)

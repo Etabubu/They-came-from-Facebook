@@ -1,6 +1,27 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 489" majorVersion="11" buildNumber="489" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <folders>
+          <DOMFolderItem name="Assets" itemID="4d4481cb-00000d7c"/>
+     </folders>
+     <media>
+          <DOMBitmapItem name="Assets/Back.jpg" itemID="4d444fef-000000cd" sourceExternalFilepath=".\Images\Back.jpg" sourceLastImported="1296321992" sourcePlatform="macintosh" quality="50" href="Assets\Back.jpg" bitmapDataHRef="M 1 1296322543.dat" frameRight="15200" frameBottom="17000" isJPEG="true"/>
+          <DOMBitmapItem name="Assets/face.png" itemID="4d44500d-00000193" sourceExternalFilepath=".\Images\face.png" sourceLastImported="1296322212" originalCompressionType="lossless" quality="50" href="Assets\face.png" bitmapDataHRef="M 2 1296322573.dat" frameRight="9560" frameBottom="9300"/>
+          <DOMBitmapItem name="Assets/logo.png" itemID="4d4462f9-0000402f" sourceExternalFilepath=".\Images\logo.png" sourceLastImported="1296326778" originalCompressionType="lossless" quality="50" href="Assets\logo.png" bitmapDataHRef="M 3 1296327417.dat" frameRight="14620" frameBottom="5640"/>
+     </media>
      <symbols>
-          <Include href="Test.xml"/>
+          <Include href="Assets/btnPlay.xml" loadImmediate="false"/>
+          <Include href="Assets/FBLoad.xml" loadImmediate="false"/>
+          <Include href="Assets/LeaderboardBack.xml" loadImmediate="false"/>
+          <Include href="Assets/mcDevider.xml" loadImmediate="false"/>
+          <Include href="Assets/mcFace.xml" loadImmediate="false"/>
+          <Include href="Assets/mcLeaderboard.xml" loadImmediate="false"/>
+          <Include href="Assets/mcLeaderboardFriend.xml" loadImmediate="false"/>
+          <Include href="Assets/mcLogo.xml" loadImmediate="false"/>
+          <Include href="Assets/txtHowlogn.xml" loadImmediate="false"/>
+          <Include href="Assets/txtLeaderboardTitle.xml" loadImmediate="false"/>
+          <Include href="Assets/txtPlay.xml" loadImmediate="false"/>
+          <Include href="Assets/txtText.xml" loadImmediate="false"/>
+          <Include href="BasicCharacter.xml"/>
+          <Include href="MainMenu.xml"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1">
@@ -318,6 +339,9 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="190543" publishTime="1296331238"/>
+          <PublishItem publishSize="190332" publishTime="1296331121"/>
+          <PublishItem publishSize="934" publishTime="1296318308"/>
           <PublishItem publishSize="528" publishTime="1296318232"/>
           <PublishItem publishSize="526" publishTime="1296318115"/>
           <PublishItem publishSize="517" publishTime="1296318104"/>

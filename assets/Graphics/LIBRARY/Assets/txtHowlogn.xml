@@ -1,0 +1,42 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/txtHowlogn" itemID="4d44524d-000009ca" sourceLibraryItemHRef="Symbol 1" lastModified="1296323149">
+  <timeline>
+    <DOMTimeline name="txtHowlogn">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText selected="true" width="208.4" height="23.6" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>HOW LONG WILL YOU</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="20" bitmapSize="400" face="CCMonsterMash" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText selected="true" width="198" height="124.9" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="41.2" ty="29.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>LIVE???</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" size="55" bitmapSize="1100" face="CCMonsterMash" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
