@@ -79,30 +79,56 @@ package com.gogogic.gamejam.model
 			bonuses["prom_male"].name = "Prom King";
 			bonuses["prom_male"].subtext = "more than 500 friends";
 			bonuses["prom_male"].points = 25;
+			
+			bonuses["doublecross"] = new BonusVO();
+			bonuses["doublecross"].name = "Double-cross!";
+			bonuses["doublecross"].subtext = "more than 25 mutual friends";
+			bonuses["doublecross"].points = 25;
+			
+			bonuses["code_freeze"] = new BonusVO();
+			bonuses["code_freeze"].name = "Code Freeze";
+			bonuses["code_freeze"].subtext = "killed a developer";
+			bonuses["code_freeze"].points = 182;
 		}
 		
 		private function assignBonuses(FriendVO friend):void {
 			// TODO: assign relevant bonuses to any friends needing it
 			
 			// patricide - relation is father
+			if(friend.relation == "father") friend.bonuses.push(bonuses["patricide"]);
 			
 			// matricide - relation is mother
+			if(friend.relation == "mother") friend.bonuses.push(bonuses["matricide"]);
 			
 			// sororicide - relation is sister
+			if(friend.relation == "sister") friend.bonuses.push(bonuses["sororicide"]);
 			
 			// fratricide - relation is brother
+			if(friend.relation == "brother") friend.bonuses.push(bonuses["fratricide"]);
 			
 			// Filicide - relation is son/daughter
+			if(friend.relation == "son" || friend.relation == "daughter") friend.bonuses.push(bonuses["filicide"]);
 			
 			// marital problems! - relation is married to player - _male and _female
+			if(friend.relation == "married" && friend.gender == "male") friend.bonuses.push(bonuses["marital_problems_male"]);
+			if(friend.relation == "married" && friend.gender == "female") friend.bonuses.push(bonuses["marital_problems_female"]);
 			
 			// The honeymoon suite! - relation is engaged
+			if(friend.relation == "engaged") friend.bonuses.push(bonuses["honeymoon_suite"]);
 			
 			// On the rocks - relation is a spouse (not married or engaged) - _male and _female
+			if(friend.relation == "in a relationship" && friend.gender == "male") friend.bonuses.push(bonuses["on_the_rocks_male"]);
+			if(friend.relation == "in a relationship" && friend.gender == "female") friend.bonuses.push(bonuses["on_the_rocks_female"]);
 			
 			// prom king/queen - has more than 500 friends - _male and _female
+			if(friend.friendCount > 500 && friend.gender == "male") friend.bonuses.push(bonuses["prom_male"]);
+			if(friend.friendCount > 500 && friend.gender == "female") friend.bonuses.push(bonuses["prom_female"]);
 			
+			// double-cross - has more than 25 mutual friends
+			if(friend.mutualFriendCount > 25) friend.bonuses.push(bonuses["doublecross"]);
 			
+			// code-freeze - is a developer of the game
+			if(friend.developer) friend.bonuses.push(bonuses["doublecross"]);
 		}
 		
 		public function get bonuses():Dictionary.<string, BonusVO>() {
