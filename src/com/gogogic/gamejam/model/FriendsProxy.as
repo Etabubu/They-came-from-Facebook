@@ -2,6 +2,7 @@ package com.gogogic.gamejam.model
 {
 	import org.puremvc.as3.multicore.interfaces.IProxy;
 	import org.puremvc.as3.multicore.patterns.proxy.Proxy;
+	import com.gogogic.gamejam.model.vo.FriendVO;
 	
 	public class FriendsProxy extends Proxy implements IProxy
 	{

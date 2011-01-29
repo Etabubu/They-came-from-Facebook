@@ -1,6 +1,6 @@
 package com.gogogic.gamejam.view
 {
-	import com.gogogic.gamejam.model.FriendVO;
+	import com.gogogic.gamejam.model.vo.FriendVO;
 	import com.gogogic.gamejam.model.FriendsProxy;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;

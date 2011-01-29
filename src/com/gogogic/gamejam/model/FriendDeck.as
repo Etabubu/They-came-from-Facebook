@@ -1,5 +1,7 @@
 package com.gogogic.gamejam.model
 {
+	import com.gogogic.gamejam.model.vo.FriendVO;
+
 	public class FriendDeck
 	{
 		private var _friends:Vector.<FriendVO>;
