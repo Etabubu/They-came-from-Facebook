@@ -13,5 +13,8 @@ package com.gogogic.gamejam
 		
 		// Facebook Id's of the developers
 		public static const DEVELOPERS:Vector.<Number> = new <Number>[644779038, 1518282318745, 699804391, 593171339, 588915126, 1034256399]; // ari, joe, jonathan, hilmar, marco, annamarie
+		
+		// Facebook app id
+		public static const FACEBOOK_APP_ID:Number = 183984731631877;
 	}
 }

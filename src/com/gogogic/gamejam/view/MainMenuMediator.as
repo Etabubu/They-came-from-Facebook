@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.view
 {
+	import com.facebook.graph.Facebook;
 	import com.gogogic.gamejam.model.FriendsProxy;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
@@ -25,6 +26,14 @@ package com.gogogic.gamejam.view
 			if (friendsProxy.friends) {
 				friendsLoaded();
 			} else {
+				// TODO: handle facebook permissions/login
+				//while(Facebook.getSession() == null) {
+					//ExternalInterface.call("redirect","THE APPLICATION ID", "user_birthday,read_stream,publish_stream","http://apps.facebook.com/THE CANVAS PAGE/");
+				//}
+				
+				// if login/auth fail - keep prompting.
+				//Facebook.init(
+				// if logged in
 				friendsProxy.loadFriends();
 				// TODO: Disable start game button
 				// TODO: Show a message in main menu view that it is loading the friends
