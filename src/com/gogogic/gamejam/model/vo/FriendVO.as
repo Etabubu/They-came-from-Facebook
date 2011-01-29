@@ -1,6 +1,5 @@
-package com.gogogic.gamejam.model
+package com.gogogic.gamejam.model.vo
 {
-	import com.gogogic.gamejam.model.vo.BaseVO;
 	
 	public class FriendVO extends BaseVO
 	{
