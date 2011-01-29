@@ -7,6 +7,8 @@ package com.gogogic.gamejam.view
 	{
 		public static const NAME:String = "MainMenuMediator";
 		
+		public static const START_MAIN_GAME:String = NAME + "StartMainGame";
+		
 		public function MainMenuMediator(mainMenuView:MainMenuView)
 		{
 			super(NAME, mainMenuView);

@@ -8,6 +8,9 @@ package com.gogogic.gamejam
 	[SWF(backgroundColor="#FFFFFF", frameRate="24", width="760", height="700", pageTitle="They Came From Facebook")]
 	public class Application extends Sprite
 	{
+		public static const APPLICATION_WIDTH:int = 760;
+		public static const APPLICATION_HEIGHT:int = 700;
+		
 		public static const NAME:String = "GameJamProject";
 		
 		private var facade:ApplicationFacade;
