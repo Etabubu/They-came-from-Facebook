@@ -1,7 +1,8 @@
 package com.gogogic.gamejam.view
 {
-	import com.gogogic.gamejam.model.vo.FriendVO;
+	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.FriendsProxy;
+	import com.gogogic.gamejam.model.vo.FriendVO;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
 	import org.puremvc.as3.multicore.interfaces.INotification;
@@ -11,7 +12,7 @@ package com.gogogic.gamejam.view
 	{
 		public static const NAME:String = "GameMediator";
 		
-		private var _friends:Vector.<FriendVO>;
+		private var _friendsProxy:FriendsProxy;
 		
 		public function GameMediator(gameView:GameView)
 		{
@@ -23,7 +24,11 @@ package com.gogogic.gamejam.view
 		}
 		
 		override public function onRegister():void {
-			(facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy).loadFriends();
+			_friendsProxy = facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy;
+			
+			if (_friendsProxy.friends) {
+				friendsLoaded();
+			}
 		}
 		
 		public override function listNotificationInterests():Array {
@@ -35,14 +40,14 @@ package com.gogogic.gamejam.view
 		public override function handleNotification(notification:INotification):void {
 			switch (notification.getName()) {
 				case FriendsProxy.FRIEND_LIST_LOADED:
-					_friends = notification.getBody() as Vector.<FriendVO>;
 					friendsLoaded();
 					break;
 			}
 		}
 		
 		private function friendsLoaded():void {
-			
+			// TODO: Setup the game
+			gameView.init(new FriendDeck(_friendsProxy.friends));
 		}
 	}
 }

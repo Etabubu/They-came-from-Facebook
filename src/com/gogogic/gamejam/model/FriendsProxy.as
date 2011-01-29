@@ -17,12 +17,20 @@ package com.gogogic.gamejam.model
 		
 		public function loadFriends():void {
 			// TODO: Start loading friends
+			onFriendsLoaded();
 		}
 		
 		private function onFriendsLoaded():void {
 			data = new Vector.<FriendVO>();
 			
 			// TODO: populate friends
+			
+			var dummyFriend:FriendVO = new FriendVO();
+			dummyFriend.id = 644779038;
+			dummyFriend.name = "Ari Þór H. Arnbjörnsson";
+			dummyFriend.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1283.snc4/173424_644779038_242735_q.jpg";
+			
+			friends.push(dummyFriend);
 			
 			sendNotification(FRIEND_LIST_LOADED, data);
 		}

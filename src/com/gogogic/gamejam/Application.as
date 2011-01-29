@@ -11,6 +11,8 @@ package com.gogogic.gamejam
 		public static const APPLICATION_WIDTH:int = 760;
 		public static const APPLICATION_HEIGHT:int = 850;
 		
+		public static const BULK_LOADER_DEFAULT:String = "Default";
+		
 		public static const NAME:String = "GameJamProject";
 		
 		private var facade:ApplicationFacade;
