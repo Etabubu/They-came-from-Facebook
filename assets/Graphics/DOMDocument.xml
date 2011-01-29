@@ -22,6 +22,7 @@
           <Include href="Assets/txtText.xml" loadImmediate="false"/>
           <Include href="BasicCharacter.xml"/>
           <Include href="MainMenu.xml"/>
+          <Include href="PlayerCharacter.xml"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1">
@@ -339,6 +340,7 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="190640" publishTime="1296335370"/>
           <PublishItem publishSize="190543" publishTime="1296331238"/>
           <PublishItem publishSize="190332" publishTime="1296331121"/>
           <PublishItem publishSize="934" publishTime="1296318308"/>

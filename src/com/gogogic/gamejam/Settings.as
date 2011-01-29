@@ -18,5 +18,7 @@ package com.gogogic.gamejam
 		
 		// Facebook app id
 		public static const FACEBOOK_APP_ID:Number = 183984731631877;
+		
+		public static const PLAYER_UNIT_STARTING_HEALTH:Number = 200;
 	}
 }

@@ -6,8 +6,11 @@ package com.gogogic.gamejam.model.vo
 	{
 		public var friendVO:FriendVO;
 		
-		public var x:int;
-		public var y:int;
+		public var isEnemy:Boolean;
+		public var x:Number;
+		public var y:Number;
 		public var rotation:Number;
+		public var maxHealth:Number;
+		public var currentHealth:Number;
 	}
 }

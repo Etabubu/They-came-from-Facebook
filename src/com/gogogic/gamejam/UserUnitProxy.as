@@ -26,15 +26,17 @@ package com.gogogic.gamejam
 		}
 		
 		public function friendDropped(friendVO:FriendVO, x:int, y:int):void {
-			var unitVO:UnitVO = new UnitVO();
+			var unitComponent:UnitComponent;
 			
-			unitVO.friendVO = friendVO;
-			unitVO.x = x;
-			unitVO.y = y;
+			// TODO: Create different superclasses of unitComponent according to the friendVO
 			
-			var unitComponent:DemoUnitComponent = new DemoUnitComponent(unitVO);
+			// DEBUG
+			unitComponent = new DemoUnitComponent();
 			
+			// Setup all the common, required data
+			unitComponent.init(friendVO, _gameBoardUnits, x, y, false);
 			sendNotification(GameBoardMediator.ADD_UNIT, unitComponent);
 		}
+		
 	}
 }
