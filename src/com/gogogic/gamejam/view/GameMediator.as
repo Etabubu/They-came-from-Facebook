@@ -14,7 +14,6 @@ package com.gogogic.gamejam.view
 		public static const NAME:String = "GameMediator";
 		
 		private var _friendsProxy:FriendsProxy;
-		private var _settingsProxy:SetttingsProxy;
 		
 		public function GameMediator(gameView:GameView)
 		{
