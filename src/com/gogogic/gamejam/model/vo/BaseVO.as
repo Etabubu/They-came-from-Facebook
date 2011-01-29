@@ -1,7 +1,7 @@
 package com.gogogic.gamejam.model.vo
 {
 	import com.gogogic.util.ShallowCloner;
-	import com.neopets.vendor.gogogic.terrarium.model.vo.event.DataChangeEvent;
+	import com.gogogic.gamejam.model.vo.event.DataChangeEvent;
 	
 	import flash.events.Event;
 	import flash.events.EventDispatcher;

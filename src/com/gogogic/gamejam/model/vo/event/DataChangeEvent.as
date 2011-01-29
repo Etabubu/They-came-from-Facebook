@@ -1,6 +1,7 @@
 package com.gogogic.gamejam.model.vo.event
 {
-	import com.neopets.vendor.gogogic.terrarium.model.vo.BaseVO;
+	
+	import com.gogogic.gamejam.model.vo.BaseVO;
 	
 	import flash.events.Event;
 	

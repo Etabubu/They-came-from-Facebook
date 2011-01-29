@@ -5,9 +5,13 @@ package com.gogogic.gamejam
 	
 	[Frame(factoryClass="com.gogogic.gamejam.PreloaderFactory")]
 	// Movie info
-	[SWF(backgroundColor="#FFFFFF", frameRate="24", width="800", height="700", pageTitle="Gogogic Gamejam Entry")]
+	[SWF(backgroundColor="#FFFFFF", frameRate="24", width="760", height="700", pageTitle="They Came From Facebook")]
 	public class Application extends Sprite
 	{
+		public static const NAME:String = "GameJamProject";
+		
+		private var facade:ApplicationFacade;
+		
 		public function Application()
 		{
 			addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
@@ -19,7 +23,8 @@ package com.gogogic.gamejam
 		}
 		
 		private function init():void {
-			
+			facade = ApplicationFacade.getInstance(NAME);
+			facade.sendNotification(ApplicationFacade.STARTUP, this);
 		}
 	}
 }
