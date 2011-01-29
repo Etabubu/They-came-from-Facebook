@@ -13,7 +13,8 @@ package com.gogogic.gamejam.view.components
 		public function EnemyDeckComponent(friendDeck:FriendDeck)
 		{
 			_friendDeck = friendDeck;
-			init();
+			addChild(_enemyContainer = new Sprite());
+			draw();
 		}
 
 		public function draw():void {
@@ -21,10 +22,10 @@ package com.gogogic.gamejam.view.components
 				_enemyContainer.removeChildAt(0);
 			
 			for (var i:int = 0; i < 4; i++) {
-				var friendVO:FriendVO = _friendDeck.getFriendOffset(i);
-				if (friendVO) {
-					
-				}
+				var enemyCard:EnemyCardComponent = new EnemyCardComponent(_friendDeck.getFriendOffset(i));
+				enemyCard.x = 65 * i;
+				enemyCard.y = 15 * i;
+				_enemyContainer.addChild(enemyCard);
 			}
 		}
 	}
