@@ -1,10 +1,13 @@
 package com.gogogic.gamejam.view.components
 {
+	import com.gogogic.dragmanager.DragManager;
+	import com.gogogic.dragmanager.DragSource;
 	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.model.FriendDeck;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.events.MouseEvent;
 	
 	public class GameDeckComponent extends Sprite
 	{
@@ -39,9 +42,18 @@ package com.gogogic.gamejam.view.components
 			} while (index++ < _friendCards.length-1);
 			
 			_friendCards[index] = newFriendCard;
+			newFriendCard.addEventListener(MouseEvent.MOUSE_DOWN, onFriendCardMouseDown);
 			var xPosition:Number = index * 100;
 			addChild(newFriendCard);
 			newFriendCard.x = xPosition;
+		}
+		
+		private function onFriendCardMouseDown(e:MouseEvent):void {
+			var friendCard:FriendCardComponent = e.currentTarget as FriendCardComponent;
+			var dragSource:DragSource = new DragSource();
+			dragSource.addData(friendCard, "friendCard");
+			
+			DragManager.getInstance().doDrag(friendCard, dragSource, null, new FriendCardComponent(friendCard.friendVO));
 		}
 		
 		private function onCooldownDone(e:Event):void {

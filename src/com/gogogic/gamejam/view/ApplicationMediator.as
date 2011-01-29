@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.view
 {
+	import com.gogogic.dragmanager.DragManager;
 	import com.gogogic.gamejam.Application;
 	
 	import flash.display.Sprite;
@@ -17,6 +18,7 @@ package com.gogogic.gamejam.view
 		
 		private var _viewLayer:Sprite;
 		private var _popupLayer:Sprite;
+		private var _dragDropLayer:Sprite;
 		
 		public function ApplicationMediator(application:Application)
 		{
@@ -30,6 +32,9 @@ package com.gogogic.gamejam.view
 		override public function onRegister():void {
 			application.addChild(_viewLayer = new Sprite());
 			application.addChild(_popupLayer = new Sprite());
+			application.addChild(_dragDropLayer = new Sprite());
+			
+			DragManager.getInstance().initialize(application.stage, _dragDropLayer);
 			
 			facade.registerMediator(new PopupMediator(_popupLayer));
 			

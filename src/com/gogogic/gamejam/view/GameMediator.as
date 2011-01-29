@@ -49,7 +49,6 @@ package com.gogogic.gamejam.view
 		}
 		
 		private function friendsLoaded():void {
-			// TODO: Setup the game
 			gameView.init(_playerProxy.playerVO, new FriendDeck(_friendsProxy.friends));
 		}
 	}
