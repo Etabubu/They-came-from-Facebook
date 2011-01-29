@@ -2,6 +2,7 @@ package com.gogogic.gamejam.view
 {
 	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.FriendsProxy;
+	import com.gogogic.gamejam.model.SetttingsProxy;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
@@ -13,6 +14,7 @@ package com.gogogic.gamejam.view
 		public static const NAME:String = "GameMediator";
 		
 		private var _friendsProxy:FriendsProxy;
+		private var _settingsProxy:SetttingsProxy;
 		
 		public function GameMediator(gameView:GameView)
 		{
