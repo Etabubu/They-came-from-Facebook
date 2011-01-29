@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/LeaderboardBack" itemID="4d44532b-00000d84" sourceLibraryItemHRef="Symbol 1" lastModified="1296323371">
+  <timeline>
+    <DOMTimeline name="LeaderboardBack">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMRectangleObject objectWidth="307" objectHeight="426" x="73" y="293" selected="true" lockFlag="true" topLeftRadius="12" topRightRadius="12" bottomLeftRadius="12" bottomRightRadius="12">
+                  <matrix>
+                    <Matrix tx="-73" ty="-293"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor/>
+                  </fill>
+                </DOMRectangleObject>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

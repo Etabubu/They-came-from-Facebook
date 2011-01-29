@@ -1,0 +1,85 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/mcLeaderboardFriend" itemID="4d445d47-00002f11" sourceLibraryItemHRef="Symbol 1" lastModified="1296325959">
+  <timeline>
+    <DOMTimeline name="mcLeaderboardFriend">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="square">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                    <StrokeStyle index="2">
+                      <SolidStroke scaleMode="normal" caps="square">
+                        <fill>
+                          <SolidColor color="#333333"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="2" edges="!0 1460S4|5580 1460"/>
+                    <Edge strokeStyle="1" edges="!0 0S4|5580 0"/>
+                  </edges>
+                </DOMShape>
+                <DOMDynamicText name="txtPosition" selected="true" width="32" height="16" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="3" ty="29"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>1</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="0" size="14" bitmapSize="280" face="FrutigerLTStd-Cn" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMRectangleObject objectWidth="50" objectHeight="50" x="52.25" y="93.75" selected="true" lockFlag="true">
+                  <matrix>
+                    <Matrix tx="-14.25" ty="-83.75"/>
+                  </matrix>
+                  <fill>
+                    <SolidColor color="#FFFFFF"/>
+                  </fill>
+                </DOMRectangleObject>
+                <DOMDynamicText name="txtName" selected="true" width="109" height="36" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="93" ty="18"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Name Nameson</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineSpacing="0" size="14" bitmapSize="280" face="FrutigerLTStd-Cn" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="txtScore" selected="true" width="70" height="16" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="206" ty="29"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>xxxxxx</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="0" size="14" bitmapSize="280" face="FrutigerLTStd-Cn" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

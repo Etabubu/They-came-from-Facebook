@@ -11,6 +11,8 @@ package com.gogogic.gamejam
 		// for enemy spawning
 		public static const INITIAL_SPAWN_DELAY_MILLIS:Number = 4000;
 		
+		public static const MAX_FRIENDS_ON_TEAM:int = 50;
+		
 		// Facebook Id's of the developers
 		public static const DEVELOPERS:Vector.<Number> = new <Number>[644779038, 1518282318745, 699804391, 593171339, 588915126, 1034256399]; // ari, joe, jonathan, hilmar, marco, annamarie
 		

@@ -1,0 +1,122 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MainMenu" itemID="4d4470f5-00000d64" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.MainMenu" sourceLibraryItemHRef="Symbol 1" lastModified="1296335321">
+  <timeline>
+    <DOMTimeline name="MainMenu">
+      <layers>
+        <DOMLayer name="Logo" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/mcLogo" name="mcLogo" centerPoint3DX="380.5" centerPoint3DY="151">
+                  <matrix>
+                    <Matrix tx="15.3" ty="10.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="365.2" y="140.1"/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter angle="222.852004603547" blurX="0" blurY="0" color="#AC3000" distance="11.4453001022339" quality="2" strength="0.61"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Play" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/btnPlay" name="btnPlay" centerPoint3DX="226.5" centerPoint3DY="766.5">
+                  <matrix>
+                    <Matrix tx="71.4" ty="706.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="155.1" y="60.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Leaderboard" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/mcLeaderboard" name="mcLeaderboard" centerPoint3DX="226.5" centerPoint3DY="485">
+                  <matrix>
+                    <Matrix tx="73" ty="272"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="153.5" y="213"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="text" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/txtHowlogn" name="" centerPoint3DX="521.15" centerPoint3DY="742.4">
+                  <matrix>
+                    <Matrix a="0.965911865234375" b="-0.255645751953125" c="0.255645751953125" d="0.965911865234375" tx="467.5" ty="737.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="120.85" y="43.7"/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter angle="90" blurX="0" blurY="0" distance="3" strength="3.82"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="text" color="#4FFFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/txtText" name="" centerPoint3DX="626.95" centerPoint3DY="661.35">
+                  <matrix>
+                    <Matrix a="0.965896606445313" b="-0.255630493164063" c="0.255630493164063" d="0.965896606445313" tx="457.65" ty="631.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="156.1" y="72.35"/>
+                  </transformationPoint>
+                  <filters>
+                    <DropShadowFilter angle="90" blurX="0" blurY="0" distance="3" strength="3.82"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="face" color="#808080" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/mcFace" name="mcFace" blendMode="overlay" centerPoint3DX="522" centerPoint3DY="421.5">
+                  <matrix>
+                    <Matrix tx="283" ty="189"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="239" y="232.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="back" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance name="" referenceID="" libraryItemName="Assets/Back.jpg"/>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

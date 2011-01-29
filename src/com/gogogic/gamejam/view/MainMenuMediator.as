@@ -55,7 +55,6 @@ package com.gogogic.gamejam.view
 				case FriendsProxy.FRIEND_LIST_LOADED:
 					_friends = notification.getBody() as Vector.<FriendVO>;
 					friendsLoaded();
-					sendNotification(START_MAIN_GAME);
 					break;
 			}
 		}
@@ -63,6 +62,7 @@ package com.gogogic.gamejam.view
 		private function friendsLoaded():void {
 			// TODO: Enable start game button
 			// TODO: Show in main menu view that the friends have been loaded
+			sendNotification(START_MAIN_GAME);
 		}
 	}
 }

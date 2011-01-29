@@ -1,0 +1,77 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="BasicCharacter" itemID="4d4481e4-00000d7e" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.BasicCharacter" sourceLibraryItemHRef="Symbol 1" lastModified="1296335367">
+  <timeline>
+    <DOMTimeline name="BasicCharacter">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="109" ty="11"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="109" ty="11"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#373E27"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#CCCCCC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="!-2887 -927S6[-2594 -1220 -2180 -1220!-2180 -1220[-1766 -1220 -1473 -927!-1473 -927[-1180 -634 -1180 -220!-1180 -220[-1180 194 -1473 487!-1473 487[-1766 780 -2180 780!-2180 780[-2594 780 -2887 487!-2887 487[-3180 194 -3180 -220!-3180
+ -220[-3180 -634 -2887 -927"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+                <DOMGroup>
+                  <matrix>
+                    <Matrix tx="289" ty="123"/>
+                  </matrix>
+                  <members>
+                    <DOMShape>
+                      <matrix>
+                        <Matrix tx="289" ty="123"/>
+                      </matrix>
+                      <fills>
+                        <FillStyle index="1">
+                          <SolidColor color="#373E27"/>
+                        </FillStyle>
+                      </fills>
+                      <strokes>
+                        <StrokeStyle index="1">
+                          <SolidStroke scaleMode="normal">
+                            <fill>
+                              <SolidColor color="#CCCCCC"/>
+                            </fill>
+                          </SolidStroke>
+                        </StrokeStyle>
+                      </strokes>
+                      <edges>
+                        <Edge fillStyle1="1" strokeStyle="1" edges="
+!-6077 -2163S6[-6200 -2286 -6200 -2460!-6200 -2460[-6200 -2634 -6077 -2757!-6077 -2757[-5954 -2880 -5780 -2880!-5780 -2880[-5606 -2880 -5483 -2757!-5483 -2757[-5360 -2634 -5360 -2460!-5360 -2460[-5360 -2286 -5483 -2163!-5483 -2163[-5606
+ -2040 -5780 -2040!-5780 -2040[-5954 -2040 -6077 -2163"/>
+                      </edges>
+                    </DOMShape>
+                  </members>
+                </DOMGroup>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

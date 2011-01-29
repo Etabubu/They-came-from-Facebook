@@ -3,6 +3,7 @@ package com.gogogic.gamejam.view
 	import com.gogogic.gamejam.Application;
 	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.vo.PlayerVO;
+	import com.gogogic.gamejam.view.components.EnemyDeckComponent;
 	import com.gogogic.gamejam.view.components.FriendCardComponent;
 	import com.gogogic.gamejam.view.components.GameBoardComponent;
 	import com.gogogic.gamejam.view.components.GameDeckComponent;
@@ -17,6 +18,7 @@ package com.gogogic.gamejam.view
 		private var _gameBoardComponent:GameBoardComponent;
 		private var _scoreComponent:ScoreComponent
 		private var _friendDeck:FriendDeck;
+		private var _enemyDeckComponent:EnemyDeckComponent;
 		private var _gameDeckComponent:GameDeckComponent;
 		
 		public function GameView()
@@ -24,7 +26,7 @@ package com.gogogic.gamejam.view
 			
 		}
 		
-		public function init(playerVO:PlayerVO, friendDeck:FriendDeck):void {
+		public function init(playerVO:PlayerVO, friendDeck:FriendDeck, enemyDeck:FriendDeck):void {
 			_friendDeck = friendDeck;
 			_playerVO = playerVO;
 			
@@ -35,9 +37,17 @@ package com.gogogic.gamejam.view
 			_gameDeckComponent.x = 50;
 			_gameDeckComponent.y = 700;
 			
+			addChild(_enemyDeckComponent = new EnemyDeckComponent(enemyDeck));
+			_enemyDeckComponent.x = 500;
+			_enemyDeckComponent.y = 20;
+			
 			addChild(_scoreComponent = new ScoreComponent(_playerVO));
 			_scoreComponent.x = Application.APPLICATION_WIDTH / 2;
 			_scoreComponent.y = 20;
+		}
+		
+		public function get gameBoardComponent():GameBoardComponent {
+			return _gameBoardComponent;
 		}
 	}
 }
