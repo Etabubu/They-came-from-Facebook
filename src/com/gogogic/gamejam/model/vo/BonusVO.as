@@ -7,6 +7,6 @@ package com.gogogic.gamejam.model.vo
 		public var subtext:String;
 		public var points:int;
 		
-		// XXX: Sound and maybe picture
+		// XXX: Sound and maybe picture?
 	}
 }
