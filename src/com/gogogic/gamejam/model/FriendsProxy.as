@@ -14,6 +14,10 @@ package com.gogogic.gamejam.model
 			super(NAME);
 		}
 		
+		public function loadFriends():void {
+			// TODO: Start loading friends
+		}
+		
 		private function onFriendsLoaded():void {
 			data = new Vector.<FriendVO>();
 			
