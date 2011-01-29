@@ -2,6 +2,7 @@ package com.gogogic.gamejam.view
 {
 	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.FriendsProxy;
+	import com.gogogic.gamejam.model.PlayerProxy;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
@@ -13,6 +14,7 @@ package com.gogogic.gamejam.view
 		public static const NAME:String = "GameMediator";
 		
 		private var _friendsProxy:FriendsProxy;
+		private var _playerProxy:PlayerProxy;
 		
 		public function GameMediator(gameView:GameView)
 		{
@@ -25,6 +27,7 @@ package com.gogogic.gamejam.view
 		
 		override public function onRegister():void {
 			_friendsProxy = facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy;
+			_playerProxy = facade.retrieveProxy(PlayerProxy.NAME) as PlayerProxy;
 			
 			if (_friendsProxy.friends) {
 				friendsLoaded();
@@ -46,8 +49,7 @@ package com.gogogic.gamejam.view
 		}
 		
 		private function friendsLoaded():void {
-			// TODO: Setup the game
-			gameView.init(new FriendDeck(_friendsProxy.friends));
+			gameView.init(_playerProxy.playerVO, new FriendDeck(_friendsProxy.friends));
 		}
 	}
 }

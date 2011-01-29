@@ -10,7 +10,7 @@ package com.gogogic.gamejam.model.vo
 	/**
 	 * Dispatched when any data on a value object is changed. 
 	 */	
-	[Event(name="dataChange", type="com.neopets.vendor.gogogic.terrarium.model.vo.event.DataChangeEvent")]
+	[Event(name="dataChange", type="com.gogogic.gamejam.model.vo.event.DataChangeEvent")]
 	
 	[RemoteClass(alias="BaseVO")]
 	public class BaseVO extends EventDispatcher

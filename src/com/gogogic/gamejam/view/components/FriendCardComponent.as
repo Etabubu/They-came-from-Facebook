@@ -24,7 +24,7 @@ package com.gogogic.gamejam.view.components
 		}
 		
 		private function onPortraitLoaded(bulkLoader:BulkLoader, path:String):void {
-			var portraitBitmap:Bitmap = bulkLoader.getBitmap(path);
+			var portraitBitmap:Bitmap = new Bitmap(bulkLoader.getBitmapData(path));
 			addChild(portraitBitmap);
 		}
 	}
