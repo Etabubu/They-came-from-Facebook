@@ -18,7 +18,9 @@ package com.gogogic.gamejam.view
 		public function MainMenuMediator(mainMenuView:MainMenuView)
 		{
 			super(NAME, mainMenuView);
-			
+		}
+		
+		override public function onRegister():void {
 			var friendsProxy:FriendsProxy = facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy;
 			if (friendsProxy.friends) {
 				friendsLoaded();
@@ -43,6 +45,7 @@ package com.gogogic.gamejam.view
 				case FriendsProxy.FRIEND_LIST_LOADED:
 					_friends = notification.getBody() as Vector.<FriendVO>;
 					friendsLoaded();
+					sendNotification(START_MAIN_GAME);
 					break;
 			}
 		}

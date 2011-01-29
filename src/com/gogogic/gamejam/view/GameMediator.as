@@ -1,7 +1,8 @@
 package com.gogogic.gamejam.view
 {
-	import com.gogogic.gamejam.model.vo.FriendVO;
+	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.FriendsProxy;
+	import com.gogogic.gamejam.model.vo.FriendVO;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
 	import org.puremvc.as3.multicore.interfaces.INotification;
@@ -48,6 +49,7 @@ package com.gogogic.gamejam.view
 		
 		private function friendsLoaded():void {
 			// TODO: Setup the game
+			gameView.init(new FriendDeck(_friends));
 		}
 	}
 }
