@@ -13,6 +13,8 @@ package com.gogogic.gamejam.model
 		public function BonusProxy()
 		{
 			super(NAME);
+			
+			setupBonuses();
 		}
 		
 		public function setupBonuses():void {

@@ -14,6 +14,8 @@ package com.gogogic.gamejam.model
 		public function UnitTypeProxy()
 		{
 			super(NAME);
+			
+			setupUnitTypes();
 		}
 		
 		public function setupUnitTypes():void {
