@@ -8,7 +8,7 @@ package com.gogogic.gamejam.view.components
 	{
 		public function EnemyCardComponent(friendVO:FriendVO)
 		{
-			super();
+			
 		}
 	}
 }
