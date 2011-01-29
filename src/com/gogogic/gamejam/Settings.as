@@ -3,7 +3,7 @@ package com.gogogic.gamejam
 	public final class Settings
 	{
 		// for drawing a card from the deck
-		public static const COOLDOWN_TIME:Number = 1000;
+		public static const COOLDOWN_TIME:Number = 5000;
 		
 		// for playing cards
 		public static const MAX_ENERGY:Number = 1200;
