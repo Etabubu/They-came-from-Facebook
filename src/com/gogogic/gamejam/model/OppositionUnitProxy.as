@@ -64,6 +64,8 @@ package com.gogogic.gamejam.model
 		private function onSpawnTimer(e:TimerEvent):void {
 			var unitComponent:UnitComponent;
 			
+			_spawnTimer.delay = _spawnTimer.delay * 0.9;
+			
 			// TODO: Create different superclasses of unitComponent according to the friendVO
 			
 			// DEBUG

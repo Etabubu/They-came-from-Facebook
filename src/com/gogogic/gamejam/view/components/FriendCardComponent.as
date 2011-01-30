@@ -35,7 +35,7 @@ package com.gogogic.gamejam.view.components
 			_friendCard.mcPortrait.addChild(portrait);
 			_friendCard.txtName.text = _friendVO.name;
 			_friendCard.txtClass.text = "Random";
-			_friendCard.txtPowerLevel.text = "?";
+			_friendCard.txtPowerLevel.text = _friendVO.energyCost.toString();
 			discardButton.buttonMode = true;
 			discardButton.addEventListener(MouseEvent.ROLL_OVER, onDiscardOver);
 			discardButton.addEventListener(MouseEvent.ROLL_OUT, onDiscardOut);

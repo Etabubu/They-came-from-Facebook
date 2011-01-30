@@ -40,6 +40,7 @@ package com.gogogic.gamejam.view.components
 		}
 		
 		protected function onUnitVODataChange(e:DataChangeEvent):void {
+			if (!_unitVO) return;
 			update();
 		}
 		

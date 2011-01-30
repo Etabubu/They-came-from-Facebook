@@ -80,6 +80,8 @@ package com.gogogic.gamejam.model
 				// assign bonuses
 				(facade.retrieveProxy(BonusProxy.NAME) as BonusProxy).assignBonuses(newFriend);
 				
+				newFriend.energyCost = Math.random()*8000+650;
+				
 				allFriends.push(newFriend);
 			}
 			

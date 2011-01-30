@@ -2,14 +2,16 @@ package com.gogogic.gamejam.model
 {
 	import com.facebook.graph.Facebook;
 	import com.facebook.graph.data.FacebookSession;
+	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.enum.Gender;
 	import com.gogogic.gamejam.enum.Relationship;
-	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.model.vo.PlayerVO;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
+	import flash.events.TimerEvent;
+	import flash.utils.Timer;
 	
 	import org.puremvc.as3.multicore.interfaces.IProxy;
 	import org.puremvc.as3.multicore.patterns.proxy.Proxy;
@@ -19,6 +21,8 @@ package com.gogogic.gamejam.model
 		public static const NAME:String = "PlayerProxy";
 		
 		private var _frameDispatcher:EventDispatcher;
+		
+		private var _scoreTimer:Timer;
 		
 		public function PlayerProxy()
 		{
@@ -87,11 +91,22 @@ package com.gogogic.gamejam.model
 			if (_frameDispatcher) return;
 			_frameDispatcher = new Sprite();
 			_frameDispatcher.addEventListener(Event.ENTER_FRAME, onFrame);
+			_scoreTimer = new Timer(1000);
+			_scoreTimer.addEventListener(TimerEvent.TIMER, onScoreTimer);
+			_scoreTimer.start();
+		}
+		
+		private function onScoreTimer(e:TimerEvent):void {
+			playerVO.score++;
+			playerVO.triggerDataChangeEvent();
 		}
 		
 		public function stopEnergyRegen():void {
 			_frameDispatcher.removeEventListener(Event.ENTER_FRAME, onFrame);
 			_frameDispatcher = null;
+			_scoreTimer.stop();
+			_scoreTimer.removeEventListener(TimerEvent.TIMER, onScoreTimer);
+			_scoreTimer = null;
 		}
 		
 		private function onFrame(e:Event):void {
