@@ -5,6 +5,7 @@ package com.gogogic.gamejam.view.components.units
 	import com.gogogic.gamejam.view.components.UnitComponent;
 	import com.greensock.TweenLite;
 	
+	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.geom.Point;
 
@@ -12,6 +13,7 @@ package com.gogogic.gamejam.view.components.units
 	{
 		private var _target:UnitVO;
 		private var _resting:Boolean = false;
+		private var _character:MovieClip;
 		
 		public function SlasherUnitComponent()
 		{
@@ -19,7 +21,14 @@ package com.gogogic.gamejam.view.components.units
 			unitVO.maxHealth = unitVO.currentHealth = 50;
 			
 			super(unitVO);
-			addChild(new BasicCharacter());
+		}
+		
+		
+		
+		override protected function onInitDone():void {
+			_character = new BasicCharacter();
+			if (unitVO.isEnemy) _character.gotoAndStop(2);
+			addChild(_character);
 			addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		}
 		
