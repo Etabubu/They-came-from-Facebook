@@ -1,6 +1,8 @@
 package com.gogogic.gamejam.view
 {
 	import com.facebook.graph.Facebook;
+	import com.facebook.graph.utils.FacebookDataUtils;
+	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.model.FriendsProxy;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
@@ -34,10 +36,46 @@ package com.gogogic.gamejam.view
 				// if login/auth fail - keep prompting.
 				//Facebook.init(
 				// if logged in
-				friendsProxy.loadFriends();
+				//friendsProxy.loadFriends();
 				// TODO: Disable start game button
 				// TODO: Show a message in main menu view that it is loading the friends
+				
+				
+				
+				//var topURL:String=Facebook.ExternalInterface.call('top.location.toString');
+				//if(topURL != "FACEBOOKURL") {
+					// redirect to the Facebook app page
+					
+				//}
+				
+				
+				//Facebook.login(facebookLoginHandler, {perms:"publish_stream,user_about_me,friends_about_me,user_relationships,user_relationship_details,friends_birthday,user_birthday,email"});
 			}
+			Facebook.init(Settings.FACEBOOK_APP_ID, facebookLoginHandler, {perms:Settings.FACEBOOK_PERMS});
+			//Facebook.login(facebookLoginHandler, {perms:Settings.FACEBOOK_PERMS});
+		}
+		
+		public function facebookLoginHandler(success:Object,fail:Object):void {
+			trace("login handler got back", success, fail);
+			trace(Facebook.getSession());
+			if(fail == null && success && Facebook.getSession() != null) {
+				// yay!
+				//Facebook.api("/me/feed",facebookSubmitPostHandler,{message:"HAHA! I did it!"}, "POST");
+				Facebook.fqlQuery("/jepo.au?fields=id,name", getPicture);
+				Facebook.setCanvasAutoResize();
+				//trace(Facebook.getImageUrl("/me/picture/"));
+			} else {
+				// keep prompting them
+				Facebook.init(Settings.FACEBOOK_APP_ID, facebookLoginHandler, {perms:Settings.FACEBOOK_PERMS});
+			}
+		}
+		
+		public function getPicture(success:Object, fail:Object):void {
+			trace(success, fail);
+		}
+		
+		public function facebookSubmitPostHandler(success:Object,fail:Object):void {
+			trace("submit post handler got back", success, fail);
 		}
 		
 		public function get mainMenuView():MainMenuView {
@@ -62,7 +100,7 @@ package com.gogogic.gamejam.view
 		private function friendsLoaded():void {
 			// TODO: Enable start game button
 			// TODO: Show in main menu view that the friends have been loaded
-			sendNotification(START_MAIN_GAME);
+			//sendNotification(START_MAIN_GAME);
 		}
 	}
 }
