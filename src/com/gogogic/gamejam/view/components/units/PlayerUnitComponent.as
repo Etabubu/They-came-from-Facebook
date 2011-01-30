@@ -14,7 +14,7 @@ package com.gogogic.gamejam.view.components.units
 			addChild(new PlayerCharacter());
 			
 			playerUnitVO.x = Application.APPLICATION_WIDTH / 2;
-			playerUnitVO.y = 650;
+			playerUnitVO.y = 605;
 			
 			super(playerUnitVO);
 			update();

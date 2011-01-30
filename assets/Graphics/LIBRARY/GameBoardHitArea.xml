@@ -1,0 +1,33 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="GameBoardHitArea" itemID="4d45709d-00000222" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.GameBoardHitArea" sourceLibraryItemHRef="Symbol 1" lastModified="1296396549">
+  <timeline>
+    <DOMTimeline name="GameBoardHitArea">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#F6BD0E" alpha="0.454901960784314"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!6391 3567[5889 2678 5055 1915!5055 1915[2968 0 17 0!17 0[-2934 0 -5027 1915!-5027 1915[-5886 2703 -6391 3627!-6391 3627[-6029 3794 -5630 3946!-5630 3946[-3049 4932 64 4940!64 4940[3182 4948 5660 3906!5660 3906[6042 3745 6391 3567"/>
+                    <Edge cubics="!6455 4940(;9490,4948 11586,4181 12782,3567q6455 4940Q9573 4948q12051 3906Q12433 3745q12782 3567);"/>
+                    <Edge cubics="!0 3627(;243,3739 496,3845 761,3946q0 3627Q362 3794q761 3946);"/>
+                    <Edge cubics="!761 3946(;2481,4604 4380,4934 6455,4940q761 3946Q3342 4932q6455 4940);"/>
+                    <Edge cubics="!0 3627(;337,3011 791,2440 1364,1915q0 3627Q505 2703q1364 1915);"/>
+                    <Edge cubics="!6408 0(;8375,0 10055,638 11446,1915q6408 0Q9359 0q11446 1915);"/>
+                    <Edge cubics="!1364 1915(;2759,638 4441,0 6408,0q1364 1915Q3457 0q6408 0);"/>
+                    <Edge cubics="!11446 1915(;12002,2424 12447,2974 12782,3567q11446 1915Q12280 2678q12782 3567);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

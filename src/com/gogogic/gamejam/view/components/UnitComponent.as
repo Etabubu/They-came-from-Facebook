@@ -31,7 +31,12 @@ package com.gogogic.gamejam.view.components
 			_unitVO.y = y;
 			_unitVO.isEnemy = isEnemy;
 			_allUnits = allUnits;
+			onInitDone();
 			update();
+		}
+		
+		protected function onInitDone():void {
+			// Override me if necessary
 		}
 		
 		protected function onUnitVODataChange(e:DataChangeEvent):void {

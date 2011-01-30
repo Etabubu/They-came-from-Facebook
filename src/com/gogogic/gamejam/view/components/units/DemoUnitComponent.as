@@ -32,8 +32,12 @@ package com.gogogic.gamejam.view.components.units
 		}
 		
 		override protected function onDie():void {
-			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
 			dispatchEvent(new Event(Event.COMPLETE));
+		}
+		
+		override public function dispose():void {
+			super.dispose();
+			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
 		}
 		
 	}

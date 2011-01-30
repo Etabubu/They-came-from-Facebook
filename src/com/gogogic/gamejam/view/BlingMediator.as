@@ -51,7 +51,7 @@ package com.gogogic.gamejam.view
 			}
 			
 			_isBusy = true;
-			TweenLite.delayedCall(.3, onCooledDown);
+			TweenLite.delayedCall(1, onCooledDown);
 			
 			var blingComponent:BlingComponent = new BlingComponent(bonusVO);
 			blingLayer.addChild(blingComponent);

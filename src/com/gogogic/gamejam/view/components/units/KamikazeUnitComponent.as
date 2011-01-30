@@ -46,5 +46,11 @@ package com.gogogic.gamejam.view.components.units
 				TweenLite.delayedCall(1, dispatchEvent, [new Event(Event.COMPLETE)]);
 			}
 		}
+		
+		override public function dispose():void {
+			super.dispose();
+			TweenLite.killDelayedCallsTo(dispatchEvent);
+			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
+		}
 	}
 }

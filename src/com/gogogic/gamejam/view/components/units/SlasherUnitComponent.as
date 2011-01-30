@@ -60,5 +60,10 @@ package com.gogogic.gamejam.view.components.units
 			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
 			dispatchEvent(new Event(Event.COMPLETE));
 		}
+		
+		override public function dispose():void {
+			super.dispose();
+			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
+		}
 	}
 }
