@@ -52,5 +52,12 @@ package com.gogogic.gamejam.model
 			}
 			playerVO.triggerDataChangeEvent();
 		}
+		
+		
+		public function reset():void {
+			playerVO.energy = playerVO.reserveEnergy = 1;
+			playerVO.score = 0;
+			playerVO.playerUnit = null;
+		}
 	}
 }

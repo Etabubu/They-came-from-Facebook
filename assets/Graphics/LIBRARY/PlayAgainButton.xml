@@ -1,46 +1,46 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/btnPlay" itemID="4d445ee6-000037c2" sourceLibraryItemHRef="Symbol 1" lastModified="1296344338" lastUniqueIdentifier="14">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="PlayAgainButton" itemID="4d4551cc-000002b7" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.PlayAgainButton" sourceLibraryItemHRef="Symbol 1" lastModified="1296388619">
   <timeline>
-    <DOMTimeline name="btnPlay" currentFrame="3">
+    <DOMTimeline name="PlayAgainButton">
       <layers>
-        <DOMLayer name="Layer 2" color="#9933CC">
+        <DOMLayer name="Label" color="#4FFF4F" autoNamed="false">
           <frames>
-            <DOMFrame index="0" duration="4" keyMode="9728">
-              <Actionscript>
-                <script><![CDATA[stop();]]></script>
-              </Actionscript>
+            <DOMFrame index="0" name="_normal" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="_over" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="_hit" labelType="name" keyMode="9728">
               <elements/>
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Label" color="#FF800A" autoNamed="false">
-          <frames>
-            <DOMFrame index="0" name="_FBload" labelType="name" keyMode="9728">
-              <elements/>
-            </DOMFrame>
-            <DOMFrame index="1" name="_normal" labelType="name" keyMode="9728">
-              <elements/>
-            </DOMFrame>
-            <DOMFrame index="2" name="_over" labelType="name" keyMode="9728">
-              <elements/>
-            </DOMFrame>
-            <DOMFrame index="3" name="_hit" labelType="name" keyMode="9728">
-              <elements/>
-            </DOMFrame>
-          </frames>
-        </DOMLayer>
-        <DOMLayer name="Layer 1" color="#0000FF" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="Layer 1" color="#FF4FFF" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
-              <elements/>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/txtPlay" name="" selected="true" centerPoint3DX="151.8" centerPoint3DY="33.5">
+                  <matrix>
+                    <Matrix a="0.634552001953125" d="0.634552001953125" tx="82.35" ty="10.15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="109.35" y="36.7"/>
+                  </transformationPoint>
+                  <filters>
+                    <GlowFilter blurX="12.14453125" blurY="12.14453125" color="#CC3300" strength="30"/>
+                    <DropShadowFilter angle="90" blurX="0" blurY="0" strength="0.6"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="txtPlayGame" name="" selected="true" centerPoint3DX="151.8" centerPoint3DY="57.5">
+                <DOMSymbolInstance libraryItemName="Assets/txtPlay" name="" centerPoint3DX="151.8" centerPoint3DY="33.5">
                   <matrix>
-                    <Matrix tx="42.3" ty="20.75"/>
+                    <Matrix a="0.80743408203125" d="0.80743408203125" tx="64.1" ty="-1.85"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="109.5" y="36.75"/>
+                    <Point x="105.5" y="69.5"/>
                   </transformationPoint>
                   <filters>
                     <GlowFilter blurX="12.14453125" blurY="12.14453125" color="#CC3300" strength="30"/>
@@ -51,28 +51,12 @@
             </DOMFrame>
             <DOMFrame index="2" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="txtPlayGame" name="" centerPoint3DX="151.8" centerPoint3DY="57.5">
+                <DOMSymbolInstance libraryItemName="Assets/txtPlay" name="" centerPoint3DX="151.8" centerPoint3DY="33.5">
                   <matrix>
-                    <Matrix a="1.0999755859375" d="1.0999755859375" tx="31.35" ty="17.05"/>
+                    <Matrix a="0.55328369140625" d="0.55328369140625" tx="91.25" ty="13.15"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="109.5" y="36.75"/>
-                  </transformationPoint>
-                  <filters>
-                    <GlowFilter blurX="12.14453125" blurY="12.14453125" color="#CC3300" strength="30"/>
-                    <DropShadowFilter angle="90" blurX="0" blurY="0" strength="0.6"/>
-                  </filters>
-                </DOMSymbolInstance>
-              </elements>
-            </DOMFrame>
-            <DOMFrame index="3" keyMode="9728">
-              <elements>
-                <DOMSymbolInstance libraryItemName="txtPlayGame" name="" centerPoint3DX="151.8" centerPoint3DY="57.5">
-                  <matrix>
-                    <Matrix a="0.920013427734375" d="0.920013427734375" tx="51.05" ty="23.65"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="109.5" y="36.8"/>
+                    <Point x="109.35" y="36.7"/>
                   </transformationPoint>
                   <filters>
                     <GlowFilter blurX="12.14453125" blurY="12.14453125" color="#CC3300" strength="30"/>
@@ -83,17 +67,20 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 1" color="#4FFF4F">
+        <DOMLayer name="Layer 5" color="#4FFFFF" current="true" isSelected="true">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/mcLoading" name="" centerPoint3DX="67.85" centerPoint3DY="44.1">
+                <DOMSymbolInstance libraryItemName="Assets/LeaderboardBack" name="" selected="true" blendMode="overlay" centerPoint3DX="153.5" centerPoint3DY="75">
                   <matrix>
-                    <Matrix tx="60.35" ty="24"/>
+                    <Matrix d="0.279327392578125"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="7.5" y="20.1"/>
+                    <Point x="153.5" y="213"/>
                   </transformationPoint>
+                  <filters>
+                    <DropShadowFilter angle="90" blurX="0" blurY="0" color="#CCCCCC" distance="1" quality="2"/>
+                  </filters>
                 </DOMSymbolInstance>
               </elements>
             </DOMFrame>
@@ -113,28 +100,13 @@
               </elements>
             </DOMFrame>
             <DOMFrame index="2" keyMode="9728">
-              <elements>
-                <DOMSymbolInstance libraryItemName="Assets/LeaderboardBack" name="" blendMode="overlay" centerPoint3DX="153.5" centerPoint3DY="75">
-                  <matrix>
-                    <Matrix d="0.279327392578125"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="153.5" y="213"/>
-                  </transformationPoint>
-                  <filters>
-                    <DropShadowFilter angle="90" blurX="0" blurY="0" color="#CCCCCC" distance="1" quality="2"/>
-                  </filters>
-                </DOMSymbolInstance>
-              </elements>
-            </DOMFrame>
-            <DOMFrame index="3" keyMode="9728">
               <elements>
                 <DOMSymbolInstance libraryItemName="Assets/LeaderboardBack" name="" blendMode="darken" centerPoint3DX="153.5" centerPoint3DY="75">
                   <matrix>
-                    <Matrix d="0.279327392578125"/>
+                    <Matrix a="0.92181396484375" d="0.257492065429688" tx="12" ty="4.65"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="153.5" y="213"/>
+                    <Point x="153.5" y="213.05"/>
                   </transformationPoint>
                   <filters>
                     <DropShadowFilter angle="90" blurX="0" blurY="0" color="#CCCCCC" distance="1" quality="2"/>

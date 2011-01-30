@@ -39,6 +39,7 @@
           <Include href="Assets/txtPlay.xml" loadImmediate="false"/>
           <Include href="Assets/txtText.xml" loadImmediate="false"/>
           <Include href="BasicCharacter.xml"/>
+          <Include href="EndScore.xml"/>
           <Include href="EnergyBarGraphic.xml"/>
           <Include href="FriendCardGraphic.xml"/>
           <Include href="FriendDeckGraphic.xml"/>
@@ -46,9 +47,11 @@
           <Include href="MainMenu.xml"/>
           <Include href="NextUp.xml"/>
           <Include href="NextUpIcon.xml"/>
+          <Include href="PlayAgainButton.xml"/>
           <Include href="PlayerCharacter.xml"/>
           <Include href="PlayerUnitHealth.xml"/>
           <Include href="Score.xml"/>
+          <Include href="txtPlayGame.xml" loadImmediate="false"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1">
@@ -366,6 +369,8 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2549116" publishTime="1296388668"/>
+          <PublishItem publishSize="2547875" publishTime="1296385762"/>
           <PublishItem publishSize="2547887" publishTime="1296384247"/>
           <PublishItem publishSize="2547789" publishTime="1296384212"/>
           <PublishItem publishSize="2547328" publishTime="1296359860"/>
@@ -384,7 +389,5 @@
           <PublishItem publishSize="2474672" publishTime="1296352928"/>
           <PublishItem publishSize="2473798" publishTime="1296352549"/>
           <PublishItem publishSize="2473797" publishTime="1296352504"/>
-          <PublishItem publishSize="2473686" publishTime="1296352430"/>
-          <PublishItem publishSize="2473686" publishTime="1296352407"/>
      </publishHistory>
 </DOMDocument>
