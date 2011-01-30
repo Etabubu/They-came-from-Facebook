@@ -6,6 +6,8 @@ package com.gogogic.gamejam.view
 	import com.gogogic.gamejam.model.FriendsProxy;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
+	import mx.core.mx_internal;
+	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
 	import org.puremvc.as3.multicore.interfaces.INotification;
 	import org.puremvc.as3.multicore.patterns.mediator.Mediator;
@@ -57,21 +59,24 @@ package com.gogogic.gamejam.view
 		
 		public function facebookLoginHandler(success:Object,fail:Object):void {
 			trace("login handler got back", success, fail);
-			trace(Facebook.getSession());
 			if(fail == null && success && Facebook.getSession() != null) {
 				// yay!
 				//Facebook.api("/me/feed",facebookSubmitPostHandler,{message:"HAHA! I did it!"}, "POST");
-				Facebook.fqlQuery("/jepo.au?fields=id,name", getPicture);
+				trace(Facebook.getSession());
+				Facebook.api("/me/friends", getPicture);
 				Facebook.setCanvasAutoResize();
 				//trace(Facebook.getImageUrl("/me/picture/"));
 			} else {
 				// keep prompting them
-				Facebook.init(Settings.FACEBOOK_APP_ID, facebookLoginHandler, {perms:Settings.FACEBOOK_PERMS});
+				Facebook.login(facebookLoginHandler, {perms:Settings.FACEBOOK_PERMS});
 			}
 		}
 		
 		public function getPicture(success:Object, fail:Object):void {
 			trace(success, fail);
+			if(success != null) {
+				
+			}
 		}
 		
 		public function facebookSubmitPostHandler(success:Object,fail:Object):void {
