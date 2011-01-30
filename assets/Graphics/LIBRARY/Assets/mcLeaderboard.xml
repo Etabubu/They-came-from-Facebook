@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/mcLeaderboard" itemID="4d445318-00000d0e" sourceLibraryItemHRef="Symbol 1" lastModified="1296327688" lastUniqueIdentifier="9">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/mcLeaderboard" itemID="4d445318-00000d0e" sourceLibraryItemHRef="Symbol 1" lastModified="1296344761" lastUniqueIdentifier="9">
   <timeline>
     <DOMTimeline name="mcLeaderboard">
       <layers>
-        <DOMLayer name="Layer 8" color="#FF4F4F" locked="true">
+        <DOMLayer name="Layer 8" color="#FF4F4F">
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
@@ -24,7 +24,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Friend" color="#4F80FF" locked="true" autoNamed="false">
+        <DOMLayer name="Friend" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
@@ -40,7 +40,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="devider" color="#808080" locked="true" autoNamed="false">
+        <DOMLayer name="devider" color="#808080" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
@@ -56,7 +56,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Week text" color="#4FFFFF" locked="true" autoNamed="false">
+        <DOMLayer name="Week text" color="#4FFFFF" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -132,7 +132,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Selected" color="#FF4FFF" locked="true" autoNamed="false">
+        <DOMLayer name="Selected" color="#FF4FFF" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -176,7 +176,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="title" color="#0000FF" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="title" color="#0000FF" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
@@ -192,16 +192,16 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="colorback" color="#FF800A" locked="true" autoNamed="false">
+        <DOMLayer name="colorback" color="#FF800A" autoNamed="false">
           <frames>
             <DOMFrame index="0" duration="2" keyMode="9728">
               <elements>
-                <DOMRectangleObject objectWidth="279" objectHeight="350" x="14" y="59" selected="true" lockFlag="true">
+                <DOMRectangleObject objectWidth="279" objectHeight="350" x="14" y="59" lockFlag="true">
                   <fill>
                     <SolidColor/>
                   </fill>
                 </DOMRectangleObject>
-                <DOMRectangleObject objectWidth="277.85" objectHeight="348.6" x="14" y="59" selected="true" lockFlag="true">
+                <DOMRectangleObject objectWidth="277.85" objectHeight="348.6" x="14" y="59" lockFlag="true">
                   <matrix>
                     <Matrix d="0.0715789794921875" ty="54.8"/>
                   </matrix>
@@ -222,11 +222,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="back" color="#4FFF4F" locked="true" autoNamed="false">
+        <DOMLayer name="back" color="#4FFF4F" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/LeaderboardBack" name="" selected="true" blendMode="overlay" centerPoint3DX="153.5" centerPoint3DY="213">
+                <DOMSymbolInstance libraryItemName="Assets/LeaderboardBack" name="" blendMode="overlay" centerPoint3DX="153.5" centerPoint3DY="213">
                   <transformationPoint>
                     <Point x="153.5" y="213"/>
                   </transformationPoint>

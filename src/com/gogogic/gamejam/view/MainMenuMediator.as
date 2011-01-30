@@ -7,6 +7,7 @@ package com.gogogic.gamejam.view
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
 	import mx.core.mx_internal;
+	import flash.events.Event;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
 	import org.puremvc.as3.multicore.interfaces.INotification;
@@ -103,9 +104,12 @@ package com.gogogic.gamejam.view
 		}
 		
 		private function friendsLoaded():void {
-			// TODO: Enable start game button
-			// TODO: Show in main menu view that the friends have been loaded
-			//sendNotification(START_MAIN_GAME);
+			mainMenuView.doneLoadingFacebook();
+			mainMenuView.addEventListener(MainMenuView.START_CLICKED, onStartClicked);
+		}
+		
+		private function onStartClicked(e:Event):void {
+			sendNotification(START_MAIN_GAME);
 		}
 	}
 }

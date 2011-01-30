@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/txtHowlogn" itemID="4d44524d-000009ca" sourceLibraryItemHRef="Symbol 1" lastModified="1296323149">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/txtHowlogn" itemID="4d44524d-000009ca" sourceLibraryItemHRef="Symbol 1" lastModified="1296347215">
   <timeline>
     <DOMTimeline name="txtHowlogn">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText selected="true" width="208.4" height="23.6" isSelectable="false" lineType="multiline">
+                <DOMStaticText width="208.4" height="20.55" isSelectable="false">
                   <matrix>
                     <Matrix tx="2" ty="2"/>
                   </matrix>
@@ -18,8 +18,8 @@
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
-                </DOMDynamicText>
-                <DOMDynamicText selected="true" width="198" height="124.9" isSelectable="false" lineType="multiline">
+                </DOMStaticText>
+                <DOMStaticText width="198" height="56.55" isSelectable="false">
                   <matrix>
                     <Matrix tx="41.2" ty="29.2"/>
                   </matrix>
@@ -31,7 +31,7 @@
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
-                </DOMDynamicText>
+                </DOMStaticText>
               </elements>
             </DOMFrame>
           </frames>

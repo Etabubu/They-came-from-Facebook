@@ -5,6 +5,7 @@ package com.gogogic.gamejam.view
 	import com.gogogic.gamejam.model.OppositionUnitProxy;
 	import com.gogogic.gamejam.model.PlayerProxy;
 	import com.gogogic.gamejam.model.vo.FriendVO;
+	import com.gogogic.gamejam.view.components.units.PlayerUnitComponent;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
 	import org.puremvc.as3.multicore.interfaces.INotification;
@@ -17,6 +18,8 @@ package com.gogogic.gamejam.view
 		private var _friendsProxy:FriendsProxy;
 		private var _playerProxy:PlayerProxy;
 		private var _oppositionProxy:OppositionUnitProxy;
+		
+		private var _playerUnitComponent:PlayerUnitComponent;
 		
 		public function GameMediator(gameView:GameView)
 		{
@@ -52,11 +55,25 @@ package com.gogogic.gamejam.view
 		}
 		
 		private function friendsLoaded():void {
+			start();
+		}
+		
+		private function start():void {
 			// Set up the opposition friendDeck by supplying the "enemy friends" to the opposition proxy
 			_oppositionProxy.oppositionFriends = _friendsProxy.enemies;
 			gameView.init(_playerProxy.playerVO, new FriendDeck(_friendsProxy.friends), _oppositionProxy.oppositionDeck);
 			// Register the mediator for the game board
 			facade.registerMediator(new GameBoardMediator(gameView.gameBoardComponent));
+			// Start the enemy
+			_oppositionProxy.start();
+			// Create the player unit
+			_playerUnitComponent = new PlayerUnitComponent();
+			_playerProxy.playerVO.playerUnit = _playerUnitComponent.unitVO;
+			sendNotification(GameBoardMediator.ADD_UNIT, _playerUnitComponent);
 		}
 	}
 }
+
+
+
+

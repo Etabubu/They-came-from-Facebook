@@ -21,5 +21,7 @@ package com.gogogic.gamejam
 		
 		// Facebook permissions
 		public static const FACEBOOK_PERMS:String = "publish_stream,user_about_me,friends_about_me,user_relationships,user_relationship_details,friends_birthday,user_birthday,email";
+
+		public static const PLAYER_UNIT_STARTING_HEALTH:Number = 200;
 	}
 }

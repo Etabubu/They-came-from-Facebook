@@ -7,6 +7,7 @@ package com.gogogic.gamejam.view.components
 	import com.gogogic.gamejam.view.events.DropFriendEvent;
 	
 	import flash.display.Sprite;
+	import flash.events.Event;
 	import flash.geom.Point;
 	
 	public class GameBoardComponent extends Sprite
@@ -40,10 +41,17 @@ package com.gogogic.gamejam.view.components
 		
 		public function insertUnit(unit:UnitComponent):void {
 			_unitLayer.addChild(unit);
+			unit.addEventListener(Event.COMPLETE, onUnitComplete);
 		}
 		
 		public function removeUnit(unit:UnitComponent):void {
+			unit.removeEventListener(Event.COMPLETE, onUnitComplete);
 			_unitLayer.removeChild(unit);
+			unit.dispose();
+		}
+		
+		private function onUnitComplete(e:Event):void {
+			removeUnit(e.currentTarget as UnitComponent);
 		}
 	}
 }
