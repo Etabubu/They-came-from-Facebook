@@ -44,7 +44,7 @@ package com.gogogic.gamejam.model
 				playerVO.energy = 1;
 				playerVO.dispatchEvent(new Event(PlayerVO.ENERGY_BARS_SWITCHED));
 			} else {
-				playerVO.reserveEnergy += 0.01;
+				playerVO.reserveEnergy += 0.001;
 				if (playerVO.reserveEnergy >= 1) {
 					playerVO.reserveEnergy = 1;
 				}

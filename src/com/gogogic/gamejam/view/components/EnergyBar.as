@@ -24,7 +24,8 @@ package com.gogogic.gamejam.view.components
 		}
 		
 		private function update():void {
-			
+			_energyBarGraphic.mcMainEnergy.scaleX = _playerVO.energy;
+			_energyBarGraphic.mcChargingEnergy.scaleX = _playerVO.reserveEnergy;
 		}
 	}
 }

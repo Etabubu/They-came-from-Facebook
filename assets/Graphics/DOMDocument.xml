@@ -25,6 +25,7 @@
           <Include href="Assets/FriendCard_Image.xml" loadImmediate="false"/>
           <Include href="Assets/FriendCard_Use.xml" loadImmediate="false"/>
           <Include href="Assets/FriendDeck.xml" loadImmediate="false"/>
+          <Include href="Assets/HealthMask.xml" loadImmediate="false"/>
           <Include href="Assets/LeaderboardBack.xml" loadImmediate="false"/>
           <Include href="Assets/MainEnergy.xml" loadImmediate="false"/>
           <Include href="Assets/mcDevider.xml" loadImmediate="false"/>
@@ -46,6 +47,7 @@
           <Include href="NextUp.xml"/>
           <Include href="NextUpIcon.xml"/>
           <Include href="PlayerCharacter.xml"/>
+          <Include href="PlayerUnitHealth.xml"/>
           <Include href="Score.xml"/>
      </symbols>
      <timelines>
@@ -364,6 +366,9 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2547887" publishTime="1296384247"/>
+          <PublishItem publishSize="2547789" publishTime="1296384212"/>
+          <PublishItem publishSize="2547328" publishTime="1296359860"/>
           <PublishItem publishSize="2547342" publishTime="1296359808"/>
           <PublishItem publishSize="2547316" publishTime="1296358763"/>
           <PublishItem publishSize="2547313" publishTime="1296358715"/>
@@ -381,8 +386,5 @@
           <PublishItem publishSize="2473797" publishTime="1296352504"/>
           <PublishItem publishSize="2473686" publishTime="1296352430"/>
           <PublishItem publishSize="2473686" publishTime="1296352407"/>
-          <PublishItem publishSize="2473687" publishTime="1296352344"/>
-          <PublishItem publishSize="2508854" publishTime="1296351251"/>
-          <PublishItem publishSize="399128" publishTime="1296350384"/>
      </publishHistory>
 </DOMDocument>

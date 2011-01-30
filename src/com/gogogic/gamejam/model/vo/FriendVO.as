@@ -8,6 +8,7 @@ package com.gogogic.gamejam.model.vo
 		public var portraitUrl:String;
 		public var bonuses:Vector.<BonusVO>;
 		public var unitType:UnitTypeBaseVO;
+		public var energyCost:Number;
 		
 		// facebook info
 		public var relationship:String; //son/daughter/brother/sister/father/mother/engaged/married/complicated etc

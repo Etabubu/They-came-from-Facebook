@@ -2,6 +2,7 @@ package com.gogogic.gamejam.view
 {
 	import com.gogogic.gamejam.UserUnitProxy;
 	import com.gogogic.gamejam.model.OppositionUnitProxy;
+	import com.gogogic.gamejam.model.PlayerProxy;
 	import com.gogogic.gamejam.model.vo.UnitVO;
 	import com.gogogic.gamejam.view.components.GameBoardComponent;
 	import com.gogogic.gamejam.view.components.UnitComponent;
@@ -34,6 +35,8 @@ package com.gogogic.gamejam.view
 			// Let the unit handler proxies have references to all of the units
 			(facade.retrieveProxy(OppositionUnitProxy.NAME) as OppositionUnitProxy).gameBoardUnits = _units;
 			(facade.retrieveProxy(UserUnitProxy.NAME) as UserUnitProxy).gameBoardUnits = _units;
+			// Add the player unit to the units list, the gameboardcomponent will create the unit component on its own
+			_units.push((facade.retrieveProxy(PlayerProxy.NAME) as PlayerProxy).playerVO.playerUnit);
 		}
 		
 		public function get gameBoardComponent():GameBoardComponent {

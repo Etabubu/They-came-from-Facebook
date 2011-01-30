@@ -5,6 +5,7 @@ package com.gogogic.gamejam.view.components
 	import com.gogogic.dragmanager.events.DragEvent;
 	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.model.FriendDeck;
+	import com.gogogic.gamejam.model.vo.PlayerVO;
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -17,10 +18,12 @@ package com.gogogic.gamejam.view.components
 		private var _coolDownComponent:CooldDownComponent;
 		
 		private var _friendCards:Vector.<FriendCardComponent>;
+		private var _playerVO:PlayerVO;
 		
-		public function GameDeckComponent(friendDeck:FriendDeck)
+		public function GameDeckComponent(friendDeck:FriendDeck, playerVO:PlayerVO)
 		{
 			_friendDeck = friendDeck;
+			_playerVO = playerVO;
 			init();
 		}
 		
@@ -39,7 +42,7 @@ package com.gogogic.gamejam.view.components
 		}
 		
 		private function addFriendCard():void {
-			var newFriendCard:FriendCardComponent = new FriendCardComponent(_friendDeck.drawNext());
+			var newFriendCard:FriendCardComponent = new FriendCardComponent(_friendDeck.drawNext(), _playerVO);
 			// Find the first available index
 			var index:int = 0;
 			do {
@@ -62,6 +65,8 @@ package com.gogogic.gamejam.view.components
 				removeCard(friendCard);
 			} else {
 				// Drag
+				if (!friendCard.canAfford) return;
+				
 				var dragSource:DragSource = new DragSource();
 				dragSource.addData(friendCard.friendVO, "friendCard");
 				
@@ -83,6 +88,8 @@ package com.gogogic.gamejam.view.components
 			} else {
 				// Successfull
 				removeCard(friendCard);
+				_playerVO.energy -= friendCard.friendVO.energyCost;
+				_playerVO.triggerDataChangeEvent();
 			}
 		}
 		

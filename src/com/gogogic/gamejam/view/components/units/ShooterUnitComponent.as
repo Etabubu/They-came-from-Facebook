@@ -36,6 +36,7 @@ package com.gogogic.gamejam.view.components.units
 				_shotIsCoolingDown = true;
 				TweenLite.delayedCall(.5, shotCooledDown);
 				_target.currentHealth -= 4;
+				_target.triggerDataChangeEvent();
 				// TODO: show bullet
 				// TODO: Target show blood, eww
 			}

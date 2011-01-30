@@ -2,6 +2,7 @@ package com.gogogic.gamejam.view
 {
 	import com.gogogic.dragmanager.DragManager;
 	import com.gogogic.gamejam.Application;
+	import com.gogogic.gamejam.enum.SoundName;
 	
 	import flash.display.Sprite;
 	
@@ -39,7 +40,7 @@ package com.gogogic.gamejam.view
 			facade.registerMediator(new PopupMediator(_popupLayer));
 			
 			_viewLayer.addChild(_mainMenuView = new MainMenuView());
-			facade.registerMediator(new MainMenuMediator(_mainMenuView));
+			mainMenu();
 		}
 		
 		override public function listNotificationInterests():Array {
@@ -56,11 +57,17 @@ package com.gogogic.gamejam.view
 			}
 		}
 		
+		private function mainMenu():void {
+			facade.registerMediator(new MainMenuMediator(_mainMenuView));
+			sendNotification(SoundMediator.SET_MUSIC, SoundName.MAIN_MENU_MUSIC);
+		}
+		
 		private function startTheGame():void {
 			_viewLayer.removeChild(_mainMenuView);
 			
 			_viewLayer.addChild(_gameView = new GameView());
 			facade.registerMediator(new GameMediator(_gameView));
+			sendNotification(SoundMediator.SET_MUSIC, SoundName.IN_GAME_MUSIC);
 		}
 	}
 }

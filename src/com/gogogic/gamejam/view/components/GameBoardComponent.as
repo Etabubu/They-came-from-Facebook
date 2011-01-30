@@ -4,7 +4,10 @@ package com.gogogic.gamejam.view.components
 	import com.gogogic.dragmanager.events.DragEvent;
 	import com.gogogic.gamejam.Application;
 	import com.gogogic.gamejam.assets.GameBoardBackground;
+	import com.gogogic.gamejam.assets.PlayerUnitHealth;
 	import com.gogogic.gamejam.model.vo.FriendVO;
+	import com.gogogic.gamejam.model.vo.PlayerVO;
+	import com.gogogic.gamejam.view.components.units.PlayerUnitComponent;
 	import com.gogogic.gamejam.view.events.DropFriendEvent;
 	
 	import flash.display.Sprite;
@@ -14,18 +17,27 @@ package com.gogogic.gamejam.view.components
 	public class GameBoardComponent extends Sprite
 	{
 		private var _unitLayer:Sprite;
+		private var _playerVO:PlayerVO;
+		private var _playerUnitHealth:PlayerUnitHealthComponent;
 		
-		public function GameBoardComponent()
+		public function GameBoardComponent(playerVO:PlayerVO)
 		{
+			_playerVO = playerVO;
 			init();
 		}
 		
 		private function init():void {
 			addChild(new GameBoardBackground());
 			addChild(_unitLayer = new Sprite());
+			addChild(_playerUnitHealth = new PlayerUnitHealthComponent(_playerVO.playerUnit));
+			_playerUnitHealth.x = Application.APPLICATION_WIDTH / 2;
+			_playerUnitHealth.y = 650;
 			
 			addEventListener(DragEvent.DRAG_ENTER, onDragEnter);
 			addEventListener(DragEvent.DRAG_DROP, onDragDrop);
+			
+			insertUnit(new PlayerUnitComponent(_playerVO.playerUnit));
+			_playerVO.playerUnit
 		}
 		
 		private function onDragEnter(e:DragEvent):void {
