@@ -1,0 +1,64 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Bling" itemID="4d457548-000002a9" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.Bling" sourceLibraryItemHRef="Symbol 1" lastModified="1296397683">
+  <timeline>
+    <DOMTimeline name="Bling">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="txtTitle" width="536" height="31" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-255" ty="-21.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Allan ... Allan .. Allan ...  Steve!</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="0" size="24" bitmapSize="480" face="CCMonsterMash" fillColor="#FFCC00"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter blurX="10" blurY="10" color="#990000" strength="50"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="txtPoints" width="536" height="56" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-255" ty="-68.05"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>+XXXXXX</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="0" size="44" bitmapSize="880" face="CCMonsterMash" fillColor="#FFCC00"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter blurX="10" blurY="10" color="#990000" strength="50"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="txtDescription" width="536" height="59" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="-255" ty="11.95"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Description</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineSpacing="0" size="25" bitmapSize="500" face="CCMonsterMash" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter blurX="10" blurY="10" color="#990000" strength="50"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

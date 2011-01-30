@@ -1,10 +1,12 @@
 package com.gogogic.gamejam.view
 {
 	import com.gogogic.gamejam.Settings;
+	import com.gogogic.gamejam.assets.Bling;
 	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.FriendsProxy;
 	import com.gogogic.gamejam.model.OppositionUnitProxy;
 	import com.gogogic.gamejam.model.PlayerProxy;
+	import com.gogogic.gamejam.model.vo.BonusVO;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	import com.gogogic.gamejam.model.vo.PlayerUnitVO;
 	import com.gogogic.gamejam.model.vo.UnitVO;

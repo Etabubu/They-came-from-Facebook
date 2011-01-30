@@ -4,6 +4,7 @@ package com.gogogic.gamejam.view.components
 	import com.gogogic.dragmanager.events.DragEvent;
 	import com.gogogic.gamejam.Application;
 	import com.gogogic.gamejam.assets.GameBoardBackground;
+	import com.gogogic.gamejam.assets.GameBoardHitArea;
 	import com.gogogic.gamejam.assets.PlayerUnitHealth;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	import com.gogogic.gamejam.model.vo.PlayerVO;
@@ -20,6 +21,7 @@ package com.gogogic.gamejam.view.components
 		private var _unitComponents:Vector.<UnitComponent>;
 		private var _playerVO:PlayerVO;
 		private var _playerUnitHealth:PlayerUnitHealthComponent;
+		private var _hitArea:GameBoardHitArea;
 		
 		public function GameBoardComponent(playerVO:PlayerVO)
 		{
@@ -31,21 +33,25 @@ package com.gogogic.gamejam.view.components
 			addChild(new GameBoardBackground());
 			addChild(_unitLayer = new Sprite());
 			addChild(_playerUnitHealth = new PlayerUnitHealthComponent(_playerVO.playerUnit));
+			addChild(_hitArea = new GameBoardHitArea());
+			_hitArea.x = Application.APPLICATION_WIDTH / 2;
+			_hitArea.y = 475;
+			_hitArea.alpha = 0;
 			
 			_unitComponents = new Vector.<UnitComponent>();
 			
 			_playerUnitHealth.x = Application.APPLICATION_WIDTH / 2;
-			_playerUnitHealth.y = 650;
+			_playerUnitHealth.y = 675;
 			
-			addEventListener(DragEvent.DRAG_ENTER, onDragEnter);
-			addEventListener(DragEvent.DRAG_DROP, onDragDrop);
+			_hitArea.addEventListener(DragEvent.DRAG_ENTER, onDragEnter);
+			_hitArea.addEventListener(DragEvent.DRAG_DROP, onDragDrop);
 			
 			insertUnit(new PlayerUnitComponent(_playerVO.playerUnit));
 			_playerVO.playerUnit
 		}
 		
 		private function onDragEnter(e:DragEvent):void {
-			DragManager.getInstance().acceptDragDrop(this);
+			DragManager.getInstance().acceptDragDrop(_hitArea);
 		}
 		
 		private function onDragDrop(e:DragEvent):void {

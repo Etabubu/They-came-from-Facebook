@@ -15,6 +15,7 @@ package com.gogogic.gamejam
 		
 		// for playing cards
 		public static const MAX_ENERGY:Number = 10000;
+		public static const ENERGY_REGEN_PER_FRAME:Number = 2;
 		
 		// for enemy spawning
 		public static const INITIAL_SPAWN_DELAY_MILLIS:Number = 4000;

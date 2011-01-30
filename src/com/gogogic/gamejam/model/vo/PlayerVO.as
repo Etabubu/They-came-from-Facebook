@@ -9,8 +9,8 @@ package com.gogogic.gamejam.model.vo
 		
 		public var score:int;
 		
-		public var energy:Number = 1;
-		public var reserveEnergy:Number = 1;
+		public var energy:Number;
+		public var reserveEnergy:Number;
 		
 		public var id:Number;
 		public var firstName:String;

@@ -1,4 +1,4 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 489" majorVersion="11" buildNumber="489" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 489" majorVersion="11" buildNumber="489" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" hasAccessibleData="true">
      <folders>
           <DOMFolderItem name="Assets" itemID="4d4481cb-00000d7c"/>
      </folders>
@@ -13,6 +13,7 @@
           <DOMBitmapItem name="Assets/FriendCard.png" itemID="4d44a244-00000061" sourceExternalFilepath=".\jam\FriendCard.png" sourceLastImported="1296343583" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\FriendCard.png" bitmapDataHRef="M 16 1296343620.dat" frameRight="2340" frameBottom="2900"/>
           <DOMBitmapItem name="Assets/FriendDeck.png" itemID="4d44789d-00000037" sourceExternalFilepath=".\jam\FriendDeck.png" sourceLastImported="1296332939" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\FriendDeck.png" bitmapDataHRef="M 10 1296332957.dat" frameRight="2620" frameBottom="3620"/>
           <DOMBitmapItem name="Assets/logo.png" itemID="4d4462f9-0000402f" sourceExternalFilepath=".\Images\logo.png" sourceLastImported="1296326778" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\logo.png" bitmapDataHRef="M 3 1296327417.dat" frameRight="14620" frameBottom="5640"/>
+          <DOMBitmapItem name="Assets/oldspice.png" itemID="4d456e70-0000021c" sourceExternalFilepath=".\LIBRARY\oldspice.png" sourceLastImported="1296395435" sourcePlatform="macintosh" externalFileCRC32="2684552504" externalFileSize="15292" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\oldspice.png" bitmapDataHRef="M 4 1296395481.dat" frameRight="2920" frameBottom="4860"/>
      </media>
      <symbols>
           <Include href="Assets/btnPlay.xml" loadImmediate="false"/>
@@ -37,13 +38,16 @@
           <Include href="Assets/txtHowlogn.xml" loadImmediate="false"/>
           <Include href="Assets/txtLeaderboardTitle.xml" loadImmediate="false"/>
           <Include href="Assets/txtPlay.xml" loadImmediate="false"/>
+          <Include href="Assets/txtPlayGame.xml" loadImmediate="false"/>
           <Include href="Assets/txtText.xml" loadImmediate="false"/>
           <Include href="BasicCharacter.xml"/>
+          <Include href="Bling.xml"/>
           <Include href="EndScore.xml"/>
           <Include href="EnergyBarGraphic.xml"/>
           <Include href="FriendCardGraphic.xml"/>
           <Include href="FriendDeckGraphic.xml"/>
           <Include href="GameBoardBackground.xml"/>
+          <Include href="GameBoardHitArea.xml"/>
           <Include href="MainMenu.xml"/>
           <Include href="NextUp.xml"/>
           <Include href="NextUpIcon.xml"/>
@@ -51,7 +55,6 @@
           <Include href="PlayerCharacter.xml"/>
           <Include href="PlayerUnitHealth.xml"/>
           <Include href="Score.xml"/>
-          <Include href="txtPlayGame.xml" loadImmediate="false"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1">
@@ -369,6 +372,12 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2563558" publishTime="1296396986"/>
+          <PublishItem publishSize="2563522" publishTime="1296396909"/>
+          <PublishItem publishSize="2563464" publishTime="1296396557"/>
+          <PublishItem publishSize="2563452" publishTime="1296396483"/>
+          <PublishItem publishSize="2563327" publishTime="1296395905"/>
+          <PublishItem publishSize="2563327" publishTime="1296395893"/>
           <PublishItem publishSize="2549116" publishTime="1296388668"/>
           <PublishItem publishSize="2547875" publishTime="1296385762"/>
           <PublishItem publishSize="2547887" publishTime="1296384247"/>
@@ -383,11 +392,5 @@
           <PublishItem publishSize="2532560" publishTime="1296353839"/>
           <PublishItem publishSize="2474211" publishTime="1296353496"/>
           <PublishItem publishSize="2474197" publishTime="1296353263"/>
-          <PublishItem publishSize="2474151" publishTime="1296353195"/>
-          <PublishItem publishSize="2493300" publishTime="1296353108"/>
-          <PublishItem publishSize="2474673" publishTime="1296353084"/>
-          <PublishItem publishSize="2474672" publishTime="1296352928"/>
-          <PublishItem publishSize="2473798" publishTime="1296352549"/>
-          <PublishItem publishSize="2473797" publishTime="1296352504"/>
      </publishHistory>
 </DOMDocument>
