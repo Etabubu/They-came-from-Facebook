@@ -19,20 +19,21 @@ package com.gogogic.gamejam.model
 		}
 		
 		public function setupUnitTypes():void {
-			// preload values for all bonuses
+			// preload values for all unit types
 			
-			data = new Dictionary.<string, UnitTypeBaseVO>();
+			data = {};
 			
 			unitTypes["kamikazee"] = new UnitTypeKamikazeeVO();
 		}
 		
-		private function assignUnitType(FriendVO friend):void {
+		public function assignUnitType(friend:FriendVO):void {
 			// TODO: assign relevant unit type based on facebook info
 			
+			friend.unitType = unitTypes["kamikazee"];
 		}
 		
-		public function get unitTypes():Dictionary.<string, UnitTypeBaseVO>() {
-			return data as Dictionary.<string, UnitTypeBaseVO>();
+		public function get unitTypes():Object {
+			return data;
 		}
 	}
 }

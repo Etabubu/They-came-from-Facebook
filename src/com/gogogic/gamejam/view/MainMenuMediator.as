@@ -4,10 +4,12 @@ package com.gogogic.gamejam.view
 	import com.facebook.graph.utils.FacebookDataUtils;
 	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.model.FriendsProxy;
+	import com.gogogic.gamejam.model.PlayerProxy;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
-	import mx.core.mx_internal;
 	import flash.events.Event;
+	
+	import mx.core.mx_internal;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
 	import org.puremvc.as3.multicore.interfaces.INotification;
@@ -18,6 +20,7 @@ package com.gogogic.gamejam.view
 		public static const NAME:String = "MainMenuMediator";
 		
 		public static const START_MAIN_GAME:String = NAME + "StartMainGame";
+		public static const FACEBOOK_READY:String = NAME + "FacebookReady";
 		
 		private var _friends:Vector.<FriendVO>;
 		
@@ -63,8 +66,13 @@ package com.gogogic.gamejam.view
 			if(fail == null && success && Facebook.getSession() != null) {
 				// yay!
 				//Facebook.api("/me/feed",facebookSubmitPostHandler,{message:"HAHA! I did it!"}, "POST");
-				trace(Facebook.getSession());
-				Facebook.api("/me/friends", getPicture);
+				trace("session uid: ", Facebook.getSession().uid);
+				
+				// now that we have the facebook api lets load the friends
+				sendNotification(FACEBOOK_READY);
+				//(facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy).loadFriends();
+				(facade.retrieveProxy(PlayerProxy.NAME) as PlayerProxy).loadPlayer();
+				
 				Facebook.setCanvasAutoResize();
 				//trace(Facebook.getImageUrl("/me/picture/"));
 			} else {
@@ -75,7 +83,7 @@ package com.gogogic.gamejam.view
 		
 		public function getPicture(success:Object, fail:Object):void {
 			trace(success, fail);
-			if(success != null) {
+			if(success) {
 				
 			}
 		}

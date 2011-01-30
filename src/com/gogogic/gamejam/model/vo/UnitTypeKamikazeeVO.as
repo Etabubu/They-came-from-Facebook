@@ -4,7 +4,7 @@ package com.gogogic.gamejam.model.vo
 	public class UnitTypeKamikazeeVO extends UnitTypeBaseVO
 	{
 		
-		UnitTypeKamikazeeVO() {
+		public function UnitTypeKamikazeeVO() {
 			super();
 			
 			// XXX: add to base power level?

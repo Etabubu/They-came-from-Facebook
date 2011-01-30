@@ -1,7 +1,12 @@
 package com.gogogic.gamejam.model
 {
+	import com.adobe.utils.DateUtil;
+	import com.facebook.graph.Facebook;
+	import com.facebook.graph.utils.FacebookDataUtils;
 	import com.gogogic.gamejam.Settings;
+	import com.gogogic.gamejam.enum.Gender;
 	import com.gogogic.gamejam.model.vo.FriendVO;
+	import com.gogogic.gamejam.model.vo.PlayerVO;
 	
 	import org.puremvc.as3.multicore.interfaces.IProxy;
 	import org.puremvc.as3.multicore.patterns.proxy.Proxy;
@@ -21,35 +26,59 @@ package com.gogogic.gamejam.model
 		}
 		
 		public function loadFriends():void {
-			// TODO: Start loading friends
-			onFriendsLoaded();
+			Facebook.api("/me/friends", facebookFriendsCallback);
 		}
 		
-		private function onFriendsLoaded():void {
+		public function facebookFriendsCallback(success:Object, fail:Object):void {
+			if(success){
+				onFriendsLoaded(success);
+			} else {
+				trace("facebookFriendsCallback failed", success, fail);
+				Facebook.api("/me/friends", facebookFriendsCallback, {fields:"id,name,picture,gender,birthday"});
+			}
+		}
+		
+		private function onFriendsLoaded(facebookFriends:Object):void {
 			var allFriends:Vector.<FriendVO> = new Vector.<FriendVO>();
 			
 			_enemies = new Vector.<FriendVO>();
 			_friends = new Vector.<FriendVO>();
 			
-			// TODO: populate friends
+			var playerVO:PlayerVO = (facade.retrieveProxy(PlayerProxy.NAME) as PlayerProxy).playerVO;
 			
-			
-			// ----- DEBUG DATA ---------------------
-			var dummyFriend:FriendVO = new FriendVO();
-			dummyFriend.id = 644779038;
-			dummyFriend.name = "Ari";
-			dummyFriend.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1283.snc4/173424_644779038_242735_q.jpg";
-			
-			var dummyFriend2:FriendVO = new FriendVO();
-			dummyFriend2.id = 699804391;
-			dummyFriend2.name = "Jonathan";
-			dummyFriend2.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1319.snc4/161115_699804391_191693_q.jpg";
-			
-			allFriends.push(dummyFriend);
-			allFriends.push(dummyFriend2);
-			// --------------------------------------
-			
-			
+			// populate friends
+			var friendCount:int = 0;
+			for each(var facebookFriend:Object in facebookFriends) {
+				friendCount++;
+				if(friendCount > 2000) break; // not likely but let's make sure this doesn't get out of hand
+				
+				var newFriend:FriendVO = new FriendVO();
+				
+				newFriend.id = facebookFriend.id;
+				newFriend.firstName = facebookFriend.first_name;
+				newFriend.lastName = facebookFriend.last_name;
+				newFriend.portraitUrl = facebookFriend.picture;
+				newFriend.gender = (facebookFriend.hasOwnProperty("gender") && facebookFriend.gender == Gender.MALE ? Gender.MALE : Gender.FEMALE);
+				
+				if(Settings.DEVELOPERS.indexOf(newFriend.id)) newFriend.developer = true;
+				
+				//if(facebookFriend.hasOwnProperty("birthday"))
+				//	if(new String(facebookFriend.birthday).length == 10)
+				//		newFriend.age = ( new Date() - new Date(facebookFriend.birthday) ).fullYear();
+				
+				// relationship
+				if(playerVO.family[newFriend.id]) {
+					newFriend.relationship = playerVO.family[newFriend.id];
+				}
+				
+				// assign unit type (class)
+				(facade.retrieveProxy(UnitTypeProxy.NAME) as UnitTypeProxy).assignUnitType(newFriend);
+				
+				// assign bonuses
+				(facade.retrieveProxy(BonusProxy.NAME) as BonusProxy).assignBonuses(newFriend);
+				
+				allFriends.push(newFriend);
+			}
 			
 			// Get minimum friend count with dummies if necessary
 			while (allFriends.length < 2)
@@ -82,9 +111,27 @@ package com.gogogic.gamejam.model
 			return _enemies;
 		}
 		
+		private var friendOne:Boolean = true;
 		private function createDummyFriend():FriendVO {
-			// TODO: Randomize and populate friendVO before returning it
-			return new FriendVO();
+			var dummyFriend:FriendVO = new FriendVO();;
+			if(friendOne) {
+				dummyFriend.id = 644779038;
+				dummyFriend.firstName = "Ari";
+				dummyFriend.lastName = "Arnbjörnsson";
+				dummyFriend.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1283.snc4/173424_644779038_242735_q.jpg";
+				dummyFriend.gender = Gender.MALE;
+				dummyFriend.developer = true;
+			} else {
+				dummyFriend.id = 699804391;
+				dummyFriend.firstName = "Jonathan";
+				dummyFriend.lastName = "Osborne";
+				dummyFriend.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1319.snc4/161115_699804391_191693_q.jpg";
+				dummyFriend.gender = Gender.MALE;
+				dummyFriend.developer = true;
+			}
+			friendOne = (! friendOne);
+			
+			return dummyFriend;
 		}
 	}
 }
