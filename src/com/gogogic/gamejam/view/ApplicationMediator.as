@@ -20,6 +20,7 @@ package com.gogogic.gamejam.view
 		private var _gameView:GameView;
 		
 		private var _viewLayer:Sprite;
+		private var _blingLayer:Sprite;
 		private var _popupLayer:Sprite;
 		private var _dragDropLayer:Sprite;
 		
@@ -34,12 +35,14 @@ package com.gogogic.gamejam.view
 		
 		override public function onRegister():void {
 			application.addChild(_viewLayer = new Sprite());
+			application.addChild(_blingLayer = new Sprite());
 			application.addChild(_popupLayer = new Sprite());
 			application.addChild(_dragDropLayer = new Sprite());
 			
 			DragManager.getInstance().initialize(application.stage, _dragDropLayer);
 			
 			facade.registerMediator(new PopupMediator(_popupLayer));
+			facade.registerMediator(new BlingMediator(_blingLayer));
 			
 			
 			mainMenu();
