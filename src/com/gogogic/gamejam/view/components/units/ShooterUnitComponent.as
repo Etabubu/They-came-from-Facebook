@@ -39,12 +39,15 @@ package com.gogogic.gamejam.view.components.units
 			var directionToUnit:Number = Math.atan2(_target.y - _unitVO.y, _target.x - _unitVO.x);
 			var distance:Number = distanceTo(_target);
 			
+			unitVO.x += Math.cos(directionToPoint) * 1.4;
+			unitVO.y += Math.sin(directionToPoint) * 1.4;
+			unitVO.rotation = directionToUnit * 180 / Math.PI;
+			unitVO.triggerDataChangeEvent();
+			
 			if (!_shotIsCoolingDown && distance < 150) {
 				// SHOOT
 				_shotIsCoolingDown = true;
 				TweenLite.delayedCall(.5, shotCooledDown);
-				_target.currentHealth -= 4;
-				_target.triggerDataChangeEvent();
 				
 				graphics.lineStyle(1, _unitVO.isEnemy ? 0xFF0000 : 0xFFFFFF);
 				graphics.moveTo(0, 0);
@@ -52,11 +55,9 @@ package com.gogogic.gamejam.view.components.units
 				graphics.endFill();
 				// TODO: show bullet
 				// TODO: Target show blood, eww
+				_target.currentHealth -= 4;
+				_target.triggerDataChangeEvent();
 			}
-			unitVO.x += Math.cos(directionToPoint) * 1.4;
-			unitVO.y += Math.sin(directionToPoint) * 1.4;
-			unitVO.rotation = directionToUnit * 180 / Math.PI;
-			unitVO.triggerDataChangeEvent();
 		}
 		
 		private function shotCooledDown():void {

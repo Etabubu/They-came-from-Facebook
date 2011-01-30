@@ -11,6 +11,7 @@ package com.gogogic.gamejam.view
 	import com.gogogic.gamejam.model.vo.PlayerUnitVO;
 	import com.gogogic.gamejam.model.vo.UnitVO;
 	import com.gogogic.gamejam.model.vo.event.DataChangeEvent;
+	import com.gogogic.gamejam.view.components.GameBoardComponent;
 	import com.gogogic.gamejam.view.components.units.PlayerUnitComponent;
 	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
@@ -46,6 +47,11 @@ package com.gogogic.gamejam.view
 			if (_friendsProxy.friends) {
 				friendsLoaded();
 			}
+		}
+		
+		override public function onRemove():void {
+			if (facade.hasMediator(GameBoardMediator.NAME))
+				facade.removeMediator(GameBoardMediator.NAME);
 		}
 		
 		public override function listNotificationInterests():Array {

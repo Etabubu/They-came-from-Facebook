@@ -48,9 +48,10 @@ package com.gogogic.gamejam.view.components.units
 				
 				unitVO.triggerDataChangeEvent();
 				// TODO: Show dash animation
-				_target.currentHealth -= 8;
 				_resting = true;
 				TweenLite.delayedCall(1, onDoneResting);
+				_target.currentHealth -= 8;
+				_target.triggerDataChangeEvent();
 			} else {
 				// Just move
 				unitVO.x += Math.cos(direction) * 2;

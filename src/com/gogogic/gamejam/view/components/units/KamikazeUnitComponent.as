@@ -44,15 +44,20 @@ package com.gogogic.gamejam.view.components.units
 			
 			if (distanceTo(_target) < 20) {
 				removeEventListener(Event.ENTER_FRAME, onEnterFrame);
-				// EXPLODE
-				addChild(new BlowupEffect());
-				removeChild(_character);
+				_unitVO.currentHealth = 0;
+				// onDie will get called here
+				_unitVO.triggerDataChangeEvent();
 				_target.currentHealth -= 50;
 				_target.triggerDataChangeEvent();
-				_unitVO.currentHealth = 0;
-				_unitVO.triggerDataChangeEvent();
-				TweenLite.delayedCall(.3, dispatchEvent, [new Event(Event.COMPLETE)]);
 			}
+		}
+		
+		override protected function onDie():void {
+			removeEventListener(Event.ENTER_FRAME, onEnterFrame);
+			// EXPLODE
+			removeChild(_character);
+			TweenLite.delayedCall(.3, dispatchEvent, [new Event(Event.COMPLETE)]);
+			addChild(new BlowupEffect());
 		}
 		
 		override public function dispose():void {

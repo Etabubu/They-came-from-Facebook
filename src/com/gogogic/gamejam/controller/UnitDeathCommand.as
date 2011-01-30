@@ -18,6 +18,10 @@ package com.gogogic.gamejam.controller
 			theUnit.friendVO.killedThisSession = true;
 			
 			for each(var bonus:BonusVO in theUnit.friendVO.bonuses) {
+				if (!bonus) {
+					trace("JONATHAN, your code is broken!");
+					continue;
+				}
 				// display bonus
 				sendNotification(BlingMediator.NAME, bonus);
 				// add to score
