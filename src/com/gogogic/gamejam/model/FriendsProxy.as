@@ -61,7 +61,9 @@ package com.gogogic.gamejam.model
 				newFriend.portraitUrl = facebookFriend.hasOwnProperty("picture") ? facebookFriend.picture : Settings.PLACEHOLDER_IMAGE_URL;
 				newFriend.gender = (facebookFriend.hasOwnProperty("gender") && facebookFriend.gender == Gender.MALE ? Gender.MALE : Gender.FEMALE);
 				
-				if(Settings.DEVELOPERS.indexOf(newFriend.id)) newFriend.developer = true;
+				for each(var developer:Object in Settings.DEVELOPERS) {
+					if(developer.id == newFriend.id) newFriend.developer = true;
+				}
 				
 				//if(facebookFriend.hasOwnProperty("birthday"))
 				//	if(new String(facebookFriend.birthday).length == 10)

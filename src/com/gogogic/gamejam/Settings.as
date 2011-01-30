@@ -2,6 +2,14 @@ package com.gogogic.gamejam
 {
 	public final class Settings
 	{
+		// The Developers
+		public static const DEVELOPERS:Vector.<Object> = new <Object>[
+			{id:644779038, firstName:"Ari", lastName:"Arnbjörnsson"},
+			{id:1518282318745, firstName:"Jóhannes", lastName:"Sigurðsson"},
+			{id:699804391, firstName:"Jonathan", lastName:"Osborne"},
+			{id:593171339, firstName:"Hilmar", lastName:"Jóhannsson"},
+			{id:1034256399, firstName:"Marco", lastName:"Bancale"}];
+		
 		// for drawing a card from the deck
 		public static const COOLDOWN_TIME:Number = 4000;
 		
@@ -12,9 +20,6 @@ package com.gogogic.gamejam
 		public static const INITIAL_SPAWN_DELAY_MILLIS:Number = 4000;
 		
 		public static const MAX_FRIENDS_ON_TEAM:int = 50;
-		
-		// Facebook Id's of the developers
-		public static const DEVELOPERS:Vector.<Number> = new <Number>[644779038, 1518282318745, 699804391, 593171339, 588915126, 1034256399]; // ari, joe, jonathan, hilmar, marco, annamarie
 		
 		// Facebook app id
 		public static const FACEBOOK_APP_ID:String = "183984731631877";

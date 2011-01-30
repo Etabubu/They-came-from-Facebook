@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.model
 {
+	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.enum.Gender;
 	import com.gogogic.gamejam.enum.Relationship;
 	import com.gogogic.gamejam.model.vo.BonusVO;
@@ -28,55 +29,55 @@ package com.gogogic.gamejam.model
 			
 			bonuses["patricide"] = new BonusVO();
 			bonuses["patricide"].name = "Patricide!";
-			bonuses["patricide"].subtext = "killed your father";
+			bonuses["patricide"].subtext = "victim was your father!";
 			bonuses["patricide"].points = 100;
 			
 			bonuses["matricide"] = new BonusVO();
 			bonuses["matricide"].name = "Matricide!";
-			bonuses["matricide"].subtext = "killed your mother";
+			bonuses["matricide"].subtext = "victim was your mother!";
 			bonuses["matricide"].points = 100;
 			
 			bonuses["sororicide"] = new BonusVO();
 			bonuses["sororicide"].name = "Sororicide!";
-			bonuses["sororicide"].subtext = "killed your sister";
+			bonuses["sororicide"].subtext = "victim was your sister!";
 			bonuses["sororicide"].points = 50;
 			
 			bonuses["fratricide"] = new BonusVO();
 			bonuses["fratricide"].name = "Fratricide!";
-			bonuses["fratricide"].subtext = "killed your brother";
+			bonuses["fratricide"].subtext = "victim was your brother!";
 			bonuses["fratricide"].points = 50;
 			
 			bonuses["filicide"] = new BonusVO();
 			bonuses["filicide"].name = "Filicide!";
-			bonuses["filicide"].subtext = "child killer";
+			bonuses["filicide"].subtext = "victim was your child!";
 			bonuses["filicide"].points = 75;
 			
 			bonuses["marital_problems_male"] = new BonusVO();
 			bonuses["marital_problems_male"].name = "Marital Problems!";
-			bonuses["marital_problems_male"].subtext = "killed your husband";
+			bonuses["marital_problems_male"].subtext = "victim was your husband!";
 			bonuses["marital_problems_male"].points = 150;
 			
 			bonuses["marital_problems_female"] = new BonusVO();
 			bonuses["marital_problems_female"].name = "Marital Problems!";
-			bonuses["marital_problems_female"].subtext = "killed your wife";
+			bonuses["marital_problems_female"].subtext = "victim was your wife!";
 			bonuses["marital_problems_female"].points = 150;
 			
 			bonuses["honeymoon_suite"] = new BonusVO();
 			bonuses["honeymoon_suite"].name = "The honeymoon suite!";
-			bonuses["honeymoon_suite"].subtext = "killed your fiance";
+			bonuses["honeymoon_suite"].subtext = "victim was your fiance!";
 			bonuses["honeymoon_suite"].points = 75;
 			
 			bonuses["on_the_rocks_male"] = new BonusVO();
 			bonuses["on_the_rocks_male"].name = "On the rocks";
-			bonuses["on_the_rocks_male"].subtext = "killed your boyfriend";
+			bonuses["on_the_rocks_male"].subtext = "victim was your boyfriend!";
 			bonuses["on_the_rocks_male"].points = 75;
 			
 			bonuses["on_the_rocks_female"] = new BonusVO();
 			bonuses["on_the_rocks_female"].name = "On the rocks";
-			bonuses["on_the_rocks_female"].subtext = "killed your girlfriend";
+			bonuses["on_the_rocks_female"].subtext = "victim was your girlfriend!";
 			bonuses["on_the_rocks_female"].points = 75;
 			
-			bonuses["prom_female"] = new BonusVO();
+			/*bonuses["prom_female"] = new BonusVO();
 			bonuses["prom_female"].name = "Prom Queen";
 			bonuses["prom_female"].subtext = "more than 500 friends";
 			bonuses["prom_female"].points = 25;
@@ -89,17 +90,45 @@ package com.gogogic.gamejam.model
 			bonuses["doublecross"] = new BonusVO();
 			bonuses["doublecross"].name = "Double-cross!";
 			bonuses["doublecross"].subtext = "more than 25 mutual friends";
-			bonuses["doublecross"].points = 25;
+			bonuses["doublecross"].points = 25;*/
 			
 			bonuses["code_freeze"] = new BonusVO();
 			bonuses["code_freeze"].name = "Code Freeze";
-			bonuses["code_freeze"].subtext = "killed a developer";
+			bonuses["code_freeze"].subtext = "victim was a developer";
 			bonuses["code_freeze"].points = 182;
+			
+			bonuses["awesome_name"] = new BonusVO();
+			bonuses["awesome_name"].name = "Awesome name, dude!";
+			bonuses["awesome_name"].subtext = "victim had the same name as a developer";
+			bonuses["awesome_name"].points = 120;
+			
+			bonuses["good_morning_dave"] = new BonusVO();
+			bonuses["good_morning_dave"].name = "Good morning, Dave.";
+			bonuses["good_morning_dave"].subtext = "victim was in the distant future of 2001";
+			bonuses["good_morning_dave"].points = 20;
+			
+			bonuses["billy_no"] = new BonusVO();
+			bonuses["billy_no"].name = "Billy! Noooo!";
+			bonuses["billy_no"].subtext = "because that ain't no man";
+			bonuses["billy_no"].points = 20;
+			
+			bonuses["timmeh"] = new BonusVO();
+			bonuses["timmeh"].name = "Timmmeehh!";
+			bonuses["timmeh"].subtext = "Jimmeh. Jiimeh!";
+			bonuses["timmeh"].points = 20;
+			
+			bonuses["alan_steve"] = new BonusVO();
+			bonuses["alan_steve"].name = "Al! Allan! Alan!";
+			bonuses["alan_steve"].subtext = "... Steve?!";
+			bonuses["alan_steve"].points = 20;
+			
+			bonuses["alan_steve"] = new BonusVO();
+			bonuses["alan_steve"].name = "Al! Allan! Alan!";
+			bonuses["alan_steve"].subtext = "... Steve?!";
+			bonuses["alan_steve"].points = 20;
 		}
 		
 		public function assignBonuses(friend:FriendVO):void {
-			// TODO: assign relevant bonuses to any friends needing it
-			
 			// patricide - relation is father
 			if(friend.relationship == Relationship.FATHER) friend.bonuses.push(bonuses["patricide"]);
 			
@@ -135,10 +164,25 @@ package com.gogogic.gamejam.model
 			
 			// code-freeze - is a developer of the game
 			if(friend.developer) friend.bonuses.push(bonuses["doublecross"]);
+			
+			// awesome name - shares the name of a developer
+			if(! friend.developer) {
+				for each(var developer:Object in Settings.DEVELOPERS) {
+					if(developer.firstName == friend.firstName || developer.lastName == friend.lastName) friend.bonuses.push(bonuses["awesome_name"]);
+				}
+			}
+			
+			//good_morning_dave
+			//billy_no
+			//timmeh
+			//alan_steve
+			
 		}
 		
 		public function get bonuses():Object {
 			return data;
 		}
+		
+		
 	}
 }
