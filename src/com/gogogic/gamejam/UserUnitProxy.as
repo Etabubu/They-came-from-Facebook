@@ -6,6 +6,7 @@ package com.gogogic.gamejam
 	import com.gogogic.gamejam.view.components.UnitComponent;
 	import com.gogogic.gamejam.view.components.units.DemoUnitComponent;
 	import com.gogogic.gamejam.view.components.units.KamikazeUnitComponent;
+	import com.gogogic.gamejam.view.components.units.ShooterUnitComponent;
 	import com.gogogic.gamejam.view.components.units.SlasherUnitComponent;
 	
 	import org.puremvc.as3.multicore.interfaces.IProxy;
@@ -33,7 +34,7 @@ package com.gogogic.gamejam
 			// TODO: Create different superclasses of unitComponent according to the friendVO
 			
 			// DEBUG
-			unitComponent = new KamikazeUnitComponent();
+			unitComponent = new ShooterUnitComponent();
 			
 			// Setup all the common, required data
 			unitComponent.init(friendVO, _gameBoardUnits, x, y, false);

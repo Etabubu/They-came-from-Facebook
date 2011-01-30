@@ -33,9 +33,10 @@ package com.gogogic.gamejam.view.components.units
 			
 			if (distance < 60) {
 				// Dash
-				var dashDistance:Number = distance * 2 < 50 ? 50 : distance * 2;
-				unitVO.x += Math.sin(direction) * 120;
-				unitVO.y += Math.cos(direction) * 120;
+				var dashDistance:Number = distance + 130;
+				
+				TweenLite.to(unitVO, .3, { x: unitVO.x + Math.sin(direction) * 120, y: unitVO.y + Math.cos(direction) * 120, onUpdate: unitVO.triggerDataChangeEvent });
+				
 				unitVO.triggerDataChangeEvent();
 				// TODO: Show dash animation
 				_target.currentHealth -= 8;

@@ -16,6 +16,7 @@
      </media>
      <symbols>
           <Include href="Assets/btnPlay.xml" loadImmediate="false"/>
+          <Include href="Assets/ChargingEnergy.xml" loadImmediate="false"/>
           <Include href="Assets/Classes.xml" loadImmediate="false"/>
           <Include href="Assets/Empty.xml" loadImmediate="false"/>
           <Include href="Assets/FBLoad.xml" loadImmediate="false"/>
@@ -25,6 +26,7 @@
           <Include href="Assets/FriendCard_Use.xml" loadImmediate="false"/>
           <Include href="Assets/FriendDeck.xml" loadImmediate="false"/>
           <Include href="Assets/LeaderboardBack.xml" loadImmediate="false"/>
+          <Include href="Assets/MainEnergy.xml" loadImmediate="false"/>
           <Include href="Assets/mcDevider.xml" loadImmediate="false"/>
           <Include href="Assets/mcFace.xml" loadImmediate="false"/>
           <Include href="Assets/mcLeaderboard.xml" loadImmediate="false"/>
@@ -36,6 +38,7 @@
           <Include href="Assets/txtPlay.xml" loadImmediate="false"/>
           <Include href="Assets/txtText.xml" loadImmediate="false"/>
           <Include href="BasicCharacter.xml"/>
+          <Include href="EnergyBarGraphic.xml"/>
           <Include href="FriendCardGraphic.xml"/>
           <Include href="FriendDeckGraphic.xml"/>
           <Include href="GameBoardBackground.xml"/>
@@ -361,6 +364,10 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2547342" publishTime="1296359808"/>
+          <PublishItem publishSize="2547316" publishTime="1296358763"/>
+          <PublishItem publishSize="2547313" publishTime="1296358715"/>
+          <PublishItem publishSize="2547058" publishTime="1296354122"/>
           <PublishItem publishSize="2547992" publishTime="1296354059"/>
           <PublishItem publishSize="2551885" publishTime="1296353878"/>
           <PublishItem publishSize="2532560" publishTime="1296353839"/>
@@ -377,9 +384,5 @@
           <PublishItem publishSize="2473687" publishTime="1296352344"/>
           <PublishItem publishSize="2508854" publishTime="1296351251"/>
           <PublishItem publishSize="399128" publishTime="1296350384"/>
-          <PublishItem publishSize="387304" publishTime="1296350213"/>
-          <PublishItem publishSize="387304" publishTime="1296350203"/>
-          <PublishItem publishSize="387305" publishTime="1296349839"/>
-          <PublishItem publishSize="387068" publishTime="1296349634"/>
      </publishHistory>
 </DOMDocument>

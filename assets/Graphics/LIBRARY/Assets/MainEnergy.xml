@@ -1,0 +1,30 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/MainEnergy" itemID="4d44dcfc-0000025f" sourceLibraryItemHRef="Symbol 1" lastModified="1296359823">
+  <timeline>
+    <DOMTimeline name="MainEnergy">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#87DDAD"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!15200 600|0 600!0 600|0 0!0 0|15200 0!15200 0|15200 600"/>
+                    <Edge cubics="!0 600(0,600;0,600 15200,600 15200,600q0 600 15200 600)15200,600;"/>
+                    <Edge cubics="!0 0(0,0;0,0 15200,0 15200,0q0 0 15200 0)15200,0;"/>
+                    <Edge cubics="!0 600(0,600;0,600 0,0 0,0q0 600 0 0);"/>
+                    <Edge cubics="!15200 0(;15200,0 15200,600 15200,600q15200 0 15200 600);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

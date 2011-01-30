@@ -21,6 +21,7 @@ package com.gogogic.gamejam.view.components
 		
 		public function FriendCardComponent(friendVO:FriendVO)
 		{
+			buttonMode = true;
 			addChild(_friendCard = new FriendCardGraphic());
 			_friendVO = friendVO;
 			var portrait:PortraitComponent = new PortraitComponent(_friendVO.portraitUrl);
