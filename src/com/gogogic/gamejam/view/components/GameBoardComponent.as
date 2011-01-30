@@ -63,5 +63,9 @@ package com.gogogic.gamejam.view.components
 		private function onUnitComplete(e:Event):void {
 			removeUnit(e.currentTarget as UnitComponent);
 		}
+		
+		public function dispose():void {
+			
+		}
 	}
 }

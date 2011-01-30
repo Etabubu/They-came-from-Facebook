@@ -13,7 +13,7 @@ package com.gogogic.gamejam
 		public static const NAME:String = "ApplicationFacade";
 		
 		public static const STARTUP:String = NAME + "Startup";
-		public static const RESET_DATA:String = NAME + "Startup";
+		public static const RESET_DATA:String = NAME + "ResetData";
 		
 		public function ApplicationFacade(key:String)
 		{

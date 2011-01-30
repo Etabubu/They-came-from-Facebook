@@ -49,7 +49,8 @@ package com.gogogic.gamejam.view
 		
 		override public function listNotificationInterests():Array {
 			return [
-				ADD_UNIT
+				ADD_UNIT,
+				GameMediator.GAME_OVER
 			];
 		}
 		
@@ -62,6 +63,10 @@ package com.gogogic.gamejam.view
 					// And insert the unitComponent into the gameboard
 					gameBoardComponent.insertUnit(unitComponent);
 					unitComponent.addEventListener(UnitComponent.DIE, onUnitDie);
+					break;
+				case GameMediator.GAME_OVER:
+					gameBoardComponent.dispose();
+					_units = null;
 					break;
 			}
 		}
