@@ -2,6 +2,7 @@ package com.gogogic.gamejam
 {
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.system.Security;
 	
 	[Frame(factoryClass="com.gogogic.gamejam.PreloaderFactory")]
 	// Movie info
@@ -19,6 +20,7 @@ package com.gogogic.gamejam
 		
 		public function Application()
 		{
+			Security.allowDomain("*");
 			addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 		}
 		

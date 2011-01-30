@@ -5,6 +5,8 @@ package com.gogogic.gamejam.view.components
 	import com.gogogic.gamejam.bulkLoad;
 	
 	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import flash.display.DisplayObject;
 	import flash.display.Sprite;
 	import flash.system.JPEGLoaderContext;
 	
@@ -22,7 +24,10 @@ package com.gogogic.gamejam.view.components
 		}
 		
 		private function onPortraitLoaded(bulkLoader:BulkLoader, path:String):void {
-			var portraitBitmap:Bitmap = new Bitmap(bulkLoader.getBitmapData(path), "auto", true);
+			var portraitDisplayObject:DisplayObject = bulkLoader.getDisplayObjectLoader(path);
+			var bm:BitmapData = new BitmapData(portraitDisplayObject.width, portraitDisplayObject.height, true, 0x00000000);
+			bm.draw(portraitDisplayObject);
+			var portraitBitmap:Bitmap = new Bitmap(bm, "auto", true);
 			portraitBitmap.width = portraitBitmap.height = _size;
 			addChild(portraitBitmap);
 		}

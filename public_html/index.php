@@ -21,14 +21,12 @@
 		function embedPlayer() {
 			var flashvars = {};
 			embedSWF("Application.swf", "flashContent", "760", "850", "10.0");
-			
-			FB.Canvas.setSize({ width: 760, height: 1400 });
 		}
 		//Redirect for authorization for application loaded in an iFrame on Facebook.com 
-		function redirect(id,perms,uri) {
+		/*function redirect(id,perms,uri) {
 			var params = window.location.toString().slice(window.location.toString().indexOf('?'));
 			top.location = 'https://graph.facebook.com/oauth/authorize?client_id='+id+'&scope='+perms+'&redirect_uri='+uri+params;				 
-		}
+		}*/
 		embedPlayer();
 	</script>
 </head>

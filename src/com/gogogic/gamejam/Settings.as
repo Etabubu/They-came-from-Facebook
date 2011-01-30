@@ -3,7 +3,7 @@ package com.gogogic.gamejam
 	public final class Settings
 	{
 		// for drawing a card from the deck
-		public static const COOLDOWN_TIME:Number = 5000;
+		public static const COOLDOWN_TIME:Number = 4000;
 		
 		// for playing cards
 		public static const MAX_ENERGY:Number = 1200;
@@ -20,7 +20,7 @@ package com.gogogic.gamejam
 		public static const FACEBOOK_APP_ID:String = "183984731631877";
 		
 		// Facebook permissions
-		public static const FACEBOOK_PERMS:String = "publish_stream,user_about_me,friends_about_me,user_relationships,user_relationship_details,friends_birthday,user_birthday,email";
+		public static const FACEBOOK_PERMS:String = "publish_stream,user_about_me,user_relationships,user_relationship_details";
 		
 		// player properties
 		public static const PLAYER_UNIT_STARTING_HEALTH:Number = 200;

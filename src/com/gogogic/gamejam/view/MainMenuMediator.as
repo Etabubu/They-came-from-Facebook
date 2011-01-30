@@ -30,35 +30,13 @@ package com.gogogic.gamejam.view
 		}
 		
 		override public function onRegister():void {
-			var friendsProxy:FriendsProxy = facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy;
+			/*var friendsProxy:FriendsProxy = facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy;
 			if (friendsProxy.friends) {
 				friendsLoaded();
 			} else {
-				// TODO: handle facebook permissions/login
-				//while(Facebook.getSession() == null) {
-					//ExternalInterface.call("redirect","THE APPLICATION ID", "user_birthday,read_stream,publish_stream","http://apps.facebook.com/THE CANVAS PAGE/");
-				//}
 				
-				// if login/auth fail - keep prompting.
-				//Facebook.init(
-				// if logged in
-				//friendsProxy.loadFriends();
-				// TODO: Disable start game button
-				// TODO: Show a message in main menu view that it is loading the friends
-				
-				
-				
-				//var topURL:String=Facebook.ExternalInterface.call('top.location.toString');
-				//if(topURL != "FACEBOOKURL") {
-					// redirect to the Facebook app page
-					
-				//}
-				
-				
-				//Facebook.login(facebookLoginHandler, {perms:"publish_stream,user_about_me,friends_about_me,user_relationships,user_relationship_details,friends_birthday,user_birthday,email"});
-			}
-			Facebook.init(Settings.FACEBOOK_APP_ID, facebookLoginHandler, {perms:Settings.FACEBOOK_PERMS});
-			//Facebook.login(facebookLoginHandler, {perms:Settings.FACEBOOK_PERMS});
+			}*/
+			Facebook.init(Settings.FACEBOOK_APP_ID, facebookLoginHandler);//, {perms:Settings.FACEBOOK_PERMS});
 		}
 		
 		public function facebookLoginHandler(success:Object,fail:Object):void {
@@ -70,21 +48,13 @@ package com.gogogic.gamejam.view
 				
 				// now that we have the facebook api lets load the friends
 				sendNotification(FACEBOOK_READY);
-				//(facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy).loadFriends();
 				(facade.retrieveProxy(PlayerProxy.NAME) as PlayerProxy).loadPlayer();
 				
 				Facebook.setCanvasAutoResize();
-				//trace(Facebook.getImageUrl("/me/picture/"));
 			} else {
 				// keep prompting them
+				trace("login handler failed");
 				Facebook.login(facebookLoginHandler, {perms:Settings.FACEBOOK_PERMS});
-			}
-		}
-		
-		public function getPicture(success:Object, fail:Object):void {
-			trace(success, fail);
-			if(success) {
-				
 			}
 		}
 		

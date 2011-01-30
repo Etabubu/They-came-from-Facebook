@@ -14,7 +14,7 @@ package com.gogogic.gamejam
 		if ( bulkLoader.hasItem( path, false )) {
 			onReady(bulkLoader, path);
 		} else {
-			var item:LoadingItem = bulkLoader.add( path, { context: new LoaderContext(false, new ApplicationDomain()) });
+			var item:LoadingItem = bulkLoader.add( path, { context: new LoaderContext(true, new ApplicationDomain()) });
 			item.addEventListener( BulkLoader.COMPLETE, function():void { 
 				item.removeEventListener( BulkLoader.COMPLETE, arguments.callee );
 				onReady(bulkLoader, path);

@@ -8,6 +8,7 @@ package com.gogogic.gamejam.model.vo
 		public var lastName:String;
 		public var name:String;
 		public var portraitUrl:String;
+		
 		public var bonuses:Vector.<BonusVO> = new Vector.<BonusVO>();
 		public var unitType:UnitTypeBaseVO;
 		
