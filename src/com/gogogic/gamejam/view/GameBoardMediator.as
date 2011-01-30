@@ -7,6 +7,8 @@ package com.gogogic.gamejam.view
 	import com.gogogic.gamejam.view.components.UnitComponent;
 	import com.gogogic.gamejam.view.events.DropFriendEvent;
 	
+	import flash.events.Event;
+	
 	import org.puremvc.as3.multicore.interfaces.IMediator;
 	import org.puremvc.as3.multicore.interfaces.INotification;
 	import org.puremvc.as3.multicore.patterns.mediator.Mediator;
@@ -16,6 +18,7 @@ package com.gogogic.gamejam.view
 		public static const NAME:String = "GameBoardMediator";
 		
 		public static const ADD_UNIT:String = NAME + "AddUnit";
+		public static const UNIT_DIE:String = NAME + "UnitDie";
 		
 		private var _units:Vector.<UnitVO>;
 		
@@ -55,8 +58,16 @@ package com.gogogic.gamejam.view
 					_units.push(unitComponent.unitVO);
 					// And insert the unitComponent into the gameboard
 					gameBoardComponent.insertUnit(unitComponent);
+					unitComponent.addEventListener(UnitComponent.DIE, onUnitDie);
 					break;
 			}
+		}
+		
+		private function onUnitDie(e:Event):void {
+			var unitComponent:UnitComponent = e.currentTarget as UnitComponent;
+			unitComponent.removeEventListener(UnitComponent.DIE, onUnitDie);
+			_units.splice(_units.indexOf(unitComponent.unitVO), 1);
+			sendNotification(UNIT_DIE, unitComponent.unitVO);
 		}
 	}
 }

@@ -68,6 +68,7 @@ package com.gogogic.gamejam.view
 			_oppositionProxy.start();
 			// Create the player unit
 			_playerUnitComponent = new PlayerUnitComponent();
+			_playerProxy.playerVO.playerUnit = _playerUnitComponent.unitVO;
 			sendNotification(GameBoardMediator.ADD_UNIT, _playerUnitComponent);
 		}
 	}

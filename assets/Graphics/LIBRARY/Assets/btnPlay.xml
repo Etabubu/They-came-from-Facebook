@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/btnPlay" itemID="4d445ee6-000037c2" sourceLibraryItemHRef="Symbol 1" lastModified="1296331235" lastUniqueIdentifier="14">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/btnPlay" itemID="4d445ee6-000037c2" sourceLibraryItemHRef="Symbol 1" lastModified="1296344338" lastUniqueIdentifier="14">
   <timeline>
-    <DOMTimeline name="btnPlay">
+    <DOMTimeline name="btnPlay" currentFrame="1">
       <layers>
-        <DOMLayer name="Layer 2" color="#9933CC" current="true" isSelected="true">
+        <DOMLayer name="Layer 2" color="#9933CC">
           <frames>
             <DOMFrame index="0" duration="4" keyMode="9728">
               <Actionscript>
@@ -12,7 +12,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Label" color="#FF800A" autoNamed="false">
+        <DOMLayer name="Label" color="#FF800A" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" name="_FBload" labelType="name" keyMode="9728">
               <elements/>
@@ -31,20 +31,7 @@
         <DOMLayer name="Layer 1" color="#0000FF" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
-              <elements>
-                <DOMSymbolInstance libraryItemName="Assets/txtPlay" name="" centerPoint3DX="151.8" centerPoint3DY="57.5">
-                  <matrix>
-                    <Matrix tx="42.3" ty="20.75"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="109.5" y="36.75"/>
-                  </transformationPoint>
-                  <filters>
-                    <GlowFilter blurX="12.14453125" blurY="12.14453125" color="#CC3300" strength="30"/>
-                    <DropShadowFilter angle="90" blurX="0" blurY="0" strength="0.6"/>
-                  </filters>
-                </DOMSymbolInstance>
-              </elements>
+              <elements/>
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
@@ -100,9 +87,12 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/FBLoad" name="" centerPoint3DX="153.5" centerPoint3DY="59.5">
+                <DOMSymbolInstance libraryItemName="Assets/mcLoading" name="" centerPoint3DX="67.85" centerPoint3DY="44.1">
+                  <matrix>
+                    <Matrix tx="60.35" ty="24"/>
+                  </matrix>
                   <transformationPoint>
-                    <Point x="153.5" y="59.5"/>
+                    <Point x="7.5" y="20.1"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
               </elements>

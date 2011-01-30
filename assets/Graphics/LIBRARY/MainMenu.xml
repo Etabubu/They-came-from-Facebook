@@ -1,8 +1,8 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MainMenu" itemID="4d4470f5-00000d64" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.MainMenu" sourceLibraryItemHRef="Symbol 1" lastModified="1296335321">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="MainMenu" itemID="4d4470f5-00000d64" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.MainMenu" sourceLibraryItemHRef="Symbol 1" lastModified="1296347051">
   <timeline>
     <DOMTimeline name="MainMenu">
       <layers>
-        <DOMLayer name="Logo" color="#4FFF4F" autoNamed="false">
+        <DOMLayer name="Logo" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -62,7 +62,7 @@
                     <Matrix a="0.965911865234375" b="-0.255645751953125" c="0.255645751953125" d="0.965911865234375" tx="467.5" ty="737.6"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="120.85" y="43.7"/>
+                    <Point x="120.85" y="43.55"/>
                   </transformationPoint>
                   <filters>
                     <DropShadowFilter angle="90" blurX="0" blurY="0" distance="3" strength="3.82"/>
@@ -91,7 +91,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="face" color="#808080" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="face" color="#808080" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>

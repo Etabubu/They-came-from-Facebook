@@ -5,9 +5,12 @@ package com.gogogic.gamejam.view.components
 	import com.gogogic.gamejam.model.vo.event.DataChangeEvent;
 	
 	import flash.display.Sprite;
+	import flash.events.Event;
 	
 	public class UnitComponent extends Sprite
 	{
+		public static const DIE:String = "unitDie";
+		
 		protected var _unitVO:UnitVO;
 		protected var _allUnits:Vector.<UnitVO>;
 		
@@ -56,8 +59,25 @@ package com.gogogic.gamejam.view.components
 		
 		protected function update():void {
 			// Basic motor functions
+			setPosition();
+			setRotation();
+			
+			if (_unitVO.currentHealth <= 0) {
+				dispatchEvent(new Event(DIE));
+				onDie();
+			}
+		}
+		
+		protected function onDie():void {
+			// Override me if necessary
+		}
+		
+		protected function setPosition():void {
 			x = _unitVO.x;
 			y = _unitVO.y;
+		}
+		
+		protected function setRotation():void {
 			rotation = _unitVO.rotation;
 		}
 		
@@ -80,6 +100,9 @@ package com.gogogic.gamejam.view.components
 			var closestEnemyDistance:Number;
 			
 			for each (var enemy:UnitVO in (isFriend ? friendlyUnits : enemyUnits)) {
+				// Don't target dead units
+				if (enemy.currentHealth <= 0) continue;
+				
 				var dist:Number = distanceTo(enemy);
 				if (!closestEnemy || dist < closestEnemyDistance) {
 					closestEnemyDistance = dist;
@@ -88,6 +111,11 @@ package com.gogogic.gamejam.view.components
 			}
 			
 			return closestEnemy;
+		}
+		
+		public function dispose():void {
+			_unitVO.removeEventListener(DataChangeEvent.DATA_CHANGE, onUnitVODataChange);
+			_unitVO = null;
 		}
 	}
 }

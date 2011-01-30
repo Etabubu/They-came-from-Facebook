@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/txtText" itemID="4d4451a0-000004fe" sourceLibraryItemHRef="Symbol 1" lastModified="1296322976">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/txtText" itemID="4d4451a0-000004fe" sourceLibraryItemHRef="Symbol 1" lastModified="1296347210">
   <timeline>
     <DOMTimeline name="txtText">
       <layers>
@@ -6,7 +6,7 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText width="308.4" height="140.6" isSelectable="false" lineType="multiline">
+                <DOMStaticText width="308.4" height="88.2" isSelectable="false">
                   <matrix>
                     <Matrix tx="2" ty="2"/>
                   </matrix>
@@ -18,7 +18,7 @@
                       </textAttrs>
                     </DOMTextRun>
                   </textRuns>
-                </DOMDynamicText>
+                </DOMStaticText>
               </elements>
             </DOMFrame>
           </frames>
