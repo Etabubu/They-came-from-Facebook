@@ -34,8 +34,8 @@ package com.gogogic.gamejam.view.components
 			var portrait:PortraitComponent = new PortraitComponent(_friendVO.portraitUrl);
 			_friendCard.mcPortrait.addChild(portrait);
 			_friendCard.txtName.text = _friendVO.name;
-			_friendCard.txtClass.text = "Berserker";
-			_friendCard.txtPowerLevel.text = "6";
+			_friendCard.txtClass.text = "Random";
+			_friendCard.txtPowerLevel.text = "?";
 			discardButton.buttonMode = true;
 			discardButton.addEventListener(MouseEvent.ROLL_OVER, onDiscardOver);
 			discardButton.addEventListener(MouseEvent.ROLL_OUT, onDiscardOut);

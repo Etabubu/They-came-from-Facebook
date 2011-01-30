@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="BasicCharacter" itemID="4d4481e4-00000d7e" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.BasicCharacter" sourceLibraryItemHRef="Symbol 1" lastModified="1296397640">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="BasicCharacter" itemID="4d4481e4-00000d7e" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.BasicCharacter" sourceLibraryItemHRef="Symbol 1" lastModified="1296399126">
   <timeline>
-    <DOMTimeline name="BasicCharacter" currentFrame="1">
+    <DOMTimeline name="BasicCharacter">
       <layers>
         <DOMLayer name="Layer 4" color="#FF4FFF">
           <frames>

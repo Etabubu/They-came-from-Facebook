@@ -30,11 +30,13 @@ package com.gogogic.gamejam.view.components.units
 		}
 		
 		private function onEnterFrame(e:Event):void {
+			graphics.clear();
 			if (!_target || _target.currentHealth <= 0) _target = closestEnemy;
 			if (!_target) return; // If there are no enemies on stage, just stop
 			
 			var targetPoint:Point = getLocationWithDistanceTo(_target, 130);
-			var direction:Number = Math.atan2(targetPoint.y - _unitVO.y, targetPoint.x - _unitVO.x);
+			var directionToPoint:Number = Math.atan2(targetPoint.y - _unitVO.y, targetPoint.x - _unitVO.x);
+			var directionToUnit:Number = Math.atan2(_target.y - _unitVO.y, _target.x - _unitVO.x);
 			var distance:Number = distanceTo(_target);
 			
 			if (!_shotIsCoolingDown && distance < 150) {
@@ -43,12 +45,17 @@ package com.gogogic.gamejam.view.components.units
 				TweenLite.delayedCall(.5, shotCooledDown);
 				_target.currentHealth -= 4;
 				_target.triggerDataChangeEvent();
+				
+				graphics.lineStyle(1, _unitVO.isEnemy ? 0xFF0000 : 0xFFFFFF);
+				graphics.moveTo(0, 0);
+				graphics.lineTo( distance, 0);
+				graphics.endFill();
 				// TODO: show bullet
 				// TODO: Target show blood, eww
 			}
-			unitVO.x += Math.cos(direction) * 1.4;
-			unitVO.y += Math.sin(direction) * 1.4;
-			unitVO.rotation = direction * 180 / Math.PI;
+			unitVO.x += Math.cos(directionToPoint) * 1.4;
+			unitVO.y += Math.sin(directionToPoint) * 1.4;
+			unitVO.rotation = directionToUnit * 180 / Math.PI;
 			unitVO.triggerDataChangeEvent();
 		}
 		

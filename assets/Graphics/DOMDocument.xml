@@ -9,6 +9,7 @@
      <media>
           <DOMBitmapItem name="Assets/Back.jpg" itemID="4d444fef-000000cd" sourceExternalFilepath=".\Images\Back.jpg" sourceLastImported="1296321992" sourcePlatform="macintosh" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" quality="50" href="Assets\Back.jpg" bitmapDataHRef="M 1 1296322543.dat" frameRight="15200" frameBottom="17000" isJPEG="true"/>
           <DOMBitmapItem name="Assets/Background.jpg" itemID="4d44b764-00000031" sourceExternalFilepath=".\jam\Background.jpg" sourceLastImported="1296349138" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" quality="50" href="Assets\Background.jpg" bitmapDataHRef="M 11 1296334869.dat" frameRight="15200" frameBottom="17000" isJPEG="true"/>
+          <DOMBitmapItem name="Assets/blowup.png" itemID="4d457a89-000002b2" sourceExternalFilepath=".\LIBRARY\blowup.png" sourceLastImported="1296333308" sourcePlatform="macintosh" externalFileCRC32="2184793156" externalFileSize="4055" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\blowup.png" bitmapDataHRef="M 1 1296333317.dat" frameRight="3060" frameBottom="2060"/>
           <DOMBitmapItem name="Assets/face.png" itemID="4d44500d-00000193" sourceExternalFilepath=".\Images\face.png" sourceLastImported="1296322212" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\face.png" bitmapDataHRef="M 2 1296322573.dat" frameRight="9560" frameBottom="9300"/>
           <DOMBitmapItem name="Assets/FriendCard.png" itemID="4d44a244-00000061" sourceExternalFilepath=".\jam\FriendCard.png" sourceLastImported="1296343583" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\FriendCard.png" bitmapDataHRef="M 16 1296343620.dat" frameRight="2340" frameBottom="2900"/>
           <DOMBitmapItem name="Assets/FriendDeck.png" itemID="4d44789d-00000037" sourceExternalFilepath=".\jam\FriendDeck.png" sourceLastImported="1296332939" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\FriendDeck.png" bitmapDataHRef="M 10 1296332957.dat" frameRight="2620" frameBottom="3620"/>
@@ -16,6 +17,7 @@
           <DOMBitmapItem name="Assets/oldspice.png" itemID="4d456e70-0000021c" sourceExternalFilepath=".\LIBRARY\oldspice.png" sourceLastImported="1296395435" sourcePlatform="macintosh" externalFileCRC32="2684552504" externalFileSize="15292" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\oldspice.png" bitmapDataHRef="M 4 1296395481.dat" frameRight="2920" frameBottom="4860"/>
      </media>
      <symbols>
+          <Include href="Assets/bomb.xml" loadImmediate="false"/>
           <Include href="Assets/btnPlay.xml" loadImmediate="false"/>
           <Include href="Assets/ChargingEnergy.xml" loadImmediate="false"/>
           <Include href="Assets/Classes.xml" loadImmediate="false"/>
@@ -42,6 +44,7 @@
           <Include href="Assets/txtText.xml" loadImmediate="false"/>
           <Include href="BasicCharacter.xml"/>
           <Include href="Bling.xml"/>
+          <Include href="BlowupEffect.xml"/>
           <Include href="EndScore.xml"/>
           <Include href="EnergyBarGraphic.xml"/>
           <Include href="FriendCardGraphic.xml"/>
@@ -62,7 +65,16 @@
                     <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements/>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="BlowupEffect" name="" centerPoint3DX="275" centerPoint3DY="199.95">
+                                             <matrix>
+                                                  <Matrix tx="275.5" ty="199.45"/>
+                                             </matrix>
+                                             <transformationPoint>
+                                                  <Point x="-0.5" y="0.5"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
@@ -372,6 +384,8 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="2567780" publishTime="1296398988"/>
+          <PublishItem publishSize="2563883" publishTime="1296397708"/>
           <PublishItem publishSize="2563558" publishTime="1296396986"/>
           <PublishItem publishSize="2563522" publishTime="1296396909"/>
           <PublishItem publishSize="2563464" publishTime="1296396557"/>
@@ -390,7 +404,5 @@
           <PublishItem publishSize="2547992" publishTime="1296354059"/>
           <PublishItem publishSize="2551885" publishTime="1296353878"/>
           <PublishItem publishSize="2532560" publishTime="1296353839"/>
-          <PublishItem publishSize="2474211" publishTime="1296353496"/>
-          <PublishItem publishSize="2474197" publishTime="1296353263"/>
      </publishHistory>
 </DOMDocument>

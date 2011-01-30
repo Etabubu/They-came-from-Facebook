@@ -1,16 +1,19 @@
 package com.gogogic.gamejam.view.components.units
 {
 	import com.gogogic.gamejam.assets.BasicCharacter;
+	import com.gogogic.gamejam.assets.BlowupEffect;
 	import com.gogogic.gamejam.model.vo.UnitVO;
 	import com.gogogic.gamejam.view.components.UnitComponent;
 	import com.gogogic.ui.tintDisplayObject;
 	import com.greensock.TweenLite;
 	
+	import flash.display.MovieClip;
 	import flash.events.Event;
 	
 	public class KamikazeUnitComponent extends UnitComponent
 	{
 		private var _target:UnitVO;
+		private var _character:MovieClip;
 		
 		public function KamikazeUnitComponent()
 		{
@@ -18,32 +21,37 @@ package com.gogogic.gamejam.view.components.units
 			unitVO.maxHealth = unitVO.currentHealth = 10;
 			
 			super(unitVO);
-			addChild(new BasicCharacter());
-			tintDisplayObject(this, 0xFF0000, .5);
+		}
+		
+		override protected function onInitDone():void {
+			_character = new BasicCharacter();
+			if (unitVO.isEnemy) _character.gotoAndStop(2);
+			addChild(_character);
 			addEventListener(Event.ENTER_FRAME, onEnterFrame);
-			
+			tintDisplayObject(this, 0xFF0000, .1);
 		}
 		
 		private function onEnterFrame(e:Event):void {
 			if (!_target || _target.currentHealth <= 0) _target = closestEnemy;
 			if (!_target) return; // If there are no enemies on stage, just stop
 			
-			var direction:Number = Math.atan2(_target.x - _unitVO.x, _target.y - _unitVO.y);
+			var direction:Number = Math.atan2(_target.y - _unitVO.y, _target.x - _unitVO.x);
 			
-			unitVO.x += Math.sin(direction) * 5;
-			unitVO.y += Math.cos(direction) * 5;
+			unitVO.x += Math.cos(direction) * 5;
+			unitVO.y += Math.sin(direction) * 5;
+			unitVO.rotation = direction * 180 / Math.PI;
 			unitVO.triggerDataChangeEvent();
 			
 			if (distanceTo(_target) < 20) {
 				removeEventListener(Event.ENTER_FRAME, onEnterFrame);
 				// EXPLODE
-				// TODO: Explode animation
+				addChild(new BlowupEffect());
+				removeChild(_character);
 				_target.currentHealth -= 50;
 				_target.triggerDataChangeEvent();
 				_unitVO.currentHealth = 0;
 				_unitVO.triggerDataChangeEvent();
-				alpha = .3;
-				TweenLite.delayedCall(1, dispatchEvent, [new Event(Event.COMPLETE)]);
+				TweenLite.delayedCall(.3, dispatchEvent, [new Event(Event.COMPLETE)]);
 			}
 		}
 		

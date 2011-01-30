@@ -28,14 +28,14 @@ package com.gogogic.gamejam.view.components.units
 			if (!_target || _target.currentHealth <= 0) _target = closestEnemy;
 			if (!_target) return; // If there are no enemies on stage, just stop
 			
-			var direction:Number = Math.atan2(_target.x - _unitVO.x, _target.y - _unitVO.y);
+			var direction:Number = Math.atan2(_target.y - _unitVO.y, _target.x - _unitVO.x);
 			var distance:Number = distanceTo(_target);
 			
 			if (distance < 60) {
 				// Dash
 				var dashDistance:Number = distance + 130;
 				
-				TweenLite.to(unitVO, .3, { x: unitVO.x + Math.sin(direction) * 120, y: unitVO.y + Math.cos(direction) * 120, onUpdate: unitVO.triggerDataChangeEvent });
+				TweenLite.to(unitVO, .3, { x: unitVO.x + Math.cos(direction) * 120, y: unitVO.y + Math.sin(direction) * 120, onUpdate: unitVO.triggerDataChangeEvent });
 				
 				unitVO.triggerDataChangeEvent();
 				// TODO: Show dash animation
@@ -44,12 +44,11 @@ package com.gogogic.gamejam.view.components.units
 				TweenLite.delayedCall(1, onDoneResting);
 			} else {
 				// Just move
-				unitVO.x += Math.sin(direction) * 2;
-				unitVO.y += Math.cos(direction) * 2;
+				unitVO.x += Math.cos(direction) * 2;
+				unitVO.y += Math.sin(direction) * 2;
+				unitVO.rotation = direction * 180 / Math.PI;
 				unitVO.triggerDataChangeEvent();
 			}
-			
-			
 		}
 		
 		private function onDoneResting():void {

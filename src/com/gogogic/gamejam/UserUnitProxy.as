@@ -34,7 +34,7 @@ package com.gogogic.gamejam
 			// TODO: Create different superclasses of unitComponent according to the friendVO
 			
 			// DEBUG
-			unitComponent = new ShooterUnitComponent();
+			unitComponent = new [ShooterUnitComponent, KamikazeUnitComponent, SlasherUnitComponent][Math.round(Math.random() * 2)]();
 			
 			// Setup all the common, required data
 			unitComponent.init(friendVO, _gameBoardUnits, x, y, false);
