@@ -9,6 +9,7 @@ package com.gogogic.gamejam.view.components
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.geom.Point;
 	
 	public class GameDeckComponent extends Sprite
 	{
@@ -31,7 +32,8 @@ package com.gogogic.gamejam.view.components
 			addFriendCard();
 			
 			addChild(_coolDownComponent = new CooldDownComponent());
-			_coolDownComponent.x = 650;
+			_coolDownComponent.x = 695;
+			_coolDownComponent.y = 60;
 			_coolDownComponent.addEventListener(Event.COMPLETE, onCooldownDone);
 			_coolDownComponent.start();
 		}
@@ -46,20 +48,29 @@ package com.gogogic.gamejam.view.components
 			
 			_friendCards[index] = newFriendCard;
 			newFriendCard.addEventListener(MouseEvent.MOUSE_DOWN, onFriendCardMouseDown);
-			var xPosition:Number = index * 100;
+			var xPosition:Number = 10 + index * 120;
 			addChild(newFriendCard);
 			newFriendCard.x = xPosition;
 		}
 		
 		private function onFriendCardMouseDown(e:MouseEvent):void {
 			var friendCard:FriendCardComponent = e.currentTarget as FriendCardComponent;
-			var dragSource:DragSource = new DragSource();
-			dragSource.addData(friendCard.friendVO, "friendCard");
 			
-			friendCard.alpha = .5;
+			var coords:Point = localToGlobal(new Point(mouseX, mouseY));
+			if (friendCard.discardButton.hitTestPoint(coords.x, coords.y, true)) {
+				// Discard
+				removeCard(friendCard);
+			} else {
+				// Drag
+				var dragSource:DragSource = new DragSource();
+				dragSource.addData(friendCard.friendVO, "friendCard");
+				
+				friendCard.alpha = .5;
+				
+				DragManager.getInstance().doDrag(friendCard, dragSource, null, new PortraitComponent(friendCard.friendVO.portraitUrl, 50));
+				friendCard.addEventListener(DragEvent.DRAG_COMPLETE, onDragComplete);
+			}
 			
-			DragManager.getInstance().doDrag(friendCard, dragSource, null, new FriendCardComponent(friendCard.friendVO));
-			friendCard.addEventListener(DragEvent.DRAG_COMPLETE, onDragComplete);
 		}
 		
 		private function onDragComplete(e:DragEvent):void {

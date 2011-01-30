@@ -1,0 +1,32 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="NextUp" itemID="4d44c4d7-0000020e" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.NextUp" sourceLibraryItemHRef="Symbol 1" lastModified="1296352805">
+  <timeline>
+    <DOMTimeline name="NextUp">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText selected="true" fontRenderingMode="standard" left="18.05" width="83.1" height="23.65" autoExpand="true" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="-59.6" ty="-8"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>NEXT UP</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" size="23" face="CCMonsterMash" fillColor="#FFDE02"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#620000" quality="2" strength="50"/>
+                  </filters>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

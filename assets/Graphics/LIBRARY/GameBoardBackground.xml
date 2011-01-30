@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="GameBoardBackground" itemID="4d44b9b4-00000229" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.GameBoardBackground" sourceLibraryItemHRef="Symbol 1" lastModified="1296349624">
+  <timeline>
+    <DOMTimeline name="GameBoardBackground">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance name="" referenceID="" libraryItemName="Assets/Background.jpg">
+                  <matrix>
+                    <Matrix a="1.00071716308594" d="0.99993896484375"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

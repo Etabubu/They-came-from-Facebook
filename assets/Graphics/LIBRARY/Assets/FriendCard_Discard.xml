@@ -1,0 +1,97 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/FriendCard_Discard" itemID="4d446952-00000025" sourceLibraryItemHRef="Symbol 1" lastModified="1296354114">
+  <timeline>
+    <DOMTimeline name="FriendCard_Discard">
+      <layers>
+        <DOMLayer name="text" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText fontRenderingMode="standard" width="37.6" height="16.3" autoExpand="true" isSelectable="false">
+                  <matrix>
+                    <Matrix a="0.857635498046875" d="0.857635498046875" tx="9.3" ty="2.2"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Discard</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" size="14" bitmapSize="280" face="Frutiger LT Std*" fillColor="#FFBD17"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="arrow" color="#FFFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FFBD17"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1331 83[1213 82 1188 149!1188 149[1161 216 1221 275!1221 275[1282 332 1344 352!1344 352[1270 287 1263 213!1263 213[1256 139 1331 149!1331 149|1331 201!1331 201|1471 113!1471 113|1331 26!1331 26|1331 83"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Circle" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#670600"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!1162 25[1230 -43 1326 -43!1326 -43[1421 -43 1489 25!1489 25[1558 93 1558 189!1558 189[1558 284 1489 352!1489 352[1421 421 1326 421!1326 421[1230 421 1162 352!1162 352[1095 284 1095 189!1095 189[1095 93 1162 25"/>
+                    <Edge cubics="!1326 -43(;1390,-43 1444,-20 1489,25q1326 -43Q1421 -43q1489 25);"/>
+                    <Edge cubics="!1162 25(;1208,-20 1262,-43 1326,-43q1162 25Q1230 -43q1326 -43);"/>
+                    <Edge cubics="!1326 421(;1262,421 1208,398 1162,352q1326 421Q1230 421q1162 352);"/>
+                    <Edge cubics="!1162 352(;1117,306 1095,252 1095,189q1162 352Q1095 284q1095 189);"/>
+                    <Edge cubics="!1489 352(1489,352;1444,398 1390,421 1326,421q1489 352Q1421 421q1326 421);"/>
+                    <Edge cubics="!1558 189(1558,189;1558,252 1536,306 1489,352q1558 189Q1558 284q1489 352);"/>
+                    <Edge cubics="!1489 25(1489,25;1536,71 1558,125 1558,189q1489 25Q1558 93q1558 189);"/>
+                    <Edge cubics="!1095 189(;1095,125 1117,71 1162,25q1095 189Q1095 93q1162 25);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="rect" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!1187 26|186 26!186 26[99 26 99 113!99 113|99 265!99 265[99 352 186 352!186 352|1187 352!1187 352|1187 26"/>
+                    <Edge cubics="!1187 352(;1187,352 1187,26 1187,26q1187 352 1187 26);"/>
+                    <Edge cubics="!186 26(186,26;128,26 99,55 99,113q186 26Q99 26q99 113);"/>
+                    <Edge cubics="!99 113(99,113;99,113 99,265 99,265q99 113 99 265);"/>
+                    <Edge cubics="!99 265(99,265;99,323 128,352 186,352q99 265Q99 352q186 352);"/>
+                    <Edge cubics="!1187 26(;1187,26 186,26 186,26q1187 26 186 26);"/>
+                    <Edge cubics="!186 352(;186,352 1187,352 1187,352q186 352 1187 352);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

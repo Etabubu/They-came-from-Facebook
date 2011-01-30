@@ -31,11 +31,10 @@ package com.gogogic.gamejam.view
 			_playerVO = playerVO;
 			
 			addChild(_gameBoardComponent = new GameBoardComponent());
-			_gameBoardComponent.y = 50;
 			
 			addChild(_gameDeckComponent = new GameDeckComponent(_friendDeck));
-			_gameDeckComponent.x = 50;
-			_gameDeckComponent.y = 700;
+			_gameDeckComponent.x = 0;
+			_gameDeckComponent.y = 690;
 			
 			addChild(_enemyDeckComponent = new EnemyDeckComponent(enemyDeck));
 			_enemyDeckComponent.x = 500;

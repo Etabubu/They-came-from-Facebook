@@ -6,6 +6,7 @@ package com.gogogic.gamejam
 	import com.gogogic.gamejam.view.components.UnitComponent;
 	import com.gogogic.gamejam.view.components.units.DemoUnitComponent;
 	import com.gogogic.gamejam.view.components.units.KamikazeUnitComponent;
+	import com.gogogic.gamejam.view.components.units.SlasherUnitComponent;
 	
 	import org.puremvc.as3.multicore.interfaces.IProxy;
 	import org.puremvc.as3.multicore.patterns.proxy.Proxy;
