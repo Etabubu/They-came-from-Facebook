@@ -1,0 +1,62 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="EnergyBarGraphic" itemID="4d44dd66-00000266" linkageExportForAS="true" linkageClassName="com.gogogic.ggamejam.assets.EnergyBarGraphic" sourceLibraryItemHRef="Symbol 1" lastModified="1296359849">
+  <timeline>
+    <DOMTimeline name="EnergyBarGraphic">
+      <layers>
+        <DOMLayer name="BlueBar" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/MainEnergy" name="mcMainEnergy" centerPoint3DX="418.6" centerPoint3DY="-14">
+                  <matrix>
+                    <Matrix ty="-30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="LightBlueBar" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/ChargingEnergy" name="mcChargingEnergy" centerPoint3DX="421" centerPoint3DY="-14">
+                  <matrix>
+                    <Matrix ty="-30"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="BackgroundBar" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#7A7A7A"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!15200 -600|15200 0!15200 0|0 0!0 0|0 -600!0 -600|15200 -600"/>
+                    <Edge cubics="!0 0(;0,0 0,-600 0,-600q0 0 0 -600);"/>
+                    <Edge cubics="!0 0(0,0;0,0 15200,0 15200,0q0 0 15200 0)15200,0;"/>
+                    <Edge cubics="!0 -600(0,-600;0,-600 15200,-600 15200,-600q0 -600 15200 -600)15200,-600;"/>
+                    <Edge cubics="!15200 -600(15200,-600;15200,-600 15200,0 15200,0q15200 -600 15200 0);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

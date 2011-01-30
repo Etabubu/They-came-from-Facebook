@@ -3,19 +3,30 @@
           <DOMFolderItem name="Assets" itemID="4d4481cb-00000d7c"/>
      </folders>
      <fonts>
-          <DOMFontItem name="Assets/Frutiger LT Std" itemID="4d44afa6-000001ed" font="FrutigerLTStd-LightCn" size="0" id="2" sourceLastImported="1296347046" embedRanges="1|2|3|4|5|17"/>
+          <DOMFontItem name="Assets/Frutiger LT Std" itemID="4d44c777-00000224" font="FrutigerLTStd-LightCn" size="0" id="4" sourceLastImported="1296353104" embedRanges="1|2|3|4|5|17"/>
           <DOMFontItem name="Assets/CCMonsterMash" itemID="4d44a688-000001e9" font="CCMonsterMash" size="0" id="1" sourceLastImported="1296344712" embedRanges="1|2|3|4|5|17"/>
      </fonts>
      <media>
-          <DOMBitmapItem name="Assets/Back.jpg" itemID="4d444fef-000000cd" sourceExternalFilepath=".\Images\Back.jpg" sourceLastImported="1296321992" sourcePlatform="macintosh" quality="50" href="Assets\Back.jpg" bitmapDataHRef="M 1 1296322543.dat" frameRight="15200" frameBottom="17000" isJPEG="true"/>
-          <DOMBitmapItem name="Assets/face.png" itemID="4d44500d-00000193" sourceExternalFilepath=".\Images\face.png" sourceLastImported="1296322212" originalCompressionType="lossless" quality="50" href="Assets\face.png" bitmapDataHRef="M 2 1296322573.dat" frameRight="9560" frameBottom="9300"/>
-          <DOMBitmapItem name="Assets/logo.png" itemID="4d4462f9-0000402f" sourceExternalFilepath=".\Images\logo.png" sourceLastImported="1296326778" originalCompressionType="lossless" quality="50" href="Assets\logo.png" bitmapDataHRef="M 3 1296327417.dat" frameRight="14620" frameBottom="5640"/>
+          <DOMBitmapItem name="Assets/Back.jpg" itemID="4d444fef-000000cd" sourceExternalFilepath=".\Images\Back.jpg" sourceLastImported="1296321992" sourcePlatform="macintosh" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" quality="50" href="Assets\Back.jpg" bitmapDataHRef="M 1 1296322543.dat" frameRight="15200" frameBottom="17000" isJPEG="true"/>
+          <DOMBitmapItem name="Assets/Background.jpg" itemID="4d44b764-00000031" sourceExternalFilepath=".\jam\Background.jpg" sourceLastImported="1296349138" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" quality="50" href="Assets\Background.jpg" bitmapDataHRef="M 11 1296334869.dat" frameRight="15200" frameBottom="17000" isJPEG="true"/>
+          <DOMBitmapItem name="Assets/face.png" itemID="4d44500d-00000193" sourceExternalFilepath=".\Images\face.png" sourceLastImported="1296322212" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\face.png" bitmapDataHRef="M 2 1296322573.dat" frameRight="9560" frameBottom="9300"/>
+          <DOMBitmapItem name="Assets/FriendCard.png" itemID="4d44a244-00000061" sourceExternalFilepath=".\jam\FriendCard.png" sourceLastImported="1296343583" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\FriendCard.png" bitmapDataHRef="M 16 1296343620.dat" frameRight="2340" frameBottom="2900"/>
+          <DOMBitmapItem name="Assets/FriendDeck.png" itemID="4d44789d-00000037" sourceExternalFilepath=".\jam\FriendDeck.png" sourceLastImported="1296332939" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\FriendDeck.png" bitmapDataHRef="M 10 1296332957.dat" frameRight="2620" frameBottom="3620"/>
+          <DOMBitmapItem name="Assets/logo.png" itemID="4d4462f9-0000402f" sourceExternalFilepath=".\Images\logo.png" sourceLastImported="1296326778" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Assets\logo.png" bitmapDataHRef="M 3 1296327417.dat" frameRight="14620" frameBottom="5640"/>
      </media>
      <symbols>
           <Include href="Assets/btnPlay.xml" loadImmediate="false"/>
+          <Include href="Assets/ChargingEnergy.xml" loadImmediate="false"/>
+          <Include href="Assets/Classes.xml" loadImmediate="false"/>
+          <Include href="Assets/Empty.xml" loadImmediate="false"/>
           <Include href="Assets/FBLoad.xml" loadImmediate="false"/>
           <Include href="Assets/fbLoadingElement.xml" loadImmediate="false"/>
+          <Include href="Assets/FriendCard_Discard.xml" loadImmediate="false"/>
+          <Include href="Assets/FriendCard_Image.xml" loadImmediate="false"/>
+          <Include href="Assets/FriendCard_Use.xml" loadImmediate="false"/>
+          <Include href="Assets/FriendDeck.xml" loadImmediate="false"/>
           <Include href="Assets/LeaderboardBack.xml" loadImmediate="false"/>
+          <Include href="Assets/MainEnergy.xml" loadImmediate="false"/>
           <Include href="Assets/mcDevider.xml" loadImmediate="false"/>
           <Include href="Assets/mcFace.xml" loadImmediate="false"/>
           <Include href="Assets/mcLeaderboard.xml" loadImmediate="false"/>
@@ -27,8 +38,15 @@
           <Include href="Assets/txtPlay.xml" loadImmediate="false"/>
           <Include href="Assets/txtText.xml" loadImmediate="false"/>
           <Include href="BasicCharacter.xml"/>
+          <Include href="EnergyBarGraphic.xml"/>
+          <Include href="FriendCardGraphic.xml"/>
+          <Include href="FriendDeckGraphic.xml"/>
+          <Include href="GameBoardBackground.xml"/>
           <Include href="MainMenu.xml"/>
+          <Include href="NextUp.xml"/>
+          <Include href="NextUpIcon.xml"/>
           <Include href="PlayerCharacter.xml"/>
+          <Include href="Score.xml"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Scene 1">
@@ -346,23 +364,25 @@
      </extendedSwatchLists>
      <PrinterSettings/>
      <publishHistory>
-          <PublishItem publishSize="234607" publishTime="1296347227"/>
-          <PublishItem publishSize="234657" publishTime="1296347054"/>
-          <PublishItem publishSize="234655" publishTime="1296347049"/>
-          <PublishItem publishSize="214719" publishTime="1296346985"/>
-          <PublishItem publishSize="214843" publishTime="1296344749"/>
-          <PublishItem publishSize="214844" publishTime="1296344744"/>
-          <PublishItem publishSize="214017" publishTime="1296344716"/>
-          <PublishItem publishSize="199020" publishTime="1296344641"/>
-          <PublishItem publishSize="193053" publishTime="1296344356"/>
-          <PublishItem publishSize="193041" publishTime="1296344346"/>
-          <PublishItem publishSize="193039" publishTime="1296344342"/>
-          <PublishItem publishSize="190640" publishTime="1296335370"/>
-          <PublishItem publishSize="190543" publishTime="1296331238"/>
-          <PublishItem publishSize="190332" publishTime="1296331121"/>
-          <PublishItem publishSize="934" publishTime="1296318308"/>
-          <PublishItem publishSize="528" publishTime="1296318232"/>
-          <PublishItem publishSize="526" publishTime="1296318115"/>
-          <PublishItem publishSize="517" publishTime="1296318104"/>
+          <PublishItem publishSize="2547342" publishTime="1296359808"/>
+          <PublishItem publishSize="2547316" publishTime="1296358763"/>
+          <PublishItem publishSize="2547313" publishTime="1296358715"/>
+          <PublishItem publishSize="2547058" publishTime="1296354122"/>
+          <PublishItem publishSize="2547992" publishTime="1296354059"/>
+          <PublishItem publishSize="2551885" publishTime="1296353878"/>
+          <PublishItem publishSize="2532560" publishTime="1296353839"/>
+          <PublishItem publishSize="2474211" publishTime="1296353496"/>
+          <PublishItem publishSize="2474197" publishTime="1296353263"/>
+          <PublishItem publishSize="2474151" publishTime="1296353195"/>
+          <PublishItem publishSize="2493300" publishTime="1296353108"/>
+          <PublishItem publishSize="2474673" publishTime="1296353084"/>
+          <PublishItem publishSize="2474672" publishTime="1296352928"/>
+          <PublishItem publishSize="2473798" publishTime="1296352549"/>
+          <PublishItem publishSize="2473797" publishTime="1296352504"/>
+          <PublishItem publishSize="2473686" publishTime="1296352430"/>
+          <PublishItem publishSize="2473686" publishTime="1296352407"/>
+          <PublishItem publishSize="2473687" publishTime="1296352344"/>
+          <PublishItem publishSize="2508854" publishTime="1296351251"/>
+          <PublishItem publishSize="399128" publishTime="1296350384"/>
      </publishHistory>
 </DOMDocument>

@@ -1,10 +1,12 @@
 package com.gogogic.gamejam.view.components
 {
 	import com.gogogic.gamejam.Settings;
+	import com.gogogic.gamejam.assets.FriendDeckGraphic;
 	import com.gogogic.ui.drawPieMask;
 	import com.greensock.TweenLite;
 	import com.greensock.easing.Linear;
 	
+	import flash.display.BlendMode;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.TimerEvent;
@@ -14,12 +16,20 @@ package com.gogogic.gamejam.view.components
 	{
 		private var _timer:Timer;
 		private var _wasStopped:Boolean = false;
+		private var _overlayDeck:FriendDeckGraphic;
+		private var _overlayDeckMask:Sprite;
 		
 		public var timeLeft:Number;
 		
 		public function CooldDownComponent()
 		{
-			
+			var cardGraphic:FriendDeckGraphic = new FriendDeckGraphic();
+			addChild(cardGraphic);
+			addChild(_overlayDeck = new FriendDeckGraphic());
+			_overlayDeck.blendMode = BlendMode.MULTIPLY;
+			_overlayDeckMask = new Sprite();
+			_overlayDeck.addChild(_overlayDeckMask);
+			_overlayDeck.mask = _overlayDeckMask;
 		}
 		
 		public function start():void {
@@ -47,10 +57,10 @@ package com.gogogic.gamejam.view.components
 			var scale:Number = timeLeft / Settings.COOLDOWN_TIME ;
 			// TODO: Draw the progress
 			
-			graphics.clear();
-			graphics.beginFill(0);
-			drawPieMask(graphics, scale, 50, 0, 0, -Math.PI/2, 20);
-			graphics.endFill();
+			_overlayDeckMask.graphics.clear();
+			_overlayDeckMask.graphics.beginFill(0);
+			drawPieMask(_overlayDeckMask.graphics, scale, 100, 0, 0, -Math.PI/2, 3);
+			_overlayDeckMask.graphics.endFill();
 		}
 	}
 }

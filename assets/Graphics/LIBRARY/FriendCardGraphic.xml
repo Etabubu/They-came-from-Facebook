@@ -1,0 +1,191 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="FriendCardGraphic" itemID="4d44c0cb-00000281" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.FriendCardGraphic" sourceLibraryItemHRef="Symbol 1" lastModified="1296354054">
+  <timeline>
+    <DOMTimeline name="FriendCardGraphic">
+      <layers>
+        <DOMLayer name="Discard Card" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/FriendCard_Discard" name="btnDiscard" selected="true" centerPoint3DX="73.95" centerPoint3DY="7.45">
+                  <matrix>
+                    <Matrix a="1.00048828125" d="0.989730834960938" tx="32.5" ty="-1.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="34.8" y="9.8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Use Card" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#1C643F"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#0EBA5B"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#FFFFFF"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle0="1" edges="!444 2938|1166 2938!1166 2938[1257 2938 1257 2848!1257 2848|1257 2690!1257 2690[1257 2601 1166 2601!1166 2601|445 2601"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!445 2601[516 #A6D.B9 516 2769!516 2769[516 2868 444 2938"/>
+                    <Edge fillStyle0="3" fillStyle1="2" edges="!348 2704|257 2560!257 2560|167 2704!167 2704|226 2704!226 2704[226 2706 226 2708!226 2708|226 2710!226 2710|266 2962!266 2962|290 2710!290 2710|290 2708!290 2708|293 2704!293 2704|348 2704"/>
+                    <Edge fillStyle1="2" edges="!444 2938[375 3009 276 3009!276 3009[176 3009 107 2938!107 2938[74 2905 56 2865!56 2865[37 2821 37 2769!37 2769[37 2717 56 2672!56 2672[74 2633 107 2600!107 2600[176 2529 276 2529!276 2529[375 2529 444 2600!444 2600[#1BC.85 2600.5 445
+ 2601"/>
+                    <Edge cubics="!1166 2938(1166,2938;1226,2938 1257,2908 1257,2848q1166 2938Q1257 2938q1257 2848);"/>
+                    <Edge cubics="!1257 2848(1257,2848;1257,2848 1257,2690 1257,2690q1257 2848 1257 2690);"/>
+                    <Edge cubics="!1257 2690(1257,2690;1257,2631 1226,2601 1166,2601q1257 2690Q1257 2601q1166 2601);"/>
+                    <Edge cubics="!389 2601(389,2601;389,2601 389,2938 389,2938q389 2601 389 2938);"/>
+                    <Edge cubics="!1166 2601(1166,2601;1166,2601 445,2601 445,2601q1166 2601 445 2601);"/>
+                    <Edge cubics="!445 2601(;445,2601 389,2601 389,2601q445 2601 389 2601);"/>
+                    <Edge cubics="!389 2938(;389,2938 444,2938 444,2938q389 2938 444 2938);"/>
+                    <Edge cubics="!444 2938(;444,2938 1166,2938 1166,2938q444 2938 1166 2938);"/>
+                    <Edge cubics="!276 2529(;342,2529 398,2553 444,2600q276 2529Q375 2529q444 2600);"/>
+                    <Edge cubics="!107 2600(;154,2553 210,2529 276,2529q107 2600Q176 2529q276 2529);"/>
+                    <Edge cubics="!276 3009(;210,3009 154,2986 107,2938q276 3009Q176 3009q107 2938);"/>
+                    <Edge cubics="!107 2938(;86,2918 70,2895 56,2865q107 2938Q74 2905q56 2865);"/>
+                    <Edge cubics="!56 2865(56,2865;44,2840 37,2807 37,2769q56 2865Q37 2821q37 2769);"/>
+                    <Edge cubics="!444 2938(444,2938;398,2986 342,3009 276,3009q444 2938Q375 3009q276 3009);"/>
+                    <Edge cubics="!516 2769(516,2769;516,2835 492,2891 444,2938q516 2769Q516 2868q444 2938);"/>
+                    <Edge cubics="!444 2600(444,2600;445,2601 446,2602 445,2601q444 2600 445 2601);"/>
+                    <Edge cubics="!445 2601(;494,2650 516,2705 516,2769q445 2601Q516 2670q516 2769);"/>
+                    <Edge cubics="!37 2769(37,2769;37,2736 43,2704 56,2672q37 2769Q37 2717q56 2672);"/>
+                    <Edge cubics="!56 2672(56,2672;66,2648 84,2623 107,2600q56 2672Q74 2633q107 2600);"/>
+                  </edges>
+                </DOMShape>
+                <DOMDynamicText name="txtPowerLevel" fontRenderingMode="standard" width="29.85" height="16.95" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix a="0.8857421875" d="0.887680053710938" tx="29.3" ty="130.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>9001</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" size="14" bitmapSize="280" face="FrutigerLTStd-LightCn" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Name" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="txtName" fontRenderingMode="standard" left="-8.75" width="83.9" height="17.05" isSelectable="false">
+                  <matrix>
+                    <Matrix a="1.00146484375" d="0.997940063476563" tx="23.25" ty="84"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Jóhannes Sigurð</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" size="14" bitmapSize="280" face="FrutigerLTStd-LightCn" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Layer 4" color="#FF4FFF">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor alpha="0.745098039215686"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="
+!2002 1681|2002 1995!2002 1995|286 1995!286 1995|286 1681!286 1681|2002 1681"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Image" color="#4FFFFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Assets/FriendCard_Image" name="mcPortrait" centerPoint3DX="-63" centerPoint3DY="68.25">
+                  <matrix>
+                    <Matrix a="1.00009155273438" d="1.0001220703125" tx="14" ty="11"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Class" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="txtClass" fontRenderingMode="standard" left="-8.75" width="95.85" height="17" isSelectable="false">
+                  <matrix>
+                    <Matrix a="0.891448974609375" d="0.901718139648438" tx="17.55" ty="98.85"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Class</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" size="14" bitmapSize="280" face="FrutigerLTStd-LightCn" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="powerlevel" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMStaticText fontRenderingMode="standard" left="-8.75" width="71.9" height="11.15" isSelectable="false">
+                  <matrix>
+                    <Matrix a="1.00146484375" d="1.00030517578125" tx="31.75" ty="118"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Power Level</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" size="10" face="Frutiger LT Std 55 Roman" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMStaticText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Card" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance name="" referenceID="" libraryItemName="Assets/FriendCard.png"/>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

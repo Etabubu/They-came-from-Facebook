@@ -2,6 +2,7 @@ package com.gogogic.gamejam.view.components
 {
 	import br.com.stimuli.loading.BulkLoader;
 	
+	import com.gogogic.gamejam.assets.NextUpIcon;
 	import com.gogogic.gamejam.bulkLoad;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	import com.greensock.TweenLite;
@@ -16,7 +17,6 @@ package com.gogogic.gamejam.view.components
 	{
 		private var _portraitHolder:Sprite;
 		private var _friendVO:FriendVO;
-		private var _friendName:TextField;
 		
 		public function EnemyCardComponent(friendVO:FriendVO)
 		{
@@ -25,35 +25,17 @@ package com.gogogic.gamejam.view.components
 		}
 		
 		private function init():void {
-			addChild(_portraitHolder = new Sprite());
-			_portraitHolder.x = -25;
-			_portraitHolder.graphics.lineStyle(1, 0x000000);
-			_portraitHolder.graphics.beginFill(0xFFFFFF);
-			_portraitHolder.graphics.drawRect(.5, .5, 49, 49);
-			_portraitHolder.graphics.endFill();
+			var nextUpIcon:NextUpIcon = new NextUpIcon();
+			addChild(nextUpIcon);
 			
-			_friendName = new TextField();
-			_friendName.selectable = false;
-			_friendName.autoSize = TextFieldAutoSize.LEFT;
 			
 			if (_friendVO) {
-				_friendName.text = _friendVO.name;
-				bulkLoad(_friendVO.portraitUrl, onPortraitLoaded);
+				nextUpIcon.txtClass.text = _friendVO.name;
+				nextUpIcon.mcPortrait.addChild(new PortraitComponent(_friendVO.portraitUrl, 50));
 			} else {
 				// TODO: Show a question mark instead
-				_friendName.text = "?";
+				nextUpIcon.txtClass.text = "?";
 			}
-			
-			_friendName.x = -Math.round(_friendName.width / 2);
-			addChild(_friendName);
-			_friendName.filters = [new GlowFilter(0xFFFFFF1, 1, 3, 3, 1)];
-		}
-		
-		private function onPortraitLoaded(bulkLoader:BulkLoader,path:String):void {
-			var bitmap:Bitmap = new Bitmap(bulkLoader.getBitmapData(path));
-			_portraitHolder.addChild(bitmap);
-			bitmap.alpha = 0;
-			TweenLite.to(bitmap, .5, { alpha: 1 });
 		}
 	}
 }

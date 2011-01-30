@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.view.components
 {
+	import com.gogogic.gamejam.assets.NextUp;
 	import com.gogogic.gamejam.model.FriendDeck;
 	import com.gogogic.gamejam.model.vo.FriendVO;
 	
@@ -14,6 +15,9 @@ package com.gogogic.gamejam.view.components
 		{
 			_friendDeck = friendDeck;
 			addChild(_enemyContainer = new Sprite());
+			var nextUp:NextUp = new NextUp();
+			nextUp.y = -4;
+			addChild(nextUp);
 			draw();
 		}
 
@@ -24,7 +28,7 @@ package com.gogogic.gamejam.view.components
 			for (var i:int = 0; i < 4; i++) {
 				var enemyCard:EnemyCardComponent = new EnemyCardComponent(_friendDeck.getFriendOffset(i));
 				enemyCard.x = 65 * i;
-				enemyCard.y = 15 * i;
+				enemyCard.y = 10 + 15 * i;
 				_enemyContainer.addChild(enemyCard);
 			}
 		}

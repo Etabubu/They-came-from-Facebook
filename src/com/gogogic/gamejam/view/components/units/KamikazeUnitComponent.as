@@ -25,7 +25,7 @@ package com.gogogic.gamejam.view.components.units
 		}
 		
 		private function onEnterFrame(e:Event):void {
-			if (!_target) _target = closestEnemy;
+			if (!_target || _target.currentHealth <= 0) _target = closestEnemy;
 			if (!_target) return; // If there are no enemies on stage, just stop
 			
 			var direction:Number = Math.atan2(_target.x - _unitVO.x, _target.y - _unitVO.y);

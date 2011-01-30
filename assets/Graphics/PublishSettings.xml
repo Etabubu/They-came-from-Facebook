@@ -62,7 +62,7 @@
     <Report>0</Report>
     <Protect>0</Protect>
     <OmitTraceActions>0</OmitTraceActions>
-    <Quality>80</Quality>
+    <Quality>100</Quality>
     <DeblockingFilter>0</DeblockingFilter>
     <StreamFormat>0</StreamFormat>
     <StreamCompress>7</StreamCompress>

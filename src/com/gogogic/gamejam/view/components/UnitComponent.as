@@ -6,6 +6,7 @@ package com.gogogic.gamejam.view.components
 	
 	import flash.display.Sprite;
 	import flash.events.Event;
+	import flash.geom.Point;
 	
 	public class UnitComponent extends Sprite
 	{
@@ -111,6 +112,15 @@ package com.gogogic.gamejam.view.components
 			}
 			
 			return closestEnemy;
+		}
+		
+		protected function getLocationWithDistanceTo(unit:UnitVO, preferredDistance:Number):Point {
+			var distanceVector:Point = new Point(_unitVO.x - unit.x, _unitVO.y - unit.y);
+			var distance:Number = distanceTo(unit);
+			// unit vector
+			distanceVector.x = distanceVector.x / distance * preferredDistance + unit.x;
+			distanceVector.y = distanceVector.y / distance * preferredDistance + unit.y;
+			return distanceVector;
 		}
 		
 		public function dispose():void {

@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.view.components
 {
+	import com.gogogic.gamejam.assets.Score;
 	import com.gogogic.gamejam.model.vo.PlayerVO;
 	import com.gogogic.gamejam.model.vo.event.DataChangeEvent;
 	import com.gogogic.ui.setTextFormat;
@@ -12,7 +13,7 @@ package com.gogogic.gamejam.view.components
 	public class ScoreComponent extends Sprite
 	{
 		private var _playerVO:PlayerVO;
-		private var _scoreField:TextField;
+		private var _score:Score;
 		
 		public function ScoreComponent(playerVO:PlayerVO)
 		{
@@ -24,13 +25,8 @@ package com.gogogic.gamejam.view.components
 			_playerVO.addEventListener(DataChangeEvent.DATA_CHANGE, onPlayerVODataChange);
 			// TODO: Initialize score graphics and dynamic textfield
 			
-			_scoreField = new TextField();
-			_scoreField.selectable = false;
-			_scoreField.autoSize = TextFieldAutoSize.CENTER;
-			addChild(_scoreField);
-			setTextFormat(_scoreField, null, 20, 0x000000, null, null, null, null, null, TextFormatAlign.CENTER);
-			_scoreField.embedFonts = false;
-			
+			addChild(_score = new Score());
+			_score.txtScore.autoSize = TextFieldAutoSize.LEFT;
 			updateScore();
 		}
 		
@@ -40,8 +36,9 @@ package com.gogogic.gamejam.view.components
 		
 		private function updateScore():void {
 			// TODO: Update score textfield
-			_scoreField.text = "SCORE:\n" + _playerVO.score.toString();
-			_scoreField.x = -Math.round(_scoreField.width / 2);
+			_score.txtScore.text = _playerVO.score.toString();
+			
+			_score.txtScore.x = -Math.round(_score.txtScore.width / 2);
 		}
 		
 	}

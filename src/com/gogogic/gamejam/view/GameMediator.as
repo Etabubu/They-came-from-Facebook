@@ -59,6 +59,9 @@ package com.gogogic.gamejam.view
 		}
 		
 		private function start():void {
+			// Create the player unit
+			_playerUnitComponent = new PlayerUnitComponent();
+			_playerProxy.playerVO.playerUnit = _playerUnitComponent.unitVO;
 			// Set up the opposition friendDeck by supplying the "enemy friends" to the opposition proxy
 			_oppositionProxy.oppositionFriends = _friendsProxy.enemies;
 			gameView.init(_playerProxy.playerVO, new FriendDeck(_friendsProxy.friends), _oppositionProxy.oppositionDeck);
@@ -66,10 +69,9 @@ package com.gogogic.gamejam.view
 			facade.registerMediator(new GameBoardMediator(gameView.gameBoardComponent));
 			// Start the enemy
 			_oppositionProxy.start();
-			// Create the player unit
-			_playerUnitComponent = new PlayerUnitComponent();
-			_playerProxy.playerVO.playerUnit = _playerUnitComponent.unitVO;
 			sendNotification(GameBoardMediator.ADD_UNIT, _playerUnitComponent);
+			// Start the energy regeneration
+			_playerProxy.startEnergyRegen();
 		}
 	}
 }

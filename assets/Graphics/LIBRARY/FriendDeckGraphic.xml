@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="FriendDeckGraphic" itemID="4d44bc2f-00000235" linkageExportForAS="true" linkageClassName="com.gogogic.gamejam.assets.FriendDeckGraphic" sourceLibraryItemHRef="Symbol 1" lastModified="1296353874" lastUniqueIdentifier="1">
+  <timeline>
+    <DOMTimeline name="FriendDeckGraphic">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance name="" referenceID="" libraryItemName="Assets/FriendDeck.png">
+                  <matrix>
+                    <Matrix tx="-65.5" ty="-90.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
