@@ -6,6 +6,7 @@ package com.gogogic.gamejam.model
 	import com.gogogic.gamejam.view.GameBoardMediator;
 	import com.gogogic.gamejam.view.components.UnitComponent;
 	import com.gogogic.gamejam.view.components.units.DemoUnitComponent;
+	import com.gogogic.gamejam.view.components.units.ShooterUnitComponent;
 	
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
@@ -64,7 +65,7 @@ package com.gogogic.gamejam.model
 			// TODO: Create different superclasses of unitComponent according to the friendVO
 			
 			// DEBUG
-			unitComponent = new DemoUnitComponent();
+			unitComponent = new ShooterUnitComponent();
 			
 			// Setup all the common, required data
 			unitComponent.init(_oppositionDeck.drawNext(), _gameBoardUnits, 30 + Math.random() * 700, 100, true);

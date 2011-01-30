@@ -1,6 +1,6 @@
 <DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Assets/btnPlay" itemID="4d445ee6-000037c2" sourceLibraryItemHRef="Symbol 1" lastModified="1296344338" lastUniqueIdentifier="14">
   <timeline>
-    <DOMTimeline name="btnPlay" currentFrame="1">
+    <DOMTimeline name="btnPlay" currentFrame="3">
       <layers>
         <DOMLayer name="Layer 2" color="#9933CC">
           <frames>
@@ -12,7 +12,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Label" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="Label" color="#FF800A" autoNamed="false">
           <frames>
             <DOMFrame index="0" name="_FBload" labelType="name" keyMode="9728">
               <elements/>
@@ -28,14 +28,14 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="Layer 1" color="#0000FF" autoNamed="false">
+        <DOMLayer name="Layer 1" color="#0000FF" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements/>
             </DOMFrame>
             <DOMFrame index="1" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/txtPlay" name="" centerPoint3DX="151.8" centerPoint3DY="57.5">
+                <DOMSymbolInstance libraryItemName="txtPlayGame" name="" selected="true" centerPoint3DX="151.8" centerPoint3DY="57.5">
                   <matrix>
                     <Matrix tx="42.3" ty="20.75"/>
                   </matrix>
@@ -51,7 +51,7 @@
             </DOMFrame>
             <DOMFrame index="2" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/txtPlay" name="" centerPoint3DX="151.8" centerPoint3DY="57.5">
+                <DOMSymbolInstance libraryItemName="txtPlayGame" name="" centerPoint3DX="151.8" centerPoint3DY="57.5">
                   <matrix>
                     <Matrix a="1.0999755859375" d="1.0999755859375" tx="31.35" ty="17.05"/>
                   </matrix>
@@ -67,7 +67,7 @@
             </DOMFrame>
             <DOMFrame index="3" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="Assets/txtPlay" name="" centerPoint3DX="151.8" centerPoint3DY="57.5">
+                <DOMSymbolInstance libraryItemName="txtPlayGame" name="" centerPoint3DX="151.8" centerPoint3DY="57.5">
                   <matrix>
                     <Matrix a="0.920013427734375" d="0.920013427734375" tx="51.05" ty="23.65"/>
                   </matrix>

@@ -9,15 +9,12 @@ package com.gogogic.gamejam.view.components.units
 	
 	public class PlayerUnitComponent extends UnitComponent
 	{
-		public function PlayerUnitComponent()
+		public function PlayerUnitComponent(playerUnitVO:UnitVO)
 		{
-			var playerUnitVO:UnitVO = new UnitVO();
-			playerUnitVO.maxHealth = playerUnitVO.currentHealth = Settings.PLAYER_UNIT_STARTING_HEALTH;
-			
 			addChild(new PlayerCharacter());
 			
 			playerUnitVO.x = Application.APPLICATION_WIDTH / 2;
-			playerUnitVO.y = 500;
+			playerUnitVO.y = 650;
 			
 			super(playerUnitVO);
 			update();

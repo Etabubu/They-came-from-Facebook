@@ -9,10 +9,8 @@ package com.gogogic.gamejam.model.vo
 		
 		public var score:int;
 		
-		public var energy:Number;
-		public var reserveEnergy:Number;
-		
-		public var playerUnit:UnitVO;
+		public var energy:Number = 1;
+		public var reserveEnergy:Number = 1;
 		
 		public var id:Number;
 		public var firstName:String;
@@ -24,5 +22,7 @@ package com.gogogic.gamejam.model.vo
 		public var developer:Boolean;
 		
 		public var family:Object = {};
+		
+		public var playerUnit:PlayerUnitVO;
 	}
 }

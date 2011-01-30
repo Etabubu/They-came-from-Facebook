@@ -11,15 +11,13 @@ package com.gogogic.gamejam
 			{id:1034256399, firstName:"Marco", lastName:"Bancale"}];
 		
 		// for drawing a card from the deck
-		public static const COOLDOWN_TIME:Number = 4000;
+		public static const COOLDOWN_TIME:Number = 3800;
 		
 		// for playing cards
-		public static const MAX_ENERGY:Number = 1200;
+		public static const MAX_ENERGY:Number = 10000;
 		
 		// for enemy spawning
 		public static const INITIAL_SPAWN_DELAY_MILLIS:Number = 4000;
-		
-		public static const MAX_FRIENDS_ON_TEAM:int = 50;
 		
 		// Facebook app id
 		public static const FACEBOOK_APP_ID:String = "183984731631877";
@@ -29,6 +27,7 @@ package com.gogogic.gamejam
 		
 		// player properties
 		public static const PLAYER_UNIT_STARTING_HEALTH:Number = 200;
+		public static const MAX_FRIENDS_ON_TEAM:int = 50;
 		
 		// Placeholder image
 		public static const PLACEHOLDER_IMAGE_URL:String = "http://apps.gogogic.com/tcff/scream.png"; // TODO: change base path to be dynamic where Application.swf, please.

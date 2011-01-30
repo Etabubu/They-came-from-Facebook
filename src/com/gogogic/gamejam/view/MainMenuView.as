@@ -20,6 +20,8 @@ package com.gogogic.gamejam.view
 		
 		private function init():void {
 			addChild(_mainMenu = new MainMenu());
+			// Since we didn't have time to implement
+			_mainMenu.mcLeaderboard.visible = false;
 		}
 		
 		public function doneLoadingFacebook():void {

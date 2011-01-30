@@ -11,9 +11,10 @@ package com.gogogic.gamejam.model.vo
 		
 		public var bonuses:Vector.<BonusVO> = new Vector.<BonusVO>();
 		public var unitType:UnitTypeBaseVO;
+		public var energyCost:Number;
 		
 		// have we killed this friend at any point this round?
-		public var killedThisRound:Boolean = false;
+		public var killedThisSession:Boolean = false;
 		
 		// facebook info
 		public var relationship:String; //son/daughter/brother/sister/father/mother/engaged/married/complicated etc

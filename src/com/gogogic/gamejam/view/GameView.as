@@ -32,12 +32,12 @@ package com.gogogic.gamejam.view
 			_friendDeck = friendDeck;
 			_playerVO = playerVO;
 			
-			addChild(_gameBoardComponent = new GameBoardComponent());
+			addChild(_gameBoardComponent = new GameBoardComponent(_playerVO));
 			
 			addChild(_energyBar = new EnergyBar(_playerVO));
 			_energyBar.y = Application.APPLICATION_HEIGHT;
 			
-			addChild(_gameDeckComponent = new GameDeckComponent(_friendDeck));
+			addChild(_gameDeckComponent = new GameDeckComponent(_friendDeck, _playerVO));
 			_gameDeckComponent.x = 0;
 			_gameDeckComponent.y = 690;
 			

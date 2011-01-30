@@ -101,13 +101,20 @@ package com.gogogic.gamejam.model
 				playerVO.energy = 1;
 				playerVO.dispatchEvent(new Event(PlayerVO.ENERGY_BARS_SWITCHED));
 			} else {
-				playerVO.reserveEnergy += 0.01;
+				playerVO.reserveEnergy += 0.001;
 				if (playerVO.reserveEnergy >= 1) {
 					playerVO.reserveEnergy = 1;
 				}
 				// Switch on next onFrame
 			}
 			playerVO.triggerDataChangeEvent();
+		}
+		
+		
+		public function reset():void {
+			playerVO.energy = playerVO.reserveEnergy = 1;
+			playerVO.score = 0;
+			playerVO.playerUnit = null;
 		}
 	}
 }
