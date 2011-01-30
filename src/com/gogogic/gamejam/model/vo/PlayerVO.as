@@ -17,11 +17,8 @@ package com.gogogic.gamejam.model.vo
 		public var id:Number;
 		public var firstName:String;
 		public var lastName:String;
+		public var name:String;
 		public var portraitUrl:String;
-		
-		public function get name():String {
-			return firstName + lastName;
-		}
 		
 		public var gender:String;
 		public var developer:Boolean;

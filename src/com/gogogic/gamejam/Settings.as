@@ -21,7 +21,11 @@ package com.gogogic.gamejam
 		
 		// Facebook permissions
 		public static const FACEBOOK_PERMS:String = "publish_stream,user_about_me,friends_about_me,user_relationships,user_relationship_details,friends_birthday,user_birthday,email";
-
+		
+		// player properties
 		public static const PLAYER_UNIT_STARTING_HEALTH:Number = 200;
+		
+		// Placeholder image
+		public static const PLACEHOLDER_IMAGE_URL:String = "http://apps.gogogic.com/tcff/scream.png"; // TODO: change base path to be dynamic where Application.swf, please.
 	}
 }

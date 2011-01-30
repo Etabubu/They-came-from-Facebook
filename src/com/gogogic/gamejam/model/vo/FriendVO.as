@@ -6,16 +6,13 @@ package com.gogogic.gamejam.model.vo
 		public var id:Number;
 		public var firstName:String;
 		public var lastName:String;
+		public var name:String;
 		public var portraitUrl:String;
-		public var bonuses:Vector.<BonusVO>;
+		public var bonuses:Vector.<BonusVO> = new Vector.<BonusVO>();
 		public var unitType:UnitTypeBaseVO;
 		
 		// have we killed this friend at any point this round?
 		public var killedThisRound:Boolean = false;
-		
-		public function get name():String {
-			return firstName + lastName;
-		}
 		
 		// facebook info
 		public var relationship:String; //son/daughter/brother/sister/father/mother/engaged/married/complicated etc

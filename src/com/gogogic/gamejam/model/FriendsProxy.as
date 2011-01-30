@@ -26,7 +26,7 @@ package com.gogogic.gamejam.model
 		}
 		
 		public function loadFriends():void {
-			Facebook.api("/me/friends", facebookFriendsCallback);
+			Facebook.api("/me/friends", facebookFriendsCallback, {fields:"id,first_name,last_name,name,picture,gender"}); //,birthday
 		}
 		
 		public function facebookFriendsCallback(success:Object, fail:Object):void {
@@ -34,7 +34,7 @@ package com.gogogic.gamejam.model
 				onFriendsLoaded(success);
 			} else {
 				trace("facebookFriendsCallback failed", success, fail);
-				Facebook.api("/me/friends", facebookFriendsCallback, {fields:"id,name,picture,gender,birthday"});
+				loadFriends(); // try again
 			}
 		}
 		
@@ -57,7 +57,8 @@ package com.gogogic.gamejam.model
 				newFriend.id = facebookFriend.id;
 				newFriend.firstName = facebookFriend.first_name;
 				newFriend.lastName = facebookFriend.last_name;
-				newFriend.portraitUrl = facebookFriend.picture;
+				newFriend.name = facebookFriend.name;
+				newFriend.portraitUrl = facebookFriend.hasOwnProperty("picture") ? facebookFriend.picture : Settings.PLACEHOLDER_IMAGE_URL;
 				newFriend.gender = (facebookFriend.hasOwnProperty("gender") && facebookFriend.gender == Gender.MALE ? Gender.MALE : Gender.FEMALE);
 				
 				if(Settings.DEVELOPERS.indexOf(newFriend.id)) newFriend.developer = true;
@@ -118,14 +119,14 @@ package com.gogogic.gamejam.model
 				dummyFriend.id = 644779038;
 				dummyFriend.firstName = "Ari";
 				dummyFriend.lastName = "Arnbjörnsson";
-				dummyFriend.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1283.snc4/173424_644779038_242735_q.jpg";
+				dummyFriend.portraitUrl = Settings.PLACEHOLDER_IMAGE_URL;
 				dummyFriend.gender = Gender.MALE;
 				dummyFriend.developer = true;
 			} else {
 				dummyFriend.id = 699804391;
 				dummyFriend.firstName = "Jonathan";
 				dummyFriend.lastName = "Osborne";
-				dummyFriend.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1319.snc4/161115_699804391_191693_q.jpg";
+				dummyFriend.portraitUrl = Settings.PLACEHOLDER_IMAGE_URL;
 				dummyFriend.gender = Gender.MALE;
 				dummyFriend.developer = true;
 			}

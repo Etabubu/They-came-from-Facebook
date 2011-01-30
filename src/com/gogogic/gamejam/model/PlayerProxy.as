@@ -29,7 +29,7 @@ package com.gogogic.gamejam.model
 		}
 		
 		public function loadPlayer():void {
-			Facebook.api("/me", facebookPlayerCallback);
+			Facebook.api("/me", facebookPlayerCallback, {fields:"id,first_name,last_name,name,picture,gender,family,significant_other,relationship_status"});
 		}
 		
 		public function facebookPlayerCallback(success:Object, fail:Object):void {
@@ -37,7 +37,7 @@ package com.gogogic.gamejam.model
 				onPlayerLoaded(success);
 			} else {
 				trace("facebookPlayerCallback failed", success, fail);
-				Facebook.api("/me", facebookPlayerCallback);
+				loadPlayer(); // try again
 			}
 		}
 		
@@ -47,6 +47,7 @@ package com.gogogic.gamejam.model
 			playerVO.id = result.id;
 			playerVO.firstName = result.first_name;
 			playerVO.lastName = result.last_name;
+			playerVO.name = result.name;
 			playerVO.portraitUrl = result.picture;
 			playerVO.gender = (result.hasOwnProperty("gender") && result.gender == Gender.MALE ? Gender.MALE : Gender.FEMALE);
 			
@@ -67,7 +68,7 @@ package com.gogogic.gamejam.model
 			
 			if(result.hasOwnProperty("family")) {
 				internalRelationship = "";
-				for each (var familyMember:Object in result.family) {
+				for each (var familyMember:Object in result.family.data) {
 					if(familyMember.relationship == "son" || familyMember.relationship == "daughter") internalRelationship = Relationship.CHILD;
 					if(familyMember.relationship == "father") internalRelationship = Relationship.FATHER;
 					if(familyMember.relationship == "mother") internalRelationship = Relationship.MOTHER;
@@ -76,6 +77,8 @@ package com.gogogic.gamejam.model
 					if(internalRelationship.length > 0) playerVO.family[familyMember.id] = internalRelationship;
 				}
 			}
+			
+			(facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy).loadFriends();
 		}
 			
 		public function startEnergyRegen():void {

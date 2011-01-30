@@ -6,6 +6,7 @@ package com.gogogic.gamejam.view.components
 	
 	import flash.display.Bitmap;
 	import flash.display.Sprite;
+	import flash.system.JPEGLoaderContext;
 	
 	public class PortraitComponent extends Sprite
 	{
