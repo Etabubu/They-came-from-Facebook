@@ -3,6 +3,7 @@ package com.gogogic.gamejam.controller
 	import com.gogogic.gamejam.model.PlayerProxy;
 	import com.gogogic.gamejam.model.vo.BonusVO;
 	import com.gogogic.gamejam.model.vo.UnitVO;
+	import com.gogogic.gamejam.view.BlingMediator;
 	
 	import org.puremvc.as3.multicore.interfaces.ICommand;
 	import org.puremvc.as3.multicore.interfaces.INotification;
@@ -18,9 +19,10 @@ package com.gogogic.gamejam.controller
 			
 			for each(var bonus:BonusVO in theUnit.friendVO.bonuses) {
 				// display bonus
-				
+				sendNotification(BlingMediator.NAME, bonus);
 				// add to score
 				(facade.retrieveProxy(PlayerProxy.NAME) as PlayerProxy).playerVO.score += bonus.points;
+				(facade.retrieveProxy(PlayerProxy.NAME) as PlayerProxy).playerVO.triggerDataChangeEvent();
 			}
 		}
 	}

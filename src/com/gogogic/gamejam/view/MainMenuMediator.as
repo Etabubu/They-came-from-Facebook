@@ -30,12 +30,6 @@ package com.gogogic.gamejam.view
 		}
 		
 		override public function onRegister():void {
-			/*var friendsProxy:FriendsProxy = facade.retrieveProxy(FriendsProxy.NAME) as FriendsProxy;
-			if (friendsProxy.friends) {
-				friendsLoaded();
-			} else {
-				
-			}*/
 			Facebook.init(Settings.FACEBOOK_APP_ID, facebookLoginHandler);//, {perms:Settings.FACEBOOK_PERMS});
 		}
 		
