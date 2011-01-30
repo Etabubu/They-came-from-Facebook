@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.model
 {
+	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.model.vo.PlayerVO;
 	
 	import flash.display.Sprite;
@@ -18,6 +19,7 @@ package com.gogogic.gamejam.model
 		public function PlayerProxy()
 		{
 			super(NAME, new PlayerVO());
+			playerVO.energy = playerVO.reserveEnergy = Settings.MAX_ENERGY;
 		}
 		
 		public function get playerVO():PlayerVO {
@@ -36,17 +38,17 @@ package com.gogogic.gamejam.model
 		}
 		
 		private function onFrame(e:Event):void {
-			if (playerVO.energy == 1 && playerVO.reserveEnergy == 1) return;
+			if (playerVO.energy == Settings.MAX_ENERGY && playerVO.reserveEnergy == Settings.MAX_ENERGY) return;
 			
-			if (playerVO.reserveEnergy == 1 && playerVO.energy < 1) {
+			if (playerVO.reserveEnergy == Settings.MAX_ENERGY && playerVO.energy < Settings.MAX_ENERGY) {
 				// Switch
 				playerVO.reserveEnergy = playerVO.energy;
-				playerVO.energy = 1;
+				playerVO.energy = Settings.MAX_ENERGY;
 				playerVO.dispatchEvent(new Event(PlayerVO.ENERGY_BARS_SWITCHED));
 			} else {
-				playerVO.reserveEnergy += 0.001;
-				if (playerVO.reserveEnergy >= 1) {
-					playerVO.reserveEnergy = 1;
+				playerVO.reserveEnergy += Settings.ENERGY_REGEN_PER_FRAME;
+				if (playerVO.reserveEnergy >= Settings.MAX_ENERGY) {
+					playerVO.reserveEnergy = Settings.MAX_ENERGY;
 				}
 				// Switch on next onFrame
 			}
@@ -55,7 +57,7 @@ package com.gogogic.gamejam.model
 		
 		
 		public function reset():void {
-			playerVO.energy = playerVO.reserveEnergy = 1;
+			playerVO.energy = playerVO.reserveEnergy = Settings.MAX_ENERGY;
 			playerVO.score = 0;
 			playerVO.playerUnit = null;
 		}

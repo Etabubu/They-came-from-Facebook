@@ -1,5 +1,6 @@
 package com.gogogic.gamejam.view.components
 {
+	import com.gogogic.gamejam.Settings;
 	import com.gogogic.gamejam.model.vo.PlayerVO;
 	import com.gogogic.gamejam.model.vo.event.DataChangeEvent;
 	import com.gogogic.ggamejam.assets.EnergyBarGraphic;
@@ -24,8 +25,8 @@ package com.gogogic.gamejam.view.components
 		}
 		
 		private function update():void {
-			_energyBarGraphic.mcMainEnergy.scaleX = _playerVO.energy;
-			_energyBarGraphic.mcChargingEnergy.scaleX = _playerVO.reserveEnergy;
+			_energyBarGraphic.mcMainEnergy.scaleX = _playerVO.energy / Settings.MAX_ENERGY;
+			_energyBarGraphic.mcChargingEnergy.scaleX = _playerVO.reserveEnergy / Settings.MAX_ENERGY;
 		}
 	}
 }

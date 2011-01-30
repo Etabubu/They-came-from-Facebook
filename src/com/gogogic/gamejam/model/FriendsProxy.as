@@ -38,13 +38,13 @@ package com.gogogic.gamejam.model
 			var dummyFriend:FriendVO = new FriendVO();
 			dummyFriend.id = 644779038;
 			dummyFriend.name = "Ari";
-			dummyFriend.energyCost = .23;
+			dummyFriend.energyCost = 500;
 			dummyFriend.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1283.snc4/173424_644779038_242735_q.jpg";
 			
 			var dummyFriend2:FriendVO = new FriendVO();
 			dummyFriend2.id = 699804391;
 			dummyFriend2.name = "Jonathan";
-			dummyFriend2.energyCost = .23;
+			dummyFriend2.energyCost = 500;
 			dummyFriend2.portraitUrl = "http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs1319.snc4/161115_699804391_191693_q.jpg";
 			
 			allFriends.push(dummyFriend);
